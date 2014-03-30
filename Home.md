@@ -7,3 +7,9 @@ JHOVE is licensed under the [GNU Lesser General Public License](http://www.gnu.o
 The [old repository](http://sourceforge.net/projects/jhove/) is on SourceForge. The [documentation](http://jhove.sourceforge.net/) is still there, and will be till I figure out something better. Code changes will go here, but the documentation may continue to be updated on SourceForge for a while.
 
 The initial plan is to change the build from Ant plus a lot of manual work to a more easily run Maven build. 
+
+## Branches
+
+There are several branches which represent old work from SourceForge. They're no longer active.
+
+There's a branch called pull_staging, for bringing in pull requests that may require some testing. Give it a try if you're adventurous, and please report any issues.
