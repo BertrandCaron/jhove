@@ -5,5 +5,6 @@ PDF related errors
 **Examples**  
 **Source Code Location**  
 **Impact**  
-**Cure**  
+**Cure**
+**Classification** 
 
