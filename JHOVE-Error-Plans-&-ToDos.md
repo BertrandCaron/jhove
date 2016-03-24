@@ -13,3 +13,4 @@ These are the tasks we believe are to do, question mark indicates possible
   - [] Contributor Guidelines for the Wiki error messages.
   - [] GitHub Issues template for Error messages?
   - [] Move all issues from the OPF Wiki page to the new JHOVE Wiki page (automated task).
+  - [] Takedown notice on OPF Wiki DIG page and redirect to new Wiki page.
