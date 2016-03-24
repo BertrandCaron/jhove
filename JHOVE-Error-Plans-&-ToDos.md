@@ -10,6 +10,6 @@ After some discussion and experimentation @pmay and I thought that the Wiki woul
 ToDo
 ----
 These are the tasks we believe are to do, question mark indicates possible
-  [] Contributor Guidelines for the Wiki error messages.
-  [] GitHub Issues template for Error messages?
-  [] Move all issues from the OPF Wiki page to the new JHOVE Wiki page (automated task).
+  - [] Contributor Guidelines for the Wiki error messages.
+  - [] GitHub Issues template for Error messages?
+  - [] Move all issues from the OPF Wiki page to the new JHOVE Wiki page (automated task).
