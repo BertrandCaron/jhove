@@ -1,5 +1,5 @@
 PDF related errors
 
-# <ID> - <Name>
+# {ID} - {Name}
 ## 
 ##
