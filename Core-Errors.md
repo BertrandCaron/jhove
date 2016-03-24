@@ -1,1 +1,1 @@
-Holding text for error page
+Core JHOVE errors that are errors that aren't associated with a specific format module.
