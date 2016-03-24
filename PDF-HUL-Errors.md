@@ -15,5 +15,5 @@ PDF related errors
 **Source Code Location:**  
 **Impact:** A missing Pdf Dictionary is a real error /lack, which should not be accepted.  
 **Cure:** Is it possible to build a Pdf Dictionary as an afterthought? Maybe iText can fix it. We (at ZBW) have an iText-Tool, which just copies each page into a new PDF. The PDF structure gets repaired by this procedure and I would guess that it would build a brand new PDF Dictionary for the PDF. I do not have any example by hand, though, so I cannot check.  
-**Classification:** Dictionary
+**Classification:** Dictionary  
 **Exception:** PdfMalformedException  
