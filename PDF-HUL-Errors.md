@@ -21,7 +21,7 @@ PDF related errors
 ### PDF-HUL-2:Invalid page dictionary
 **Explanation:**  
 **Examples:**  
-**Source Code Location:** Line 2846 of the class PdfModule  
+**Source Code Location:** [Line 2921 of the class PdfModule](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2921)  
 **Impact:**  
 **Cure:**  
 **Classification:** Dictionary  
