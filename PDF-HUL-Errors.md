@@ -1,6 +1,6 @@
 PDF related errors
 
-### {ID}-{Name}
+### {ID}:{Name}
 **Explanation:**  
 **Examples:**  
 **Source Code Location:**  
@@ -8,7 +8,7 @@ PDF related errors
 **Cure:**  
 **Classification:**  
 
-### {ID}-Missing dictionary in document node
+### PDF-HUL-1:Missing dictionary in document node
 **Explanation:** This error/exception is thrown if there is no PdfDictionary. The code checks if "_dict == null" and if it is null (=not there), the error is thrown. As a Pdf Dictionary is mandatory for a well formed PDF, this error leads to a malformed PDF.  
 **Examples:** [line 104 in DocNode class](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/DocNode.java#L104)  
 **Source Code Location:**  
