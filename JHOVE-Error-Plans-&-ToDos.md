@@ -14,3 +14,4 @@ These are the tasks we believe are to do, question mark indicates possible
   - [] GitHub Issues template for Error messages?
   - [] Move all issues from the OPF Wiki page to the new JHOVE Wiki page (automated task).
   - [] Takedown notice on OPF Wiki DIG page and redirect to new Wiki page.
+  - [] Automated task (on Jenkins?) that parses the Wiki page and updates the error pages on the JHOVE website.
