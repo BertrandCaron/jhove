@@ -4,5 +4,5 @@ PDF related errors
 #### Explanation
 #### Examples
 #### Source Code Location
-### Impact
-### Cure
+#### Impact
+#### Cure
