@@ -17,3 +17,12 @@ PDF related errors
 **Cure:** Is it possible to build a Pdf Dictionary as an afterthought? Maybe iText can fix it. We (at ZBW) have an iText-Tool, which just copies each page into a new PDF. The PDF structure gets repaired by this procedure and I would guess that it would build a brand new PDF Dictionary for the PDF. I do not have any example by hand, though, so I cannot check.  
 **Classification:** Dictionary  
 **Exception:** PdfMalformedException  
+
+### PDF-HUL-2:Invalid page dictionary
+**Explanation:**  
+**Examples:**  
+**Source Code Location:** Line 2846 of the class PdfModule  
+**Impact:**  
+**Cure:**  
+**Classification:** Dictionary  
+**Exception:** PdfMalformedException  
