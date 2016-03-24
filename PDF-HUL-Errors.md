@@ -7,4 +7,3 @@ PDF related errors
 #### Impact
 #### Cure
 
-#### Examples
