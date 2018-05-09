@@ -12,8 +12,8 @@ An unexpected object type was found for a destination object. A destination obje
 * Examples: [1](https://github.com/openpreserve/jhove/files/1228422/sample.pdf), [2](http://wiki.opf-labs.org/download/attachments/101613571/ETH23915.pdf), [3](http://wiki.opf-labs.org/download/attachments/101613571/2002.pdf), [4](http://wiki.opf-labs.org/download/attachments/101613571/SIP110204_ReColl-124480_1-s2.0-S0370269317301144-main.pdf)
 
 ### References
-PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 8.2.1
-PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 12.3.2
+ - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 8.2.1
+ - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 12.3.2
 
 
 ### Impact
@@ -36,8 +36,8 @@ An unexpected object type was returned when resolving a destination's page refer
 * Examples: Needed
 
 ### References
-PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 8.2.1
-PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 12.3.2
+ - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 8.2.1
+ - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 12.3.2
 
 
 ### Impact
@@ -60,8 +60,8 @@ An IOException occured when trying to read and parse the destination array objec
 * Examples: Needed
 
 ### References
-PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 8.2.1
-PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 12.3.2
+ - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 8.2.1
+ - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 12.3.2
 
 
 ### Impact
@@ -84,8 +84,8 @@ A page or page tree node is not a dictionary. All pages and page trees should be
 * Examples: Needed
 
 ### References
-PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.2
-PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.7.3
+ - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.2
+ - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.7.3
 
 
 ### Impact
@@ -108,8 +108,8 @@ One of the objects processed when resolving the Resources dictionary was of a ty
 * Examples: Needed
 
 ### References
-PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.2
-PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.7.3.3
+ - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.2
+ - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.7.3.3
 
 
 ### Impact
@@ -132,8 +132,8 @@ An IOException occurred when reading the reference for the for Fonts dictionary 
 * Examples: Needed
 
 ### References
-PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.7.2
-PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.8.3
+ - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.7.2
+ - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.8.3
 
 
 ### Impact
@@ -156,8 +156,8 @@ A page dictionary's "MediaBox" key value is not an array.
 * Examples: Needed
 
 ### References
-PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.8.4
-PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.9.5
+ - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.8.4
+ - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.9.5
 
 
 ### Impact
@@ -180,8 +180,8 @@ A page's "MediaBox" entry is not an array of four numbers. "MediaBox" entries mu
 * Examples: Needed
 
 ### References
-PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.8.4
-PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.9.5
+ - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.8.4
+ - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.9.5
 
 
 ### Impact
@@ -204,8 +204,8 @@ Needs review
 * Examples: Needed
 
 ### References
-PDF 1.6: Needs review
-PDF 1.7: Needs review
+ - PDF 1.6: Needs review
+ - PDF 1.7: Needs review
 
 
 ### Impact
@@ -228,8 +228,8 @@ Needs review
 * Examples: Needed
 
 ### References
-PDF 1.6: Needs review
-PDF 1.7: Needs review
+ - PDF 1.6: Needs review
+ - PDF 1.7: Needs review
 
 
 ### Impact
@@ -237,6 +237,202 @@ Needs review
 
 ### Remediation
 Needs review
+
+
+## PDF-HUL-11
+
+### Message
+> Invalid character in hex string
+
+### Details
+Needs review
+
+* Type: PdfMalformedException
+* Source location: [Literal.java L358](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Literal.java#L358)
+* Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNbUQ2R1k5aU9yTzg/view?usp=sharing), [2](http://wiki.opf-labs.org/download/attachments/101613571/ETH23915.pdf)
+
+### References
+ - PDF 1.6: Needs review
+ - PDF 1.7: Needs review
+
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+## PDF-HUL-153
+
+### Message
+> No PDF trailer
+
+### Details
+An end-of-file marker ("%%EOF") could not be found within the file's last 1024 bytes. This can often be due to a PDF file being incompletely uploaded or downloaded.
+
+* Type: ErrorMessage, Malformed
+* Source location: [PdfModule.java L937](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L937)
+* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/567147525.pdf?version=1&modificationDate=1436357226000), [2](https://office365lds-my.sharepoint.com/personal/thorsted_ldschurch_org/_layouts/15/guestaccess.aspx?guestaccesstoken=zYWzyfORm0gJ0Pu%2f31BaiaG7BAjlquvsuo5Aq3pBGks%3d&docid=0e69ca93c8e6545e5937fd26c3d14403d&rev=1)
+
+### References
+ - PDF 1.6: Needs review
+ - PDF 1.7: Needs review
+
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+
+## PDF-HUL-154
+
+### Message
+> Missing startxref keyword or value
+
+### Details
+Needs review
+
+* Type: ErrorMessage, Malformed
+* Source location: [PdfModule.java L994](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L994)
+* Examples: Needed
+
+### References
+ - PDF 1.6: Needs review
+ - PDF 1.7: Needs review
+
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+
+## PDF-HUL-155
+
+### Message
+> Document catalog dictionary object number and trailer root ref number are inconsistent.
+
+### Details
+The object retrieved as the document catalog dictionary from the cross-reference table does not have the same ID as the the reference used to retrieve it. An object's ID and it's position in the cross reference table should be the same, i.e. object ID 1 is found at index 1 in the cross-reference table. This may be indicative of a broken cross-reference table.
+
+* Type: PdfMalformedException
+* Source location: Needs review
+* Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_002_document-catalog-wrong-object-number.pdf)
+
+### References
+ - PDF 1.6: Needs review
+ - PDF 1.7: Needs review
+
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+
+## PDF-HUL-156
+
+### Message
+> Document catalog Type key must have value Catalog
+
+### Details
+The document catalog dictionary object must have key called type with the value Catalog.
+
+* Type: PdfMalformedException
+* Source location: Needs review
+* Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_006_document-catalog-wrong-type-key.pdf)
+
+### References
+ - PDF 1.6: Needs review
+ - PDF 1.7: Needs review
+
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+
+## PDF-HUL-157
+
+### Message
+> Document catalog has no Type key or it has a null value.
+
+### Details
+Needs review
+
+* Type: Needs review
+* Source location: Needs review
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+
+## PDF-HUL-158
+
+### Message
+> Document catalog Type key does not have a simple String value.
+
+### Details
+Needs review
+
+* Type: Needs review
+* Source location: Needs review
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+
+## PDF-HUL-159
+
+### Message
+> Pages dictionary has no Type key or it has a null value.
+
+### Details
+Needs review
+
+* Type: Needs review
+* Source location: Needs review
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+
+## PDF-HUL-160
+
+### Message
+> Pages dictionary Type key does not have a simple String value.
+
+### Details
+Needs review
+
+* Type: Needs review
+* Source location: Needs review
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
 
 ## PDF-HUL-161
 
