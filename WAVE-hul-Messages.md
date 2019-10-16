@@ -5,17 +5,21 @@
 > File does not start with RIFF header
 
 ### Details
-The first four bytes of the file did not spell "RIFF" or "RF64". A WAVE file should begin with a RIFF chunk header.
+The first four bytes of the file did not spell "RIFF" or "RF64". A Wave file should begin with a RIFF chunk header.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L348](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L348)
 * Examples: Needed
 
 ### Impact
-Needs review
+In many cases the lack of a RIFF header at the beginning of a file indicates that the file does not belong to the RIFF family of file formats and so is not actually a Wave file. If the file format has been misnamed or misidentified as a Wave file, its content could still be accessible after its true format has been correctly identified.
+
+In other cases, it could mean the beginning of the file has been corrupted or had extra data appended to it. If extra data has been appended to the beginning, it may still be possible to recover the content of the original Wave as long as none of its content was also modified.
 
 ### Remediation
-Needs review
+Correct identification of the file format can be attempted using a format identification tool or manual binary inspection.
+
+If extra data has been added to the beginning of the file, manual binary inspection could be used to discover the new location of the RIFF header by searching for the "RIFF" or "RF64" header <var>ID</var>, and then using the appropriate <var>size</var> field to extract the Wave's contents.
 
 
 ## WAVE-HUL-2
@@ -24,36 +28,36 @@ Needs review
 > Form type in RIFF header is not WAVE
 
 ### Details
-The form specified in the RIFF header was not "WAVE". RIFF-format files may be of types other than WAVE, such as AVI.
+The form type specified in the RIFF header was not "WAVE". RIFF-format files may be of types other than WAVE, such as AVI.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L364](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L364)
 * Examples: Needed
 
 ### Impact
-Needs review
+In most cases this signifies the file is not a Wave file but instead some other RIFF format, such as AVI or MIDI.
 
 ### Remediation
-Needs review
+Correct identification of the file format can be attempted using a format identification tool or manual binary inspection.
 
 
 ## WAVE-HUL-3
 
 ### Message
-> Unexpected end of file
+> Unexpected end of file: ...
 
 ### Details
-Needs review
+The file size is less than the Wave's own reported size, indicating that some amount of data is missing from the file. This can occur when file creation is interrupted, such as during loss of power or when transferring over an unreliable network.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L414](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L414)
-* Examples: Needed
+* Examples: [1](https://github.com/openpreserve/jhove/blob/rel/jhove-1.22/test-root/corpora/errors/modules/WAVE-hul/wf-pcm-44khz-8bit-mono-truncated-riff.wav), [2](https://github.com/openpreserve/jhove/blob/rel/jhove-1.22/test-root/corpora/errors/modules/WAVE-hul/wf-pcm-44khz-8bit-mono-truncated-final-chunk.wav)
 
 ### Impact
-Needs review
+The impact will depend on how much of the file is missing and specifically which data was lost. If the Wave still contains a Format chunk, a Fact chunk where applicable, and at least some of a Data chunk, then some audio content may still be recoverable.
 
 ### Remediation
-Needs review
+When possible, the best option is to attempt retrieval of a complete copy of the file from the original source or an equivalent backup. When not possible, manual repair of the file can allow what data remains to still be accessible.
 
 
 ## WAVE-HUL-4
@@ -62,17 +66,17 @@ Needs review
 > Exception reading file: ...
 
 ### Details
-Needs review
+An unexpected error occurred while trying to read the file.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L420](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L420)
 * Examples: Needed
 
 ### Impact
-Needs review
+The module was unable to complete file characterization or validation.
 
 ### Remediation
-Needs review
+Please report the issue and circumstances to the project for investigation.
 
 
 ## WAVE-HUL-5
@@ -81,14 +85,14 @@ Needs review
 > No Format chunk found
 
 ### Details
-A Format chunk was not found in the file. All WAVE files must have a Format ("fmt ") chunk, which contains information required to decode the audio data.
+A Format chunk was not found in the file. All Wave files must have a Format ("fmt ") chunk, which contains the information required to decode their audio data.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L452](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L452)
-* Examples: Needed
+* Examples: [1](https://github.com/openpreserve/jhove/blob/v1.22.1/test-root/corpora/errors/modules/WAVE-hul/wf-pcm-44khz-8bit-mono-fmt-chunk-missing.wav)
 
 ### Impact
-Needs review
+Without a Format chunk software will be unable to render any audio data the file may contain.
 
 ### Remediation
 Needs review
@@ -100,7 +104,7 @@ Needs review
 > Invalid chunk size
 
 ### Details
-The chunk size reported in a chunk's header exceeds the file's remaining size. The file's remaining size is calculated based on the file size reported in the RIFF header, which may not be the same as the file's actual size.
+The chunk size reported in a chunk's header exceeds the file's remaining size. The file's remaining size is calculated based on the size reported in the RIFF header, which may not be the same as the file's actual size.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L759](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L759)
@@ -119,17 +123,17 @@ Needs review
 > Ignored unrecognized chunk: ...
 
 ### Details
-A chunk with the given ID was found and ignored.
+A chunk with the given ID was found but ignored because the module is currently unaware of how to interpret the chunk's data.
 
 * Type: InfoMessage
 * Source location: [WaveModule.java L849](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L849)
 * Examples: Needed
 
 ### Impact
-Needs review
+The module is unable to inspect the contents of the chunk.
 
 ### Remediation
-Needs review
+To request support for an unrecognized chunk type, please report it to the project.
 
 
 ## WAVE-HUL-8
@@ -138,17 +142,17 @@ Needs review
 > Duplicate chunks found for type: ...
 
 ### Details
-A chunk with the given ID was found multiple times where it should appear only once.
+A chunk of the given type was found multiple times where it is expected only once.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L896](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L896)
-* Examples: Needed
+* Examples: [1](https://github.com/openpreserve/jhove/blob/v1.22.1/test-root/corpora/errors/modules/WAVE-hul/wf-pcm-44khz-8bit-mono-fmt-chunk-multiple.wav)
 
 ### Impact
-Needs review
+If the repeated chunks contain different data then rendering software could act unpredictably depending on which chunk the software decides to use.
 
 ### Remediation
-Needs review
+Remove all but one of the repeated chunks. If the data contained in each chunk is both different and deemed valuable, copies of the file could be created differing only in which of the chunks they keep.
 
 
 ## WAVE-HUL-9
@@ -427,7 +431,7 @@ The first chunk following an RF64 header was not a Data Size 64 chunk. The Data 
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L395](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L395)
-* Examples: Needed
+* Examples: [1](https://github.com/openpreserve/jhove/blob/v1.22.1/test-root/corpora/errors/modules/WAVE-hul/rf64-pcm-44khz-8bit-mono-ds64-chunk-missing.wav)
 
 ### Impact
 Needs review
@@ -442,11 +446,11 @@ Needs review
 > No Data chunk found
 
 ### Details
-A Data chunk was not found in the file. All WAVE files must have a Data ("data") chunk, which contains the audio data to decode.
+A Data chunk was not found in the file. All Wave files must have a Data ("data") chunk, which contains the audio data to decode.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L457](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L457)
-* Examples: Needed
+* Examples: [1](https://github.com/openpreserve/jhove/blob/v1.22.1/test-root/corpora/errors/modules/WAVE-hul/wf-pcm-44khz-8bit-mono-data-chunk-missing.wav)
 
 ### Impact
 Needs review
@@ -465,7 +469,7 @@ A Data chunk was found before any Format chunks. Data chunks should only appear 
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L771](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L771)
-* Examples: Needed
+* Examples: [1](https://github.com/openpreserve/jhove/blob/v1.22.1/test-root/corpora/errors/modules/WAVE-hul/wf-pcm-44khz-8bit-mono-data-chunk-before-fmt.wav)
 
 ### Impact
 Needs review
