@@ -85,14 +85,16 @@ Please report the issue and circumstances to the project for investigation.
 > No Format chunk found
 
 ### Details
-A Format chunk was not found in the file. All Wave files must have a Format ("fmt ") chunk, which contains the information required to decode their audio data.
+A Format chunk was not found in the file. All Wave files must have a Format ("fmt ") chunk containing the information required to decode their audio data.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L452](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L452)
 * Examples: [1](https://github.com/openpreserve/jhove/blob/v1.22.1/test-root/corpora/errors/modules/WAVE-hul/wf-pcm-44khz-8bit-mono-fmt-chunk-missing.wav)
 
 ### Impact
-Without a Format chunk software will be unable to render any audio data the file may contain.
+Without a Format chunk software will be unable to render any audio data the file may contain, resulting in errors attempting to open or render the file in playback software.
+
+This error may also appear if the module aborts processing a file due to format or module errors before it is able to reach the file's Format chunk.
 
 ### Remediation
 Needs review
@@ -152,7 +154,7 @@ A chunk of the given type was found multiple times where it is expected only onc
 If the repeated chunks contain different data then rendering software could act unpredictably depending on which chunk the software decides to use.
 
 ### Remediation
-Remove all but one of the repeated chunks. If the data contained in each chunk is both different and deemed valuable, copies of the file could be created differing only in which of the chunks they keep.
+Remove all but one of the repeated chunks. If the data contained in each chunk is both different and deemed valuable, copies of the file could be created differing only in which of the chunks they keep. To avoid invalidating offset values stored inside certain chunks, repeated chunks can be safely removed by replacing them with Junk ("JUNK") chunks of the same size.
 
 
 ## WAVE-HUL-9
@@ -161,7 +163,7 @@ Remove all but one of the repeated chunks. If the data contained in each chunk i
 > Unknown list type in Associated Data List chunk
 
 ### Details
-Needs review
+A non-standard list ("list") chunk with the given type was found but ignored because the module is currently unaware of how to interpret the chunk's data.
 
 * Type: ErrorMessage
 * Source location: [AssocDataListChunk.java L58](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/wave/AssocDataListChunk.java#L58)
@@ -180,7 +182,7 @@ Needs review
 > Ignored Associated Data chunk of type: ...
 
 ### Details
-Needs review
+A chunk with the given ID in a non-standard Associated Data List ("list") was found but ignored because the module is currently unaware of how to interpret the chunk's data.
 
 * Type: InfoMessage
 * Source location: [AssocDataListChunk.java L86](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/wave/AssocDataListChunk.java#L86)
@@ -275,17 +277,17 @@ Needs review
 > List chunk contains unknown type: ...
 
 ### Details
-Needs review
+A list chunk with the given type was found but ignored because the module is currently unaware of how to interpret the chunk's data. List ("LIST") chunks consist of a type field followed by a series of chunks. The list's type dictates how the chunks contained in the list should be interpreted.
 
 * Type: ErrorMessage
 * Source location: [ListInfoChunk.java L67](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/wave/ListInfoChunk.java#L67)
 * Examples: Needed
 
 ### Impact
-Needs review
+The module is unable to inspect the contents of the list chunk.
 
 ### Remediation
-Needs review
+To request support for an unrecognized list type, please report it to the project.
 
 
 ## WAVE-HUL-16
@@ -294,17 +296,10 @@ Needs review
 > Ignored Info List chunk of type: ...
 
 ### Details
-Needs review
+See [WAVE-HUL-19](#WAVE-HUL-19).
 
 * Type: InfoMessage
 * Source location: [ListInfoChunk.java L95](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/wave/ListInfoChunk.java#L95)
-* Examples: Needed
-
-### Impact
-Needs review
-
-### Remediation
-Needs review
 
 
 ## WAVE-HUL-17
@@ -313,17 +308,17 @@ Needs review
 > Ignored Associated Data chunk of type: ...
 
 ### Details
-Needs review
+An Exif List chunk with the given ID was found but ignored because the module is currently unaware of how to interpret the chunk's data.
 
 * Type: InfoMessage
 * Source location: [ListInfoChunk.java L148](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/wave/ListInfoChunk.java#L148)
 * Examples: Needed
 
 ### Impact
-Needs review
+The module is unable to inspect the contents of the chunk.
 
 ### Remediation
-Needs review
+To request support for an unrecognized chunk type, please report it to the project.
 
 
 ## WAVE-HUL-18
@@ -332,17 +327,17 @@ Needs review
 > Ignored Associated Data chunk of type: ...
 
 ### Details
-Needs review
+An Associated Data List chunk with the given ID was found but ignored because the module is currently unaware of how to interpret the chunk's data.
 
 * Type: InfoMessage
 * Source location: [ListInfoChunk.java L194](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/wave/ListInfoChunk.java#L194)
 * Examples: Needed
 
 ### Impact
-Needs review
+The module is unable to inspect the contents of the chunk.
 
 ### Remediation
-Needs review
+To request support for an unrecognized chunk type, please report it to the project.
 
 
 ## WAVE-HUL-19
@@ -351,17 +346,17 @@ Needs review
 > Ignored Info List chunk of type: ...
 
 ### Details
-Needs review
+An Info List chunk with the given ID was found but ignored because the module is currently unaware of how to interpret the chunk's data.
 
 * Type: InfoMessage
 * Source location: [ListInfoTextChunk.java L145](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/wave/ListInfoTextChunk.java#L145)
 * Examples: Needed
 
 ### Impact
-Needs review
+The module is unable to inspect the contents of the chunk.
 
 ### Remediation
-Needs review
+To request support for an unrecognized chunk type, please report it to the project.
 
 
 ## WAVE-HUL-20
@@ -415,10 +410,10 @@ The RIFF size exceeded what the module can currently handle, approximately 9.22 
 * Examples: Needed
 
 ### Impact
-Needs review
+The module is unable to process the file.
 
 ### Remediation
-Needs review
+Consider switching to [FLAC](https://xiph.org/flac/)?
 
 
 ## WAVE-HUL-23
@@ -446,14 +441,16 @@ Needs review
 > No Data chunk found
 
 ### Details
-A Data chunk was not found in the file. All Wave files must have a Data ("data") chunk, which contains the audio data to decode.
+A Data chunk was not found in the file. All Wave files must have a Data ("data") chunk containing the audio data to decode.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L457](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L457)
 * Examples: [1](https://github.com/openpreserve/jhove/blob/v1.22.1/test-root/corpora/errors/modules/WAVE-hul/wf-pcm-44khz-8bit-mono-data-chunk-missing.wav)
 
 ### Impact
-Needs review
+Without a discoverable Data chunk there is no audio data to render, often resulting in errors attempting to open or render the file in playback software.
+
+This error may also appear if the module aborts processing a file due to format or module errors before it is able to reach the file's Data chunk.
 
 ### Remediation
 Needs review
@@ -465,17 +462,17 @@ Needs review
 > Data chunk appears before Format chunk
 
 ### Details
-A Data chunk was found before any Format chunks. Data chunks should only appear after the Format chunks that specify how to interpret them.
+A Data chunk was found before a Format chunk. Data chunks should only appear after the Format chunk that specifies how to interpret them.
 
 * Type: ErrorMessage
 * Source location: [WaveModule.java L771](https://github.com/openpreserve/jhove/blob/rel/jhove-1.20/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WaveModule.java#L771)
 * Examples: [1](https://github.com/openpreserve/jhove/blob/v1.22.1/test-root/corpora/errors/modules/WAVE-hul/wf-pcm-44khz-8bit-mono-data-chunk-before-fmt.wav)
 
 ### Impact
-Needs review
+Software expecting the Format and Data chunks to be in the correct order can fail to open or render the file.
 
 ### Remediation
-Needs review
+If both Format and Data chunks still exist in the file, they could be reordered manually, with some effort, into the correct order. Care would need to be taken to ensure any offset information stored in other chunks is not invalidated by the move. This may be impossible if there exist proprietary or unknown chunks in the file whose functions also need to be preserved but which can't be verified or updated due to a lack of knowledge about their content or format. For that reason this option may only be feasible for relatively simple Wave files.
 
 
 ## WAVE-HUL-26
@@ -491,8 +488,8 @@ A chunk with the given ID contained more data than the module expected. The chun
 * Examples: Needed
 
 ### Impact
-Needs review
+The module is unable to process the unrecognized data.
 
 ### Remediation
-Needs review
+The file could be submitted to the project for investigation into supporting the unrecognized data.
 
