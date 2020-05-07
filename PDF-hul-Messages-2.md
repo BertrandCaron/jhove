@@ -1166,10 +1166,11 @@ Needs review
 
 ### Details
 This needs review, it's a horrible cludge that eats and PDFExceptions thrown while processing destination objects and always sets the invalid flag. Seems dubious behaviour.
+It, for example, reports the error "Invalid indirect destination - referenced object ' ' cannot be found". This error comes from [PDF-HUL-149](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-149).
 
-* Type: ErrorMessage, Invalid
-* Source location: [PdfModule.java L3191](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3191)
-* Examples: Needed
+* Type: ErrorMessage, An Exception for all the messages coming from adding Destination to Property list
+* Source location: [PdfModule.java L3378-L3383](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3378-L3383)
+* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP110204_ReColl-124480_1-s2.0-S0370269317301144-main.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 8.2.1
