@@ -1744,10 +1744,10 @@ Needs review
 > Page tree node not found.
 
 ### Details
-Needs review
+This error occurs when the page tree is build.
 
-* Type: Needs review
-* Source location: Needs review
+* Type: ArrayIndexOutOfBoundsException, PdfInvalidException
+* Source location: [PageTreeNode L128](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageTreeNode.java#L128)
 * Examples: Needed
 
 ### Impact
