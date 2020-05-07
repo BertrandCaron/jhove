@@ -17,25 +17,53 @@ Needs review
 ### Remediation
 Needs review
 
-
 ## WARC-KB-2
 
 ### Message
+
 > Invalid block digest algorithm: ...
 
 ### Details
-Needs review
 
-* Type: ErrorMessage
+The WARC-Block-Digest is an optional parameter indicating the algorithm name and calculated value of a digest applied to the full block of the record. This error message indicates that the algorithm is not valid. It's also possible that the algorithm is valid, but not supported by the `java.io.security.MessageDigest` class, that is used to validate. Supported algorithms are: MD2, MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256. Most web crawlers use SHA-1. The WARC standard recommends no particular algorithm.
+
+* Type: JhoveException
 * Source location: [WarcModule.java L210](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WarcModule.java#L210)
 * Examples: Needed
 
 ### Impact
-Needs review
+
+Needs review.
+
+This seems to have little impact, since it's an optional parameter and no particular algorithm is required.
 
 ### Remediation
-Needs review
 
+You can open a WARC file with a text editor and make some changes in the file.
+
+An example of a header of a WARC record containing a `WARC-Block-Digest:`
+
+```warc
+WARC/1.0
+WARC-Type: response
+WARC-Target-URI: http://www.archive.org/images/logoc.jpg
+WARC-Warcinfo-ID: <urn:uuid:d7ae5c10-e6b3-4d27-967d-34780c58ba39>
+WARC-Date: 2006-09-19T17:20:24Z
+WARC-Block-Digest: sha1:UZY6ND6CCHXETFVJD2MSS7ZENMWF7KQ2
+WARC-Payload-Digest: sha1:CCHXETFVJD2MUZY6ND6SS7ZENMWF7KQ2
+WARC-IP-Address: 207.241.233.58
+WARC-Record-ID: <urn:uuid:92283950-ef2f-4d72-b224-f54c6ec90bb0>
+Content-Type: application/http;msgtype=response
+WARC-Identified-Payload-Type: image/jpeg
+Content-Length: 1902
+```
+
+One solution would be to remove the `WARC-Block-Digest parameter that's causing the problem. This is the easiest solution. A more complex solution is to recalculate the checksum for the full block of the record that's causing the problem with a supported algorithm.
+
+### References
+
+* [WARC spec 1.0](https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.0/)
+* [Java Message Digest Algorithms](https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest)
 
 ## WARC-KB-3
 
@@ -43,17 +71,41 @@ Needs review
 > Invalid payload digest algorithm: ...
 
 ### Details
-Needs review
 
-* Type: ErrorMessage
-* Source location: [WarcModule.java L213](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WarcModule.java#L213)
+The WARC-Block-Digest is an optional parameter indicating the algorithm name and calculated value of a digest applied to the payload referred to or contained by the record - which is not necessarily equivalent to the record block. This error message indicates that the algorithm is not valid. It's also possible that the algorithm is valid, but not supported by the `java.io.security.MessageDigest` class, that is used to validate. Supported algorithms are: MD2, MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256. Most web crawlers use SHA-1. The WARC standard recommends no particular algorithm.
+
+* Type: JhoveException
+* Source location: [WarcModule.java L210](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/WarcModule.java#L210)
 * Examples: Needed
 
 ### Impact
-Needs review
+
+Needs review.
+
+This seems to have little impact, since it's an optional parameter and no particular algorithm is required.
 
 ### Remediation
-Needs review
+
+You can open a WARC file with a text editor and make some changes in the file.
+
+An example of a header of a WARC record containing a `WARC-Block-Digest:`
+
+```warc
+WARC/1.0
+WARC-Type: response
+WARC-Target-URI: http://www.archive.org/images/logoc.jpg
+WARC-Warcinfo-ID: <urn:uuid:d7ae5c10-e6b3-4d27-967d-34780c58ba39>
+WARC-Date: 2006-09-19T17:20:24Z
+WARC-Block-Digest: sha1:UZY6ND6CCHXETFVJD2MSS7ZENMWF7KQ2
+WARC-Payload-Digest: sha1:CCHXETFVJD2MUZY6ND6SS7ZENMWF7KQ2
+WARC-IP-Address: 207.241.233.58
+WARC-Record-ID: <urn:uuid:92283950-ef2f-4d72-b224-f54c6ec90bb0>
+Content-Type: application/http;msgtype=response
+WARC-Identified-Payload-Type: image/jpeg
+Content-Length: 1902
+```
+
+One solution would be to remove the `WARC-Payload-Digest parameter that's causing the problem. This would be the easiest solution.
 
 
 ## WARC-KB-4
