@@ -1602,7 +1602,7 @@ Needs review
 ### Details
 The object retrieved as the document catalog dictionary from the cross-reference table does not have the same ID as the the reference used to retrieve it. An object's ID and it's position in the cross reference table should be the same, i.e. object ID 1 is found at index 1 in the cross-reference table. This may be indicative of a broken cross-reference table. This needs review as it's really a problem with the cross-reference table / JHOVE's parsing of it as readers are more forgiving.
 
-* Type: ErrorMessage
+* Type: ErrorMessage, MalFormed
 * Source location: https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1591
 * Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_002_document-catalog-wrong-object-number.pdf)
 
@@ -1626,7 +1626,7 @@ Needs review
 ### Details
 The document catalog dictionary object must have key called type with the value Catalog. This error is related to [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-142) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-143).
 
-* Type: ErrorMessage
+* Type: ErrorMessage, MalFormed
 * Source location: [PdfModule.java L1598](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1598)
 * Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_006_document-catalog-wrong-type-key.pdf)
 
@@ -1650,7 +1650,7 @@ Needs review
 ### Details
 The document catalog dictionary object must have key called type. In this error the Type does not exist and is null. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-141) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-143).
 
-* Type: ErrorMessage
+* Type: ErrorMessage, MalFormed
 * Source location: [PdfModule.java L1599](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1599)
 * Examples: Needed
 
@@ -1669,7 +1669,7 @@ Needs review
 ### Details
 The document catalog dictionary object has a key called Type. In this error the Type is not a Simple Object. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-141) and [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-142).
 
-* Type: ErrorMessage
+* Type: ErrorMessage, MalFormed
 * Source location: [PdfModule.java L1600](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1600)
 * Examples: Needed
 
@@ -1688,7 +1688,7 @@ Needs review
 ### Details
 This error message and the next two error messages ([PDF-HUL-145](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-145) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-146)) are related. They check the Pages in a Dictionary have the correct properties. PDF-HUL-144 is about Type key is missing or null.
 
-* Type: ErrorMessage
+* Type: ErrorMessage, MalFormed
 * Source location: [PdfModule.java L1945](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1945)
 * Examples: Needed
 
@@ -1707,7 +1707,7 @@ Needs review
 ### Details
 This error message and the error messages ([PDF-HUL-144](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-144) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-146)) are related. The Type of the Page in the Directory is not a Simple Object.
 
-* Type: ErrorMessage
+* Type: ErrorMessage, MalFormed
 * Source location: [PdfModule.java L1946](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1946)
 * Examples: Needed
 
@@ -1726,7 +1726,7 @@ Needs review
 ### Details
 This error message and the error messages ([PDF-HUL-144](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-144) and [PDF-HUL-145](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-145)) are related.The value of Type is not Pages.
 
-* Type: ErrorMessage
+* Type: ErrorMessage, MalFormed
 * Source location: [PdfModule.java L1944](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1944)
 * Examples: Needed
 
