@@ -1624,10 +1624,10 @@ Needs review
 > Document catalog Type key must have value Catalog
 
 ### Details
-The document catalog dictionary object must have key called type with the value Catalog.
+The document catalog dictionary object must have key called type with the value Catalog. This error is related to [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-142) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-143).
 
-* Type: PdfMalformedException
-* Source location: Needs review
+* Type: ErrorMessage
+* Source location: [PdfModule.java L1598](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1598)
 * Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_006_document-catalog-wrong-type-key.pdf)
 
 ### References
@@ -1648,10 +1648,10 @@ Needs review
 > Document catalog has no Type key or it has a null value.
 
 ### Details
-Needs review
+The document catalog dictionary object must have key called type. In this error the Type does not exist and is null. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-141) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-143).
 
-* Type: Needs review
-* Source location: Needs review
+* Type: ErrorMessage
+* Source location: [PdfModule.java L1599](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1599)
 * Examples: Needed
 
 ### Impact
@@ -1667,10 +1667,10 @@ Needs review
 > Document catalog Type key does not have a simple String value.
 
 ### Details
-Needs review
+The document catalog dictionary object has a key called Type. In this error the Type is not a Simple Object. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-141) and [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-142).
 
-* Type: Needs review
-* Source location: Needs review
+* Type: ErrorMessage
+* Source location: [PdfModule.java L1600](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1600)
 * Examples: Needed
 
 ### Impact
