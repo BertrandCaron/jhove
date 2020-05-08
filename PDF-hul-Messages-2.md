@@ -1602,8 +1602,8 @@ Needs review
 ### Details
 The object retrieved as the document catalog dictionary from the cross-reference table does not have the same ID as the the reference used to retrieve it. An object's ID and it's position in the cross reference table should be the same, i.e. object ID 1 is found at index 1 in the cross-reference table. This may be indicative of a broken cross-reference table. This needs review as it's really a problem with the cross-reference table / JHOVE's parsing of it as readers are more forgiving.
 
-* Type: PdfMalformedException
-* Source location: Needs review
+* Type: ErrorMessage
+* Source location: https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1591
 * Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_002_document-catalog-wrong-object-number.pdf)
 
 ### References
