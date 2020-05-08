@@ -1576,10 +1576,10 @@ Needs review
 > Missing startxref keyword or value
 
 ### Details
-The "startxref" keyword marking the referece to a cross-reference stream couldn't be found OR the following line wasn't a numeric offset to a cross reference dictionary.
+The "startxref" keyword marking the reference to a cross-reference stream couldn't be found OR the following line wasn't a numeric offset to a cross reference dictionary.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L994](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L994)
+* Source location: [PdfModule.java L1213](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1213)
 * Examples: Needed
 
 ### References
