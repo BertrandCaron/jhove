@@ -203,6 +203,12 @@ This will probably have no impact now, but the issue can cause failures in the f
 
 If you're familiar with the WARC specification, some issues can be solved by opening the WARC file with a text editor and change the entity that generates a warning. When possible, The best option is to create a new WARC file of the website or webpage.
 
+### References
+
+* [WARC spec 1.0](https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.0/)
+* [JWAT documentation](https://sbforge.org/display/JWAT/Documentation)
+* [JWAT source code](https://github.com/netarchivesuite/jwat)
+
 ## WARC-KB-7
 
 ### Message
