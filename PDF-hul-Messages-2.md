@@ -960,7 +960,7 @@ Needs review
 An item in a page's annotations array ("Annots") does not point to a dictionary. Each item in an annotation array should point to an annotation dictionary containing that annotation's details.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L2732](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2732)
+* Source location: [PdfModule.java L2970-L2971](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2970-L2971)
 * Examples: Needed
 
 ### References
