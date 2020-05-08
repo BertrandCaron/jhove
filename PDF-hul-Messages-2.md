@@ -724,7 +724,7 @@ Needs review
 This is just a message to say that font information is available but not reported. The configuration needs to be changed to see the font information.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L2213](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2213)
+* Source location: [PdfModule.java L2524-L2525](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2524-L2525)
 * Examples: Not applicable, is jHove configuration
 
 ### References
