@@ -1359,8 +1359,8 @@ Needs review
 ### Details
 An unexpected object type was encountered while parsing an outline item. Possible causes include unexpected "Prev", "Next", "First", or "Last" values.
 
-* Type: PdfInvalidException
-* Source location: [PdfModule.java L3951](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3951)
+* Type: PdfInvalidException, ClassCastException
+* Source location: [PdfModule.java L4101](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4101)
 * Examples: Needed
 
 ### References
