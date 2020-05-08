@@ -1706,10 +1706,10 @@ Needs review
 > Pages dictionary Type key does not have a simple String value.
 
 ### Details
-Needs review
+This error message and the error messages ([PDF-HUL-144](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-144) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-146)) are related. The Type of the Page in the Directory is not a Simple Object.
 
-* Type: Needs review
-* Source location: Needs review
+* Type: ErrorMessage
+* Source location: [PdfModule.java L1946](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1946)
 * Examples: Needed
 
 ### Impact
