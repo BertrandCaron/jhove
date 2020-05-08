@@ -1687,10 +1687,10 @@ Needs review
 > Pages dictionary has no Type key or it has a null value.
 
 ### Details
-Needs review
+This error message and the next two error messages ([PDF-HUL-145](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-145) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-146)) are related. They check the Pages in a Dictionary have the correct properties. PDF-HUL-144 is about Type key is missing or null.
 
-* Type: Needs review
-* Source location: Needs review
+* Type: ErrorMessage
+* Source location: [PdfModule.java L1945](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1945)
 * Examples: Needed
 
 ### Impact
