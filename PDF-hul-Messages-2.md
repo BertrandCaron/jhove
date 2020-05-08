@@ -696,8 +696,8 @@ Needs review
 One of the font entries returned when processing the "Fonts" resource dictionary was resolved but a non-dictionary object was returned.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L2201](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2201)
-* Examples: [1](https://www.dropbox.com/s/a8wrcishzih3vsv/SOM_44_lisa1.pdf?dl=0), [2](https://www.dropbox.com/s/02iqqfbrbvvb913/SOM_44_lisa7.pdf?dl=0)
+* Source location: [PdfModule.java 2513-L2515](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2513-L2515)
+* Examples: Needs examples
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.7.2
