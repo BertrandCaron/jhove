@@ -1555,8 +1555,8 @@ Needs review
 An end-of-file marker ("%%EOF") could not be found within the file's last 1024 bytes. This indicates truncates and can often be due to a PDF file being incompletely uploaded or downloaded.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L937](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L937)
-* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/567147525.pdf?version=1&modificationDate=1436357226000), [2](https://office365lds-my.sharepoint.com/personal/thorsted_ldschurch_org/_layouts/15/guestaccess.aspx?guestaccesstoken=zYWzyfORm0gJ0Pu%2f31BaiaG7BAjlquvsuo5Aq3pBGks%3d&docid=0e69ca93c8e6545e5937fd26c3d14403d&rev=1)
+* Source location: [PdfModule.java L1157-L1158](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1157-L1158)
+* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/567147525.pdf?version=1&modificationDate=1436357226000)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.4.4
@@ -1564,10 +1564,10 @@ An end-of-file marker ("%%EOF") could not be found within the file's last 1024 b
 
 
 ### Impact
-Needs review
+The file is incomplete.
 
 ### Remediation
-Needs review
+Needs to be supplied again
 
 
 ## PDF-HUL-139
