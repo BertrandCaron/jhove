@@ -1504,8 +1504,8 @@ Needs review
 Really an application level warning, there's nothing wrong with the PDF, just JHOVE's ability to report all of the details.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L614](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L614)
-* Examples: [1](http://www.redbooks.ibm.com/redpapers/pdfs/redp4120.pdf), [2](https://www.dropbox.com/s/ig6u3zdp4q628zq/SOM_47.pdf?dl=0), [3](https://www.dropbox.com/s/36hc94osv6hq77j/Oiguskantsleri_ylevaade%5B1%5D.28.09.06.pdf?dl=0)
+* Source location: [PdfModule.java L910-L911](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L910-L911)
+* Examples: [1](http://www.redbooks.ibm.com/redpapers/pdfs/redp4120.pdf)
 
 ### References
  - PDF 1.6: Needs review
@@ -1513,10 +1513,10 @@ Really an application level warning, there's nothing wrong with the PDF, just JH
 
 
 ### Impact
-Needs review
+No Impact, is an InfoMessage about jHove functionality
 
 ### Remediation
-Needs review
+No Remediation, is an InfoMessage about jHove functionality
 
 
 ## PDF-HUL-137
