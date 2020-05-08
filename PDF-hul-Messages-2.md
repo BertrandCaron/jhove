@@ -1285,10 +1285,10 @@ Needs review
 > Invalid outline dictionary item
 
 ### Details
-An outline item dictionary has a "Count" value but it's not an integer. This is required if the outline item has children, but JHOVE doesn;t check thi
+An outline item dictionary has a "Count" value but it's not an integer or is not a Simple Object. This is required if the outline item has children, but JHOVE doesn't check it child elements are available.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L3860](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3860)
+* Source location: [PdfModule.java L4015](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4015)
 * Examples: Needed
 
 ### References
