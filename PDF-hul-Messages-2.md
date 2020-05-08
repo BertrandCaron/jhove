@@ -1384,7 +1384,7 @@ Needs review
 Unexpected error while parsing an outline item. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L3954](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3954)
+* Source location: [PdfModule.java L4103](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4103)
 * Examples: Needed
 
 ### References
