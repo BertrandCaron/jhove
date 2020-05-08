@@ -1794,3 +1794,22 @@ Needs review
 
 ### Remediation
 Needs review
+
+## PDF-HUL-150
+
+### Message
+> Cross-reference stream must be a stream
+
+### Details
+The retrieved object must be a stream. This error can occur when the Trailer is parsed or when the Cross references are parsed.
+
+* Type: PdfInvalidException
+* Source location: [PdfModule.java L1257-L1258](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1257-L1258) and [PdfModule.java L1429-L1430](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1429-L1430)
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
