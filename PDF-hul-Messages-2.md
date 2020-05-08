@@ -1763,10 +1763,10 @@ Needs review
 > PDF minor version number is greater than 7.
 
 ### Details
-Needs review
+At the moment the latest version of PDF is version 1.7. The latest minor version is 7. It is defined in MAX_VALID_MAJOR_VERSION Constant.
 
-* Type: Needs review
-* Source location: Needs review
+* Type: ErrorMessage
+* Source location: [PdfModule.java L1046](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1046)
 * Examples: Needed
 
 ### Impact
