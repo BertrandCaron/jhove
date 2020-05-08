@@ -1216,7 +1216,7 @@ Needs review
 Unexpected error while parsing the document outline. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L3818](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3818)
+* Source location: [PdfModule.java L3979](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3979)
 * Examples: Needed
 
 ### References
