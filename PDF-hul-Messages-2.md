@@ -1564,10 +1564,10 @@ An end-of-file marker ("%%EOF") could not be found within the file's last 1024 b
 
 
 ### Impact
-The file is incomplete.
+The file is incomplete or extra information is added after the last EOF
 
 ### Remediation
-Needs to be supplied again
+Needs to be supplied again or extra information can be removed.
 
 
 ## PDF-HUL-139
