@@ -1312,7 +1312,7 @@ Needs review
 An outline dictionary's "Next" entry points to itself. This would cause a recursive loop so JHOVE warns and breaks out. The PDF 1.6 specification doesn't explicitly disallow this.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L3916](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3916)
+* Source location: [PdfModule.java L4068-L4069](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4068-L4069)
 * Examples: Needed
 
 ### References
