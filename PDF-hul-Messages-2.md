@@ -1477,10 +1477,10 @@ Needs review
 > Unexpected error in parsing font property
 
 ### Details
-A Java null pointer exception was caught, roughly equivalent to a missing and expected PDF object, when building the font property list.
+A Java null pointer exception was caught, roughly equivalent to a missing and expected PDF object, when building the font property list. Show Fonts or Maximum Verbosity needs to be configured to show this information.
 
-* Type: ErrorMessage
-* Source location: [PdfModule.java L610](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L610)
+* Type: ErrorMessage, NullPointerException
+* Source location: [PdfModule.java L905-L906](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L905-L906)
 * Examples: Needed
 
 ### References
