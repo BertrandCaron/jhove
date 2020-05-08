@@ -1530,7 +1530,7 @@ Should a file be classified as malformed if there is any non-zero data before th
 The implementation notes in the second accompanying PDF 1.6 reference has more to say about headers. The PDF 1.7 spec has no equivalent note.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L803](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L803)
+* Source location: [PdfModule.java L1041](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1041)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/CERN-2005-009.pdf?version=1&modificationDate=1472125536000)
 
 ### References
@@ -1540,10 +1540,10 @@ https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archiv
 
 
 ### Impact
-Needs review
+The file can't be identified as PDF and the version is unknown
 
 ### Remediation
-Needs review
+If extra information is added to the header, that extra information can be removed.
 
 
 ## PDF-HUL-138
@@ -1764,7 +1764,7 @@ Needs review
 ### Details
 At the moment the latest version of PDF is version 1.7. The latest minor version is 7. It is defined in MAX_VALID_MAJOR_VERSION Constant.
 
-* Type: ErrorMessage
+* Type: ErrorMessage, Not Valid
 * Source location: [PdfModule.java L1046](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1046)
 * Examples: Needed
 
