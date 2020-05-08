@@ -1455,8 +1455,8 @@ It may happen that after a "cure" there is no information about the creation dat
 ### Details
 Another check to prevent an endless loop when processing the cross references. This is flagged the current cross reference is the same as the previous one. The program logic is a little dark here involving state across a few member variables.
 
-* Type: ErrorMessage
-* Source location: [PdfModule.java L512](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L512)
+* Type: ErrorMessage, MalFormed
+* Source location: [PdfModule.java L827-L828](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L827-L828)
 * Examples: Needed
 
 ### References
