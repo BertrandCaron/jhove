@@ -721,22 +721,21 @@ Needs review
 > Fonts exist, but are not displayed; ...
 
 ### Details
-This is just a message to say that fon't information isn't been reported, not sure it;s an error message.
+This is just a message to say that font information is available but not reported. The configuration needs to be changed to see the font information.
 
 * Type: InfoMessage
 * Source location: [PdfModule.java L2213](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2213)
-* Examples: Needed
+* Examples: Not applicable, is jHove configuration
 
 ### References
- - PDF 1.6: Needs review
- - PDF 1.7: Needs review
-
+ - PDF 1.6: Not applicable, is jHove configuration
+ - PDF 1.7: Not applicable, is jHove configuration
 
 ### Impact
-Needs review
+No impact. This is because a configuration option prevent the reporting of font information.
 
 ### Remediation
-Needs review
+The configuration file can be [changed](http://jhove.openpreservation.org/modules/pdf/)to show fonts. The configuration contains: `<param>f</param>` to prevent the reporting of fonts.
 
 
 ## PDF-HUL-106
