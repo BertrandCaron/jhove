@@ -1405,11 +1405,11 @@ Needs review
 > Outlines exist, but are not displayed; ...
 
 ### Details
-This is just a message to say that outline information isn't been reported, not sure it;s an error message.
+This is just a message to say that outline information isn't been reported. It is information about the `[jHove configuration](http://jhove.openpreservation.org/modules/pdf/)`. If the parameter "o" is added the Document Outline will be suppressed: `<param>o</param>`.
 
 * Type: InfoMessage
 * Source location: [PdfModule.java L3975](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3975)
-* Examples: Needed
+* Examples: This is configuration option in jHove.
 
 ### References
  - PDF 1.6: Needs review
@@ -1417,10 +1417,10 @@ This is just a message to say that outline information isn't been reported, not 
 
 
 ### Impact
-Needs review
+No impact, this is a configuration option
 
 ### Remediation
-Needs review
+No remediation needed as this is a configuration option.
 
 
 ## PDF-HUL-133
