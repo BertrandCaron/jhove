@@ -1431,9 +1431,9 @@ Needs review
 ### Details
 A date found in a dictionary does not conform to the expected format. Dates specified in dictionaries should follow the format: (D:YYYYMMDDHHmmSSOHH'mm') (PDF 1.4 Spec page 100, section 3.8.2 "Dates")
 
-* Type: PdfInvalidException
-* Source location: [PdfModule.java L4074](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4074)
-* Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNU1BGNFo4OGlWZ1U/view?usp=sharing), [2](https://www.dropbox.com/s/37n9jcwzdwdubs7/KAM18lisa8.pdf?dl=0), [3](https://www.dropbox.com/s/39jszmusblyz61s/NotesPrint_riigi_teataja_2007_IIpoolaasta.pdf?dl=0)
+* Type: PdfInvalidException, ErrorMessage
+* Source location: [PdfModule.java L4227](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4227)
+* Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNU1BGNFo4OGlWZ1U/view?usp=sharing)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.8.3
