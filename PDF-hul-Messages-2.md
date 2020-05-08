@@ -1264,7 +1264,7 @@ Needs review
 An outline item dictionary has no "Parent" entry. This must be an indirect reference to the parent dictionary in the outline hierarchy.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L3854](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3854)
+* Source location: [PdfModule.java L4009](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4009)
 * Examples: Needed
 
 ### References
