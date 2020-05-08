@@ -1237,10 +1237,10 @@ Needs review
 > Invalid outline dictionary item
 
 ### Details
-An outline item dictionary has no "Title" value. This must be a text string.
+An outline item dictionary has no "Title" value.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L3846](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3846)
+* Source location: [PdfModule.java L4002](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4002)
 * Examples: Needed
 
 ### References
