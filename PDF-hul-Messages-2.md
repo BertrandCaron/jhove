@@ -904,22 +904,21 @@ Needs review
 > Page information is not displayed; ...
 
 ### Details
-This just informs the user that JHOVE has skipped storing and reporting the page level properties and that it can be re-enabled by config, not sure it's an error.
+This just informs the user that JHOVE has skipped storing and reporting the page level properties and that it can be re-enabled by config. If the parameter p is added in the configuration the Pages are ignored `<param>p</param>`
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L2670](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2670)
-* Examples: Needed
+* Source location: [PdfModule.java L2912-L2913](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2912-L2913)
+* Examples: Not applicable, this is a configuration option
 
 ### References
- - PDF 1.6: Needs review
- - PDF 1.7: Needs review
-
+ - PDF 1.6: Not applicable
+ - PDF 1.7: Not applicable
 
 ### Impact
-Needs review
+Not applicable, this is a configuration option
 
 ### Remediation
-Needs review
+Not applicable, this is a configuration option
 
 
 ## PDF-HUL-113
