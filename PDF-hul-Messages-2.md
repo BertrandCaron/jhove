@@ -798,12 +798,12 @@ Needs review
 ### Details
 An object stream dictionary has failed JHOVE's validity tests:
 - must have a "Type" entry which is the name: "ObjStm";
-- must have a count "N" entry thats an integer value; and
+- must have a count "N" entry that's an integer value; and
 - must have a first offset "First" entry that's an integer value.
-
+This error is probably never shown, as the error is catched in [PDF-HUL-110](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-110).
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2424](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2424)
+* Source location: [PdfModule.java L4383-L4384](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4383-L4384)
 * Examples: Needed
 
 ### References
