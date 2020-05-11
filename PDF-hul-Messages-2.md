@@ -1032,10 +1032,10 @@ Needs review
 > Invalid page dictionary
 
 ### Details
-Unexpected exception while parsing a page object'd dictionary. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type.
+Unexpected exception while parsing a page object 'd' dictionary. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2826](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2826)
+* Source location: [PdfModule.java L3054](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3054)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP247751_ReColl118253_eth-49437-01.pdf)
 
 ### References
