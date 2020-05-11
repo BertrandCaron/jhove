@@ -879,7 +879,7 @@ Needs review
 The document catalog dictionary has a "PageLabels" entry but there's no children in the number tree structure. JHOVE munges PDF's page labels and number tree concepts making this error trickier to interpret.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2635](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2635)
+* Source location: [PdfModule.java L2880-L2881](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2880-L2881)
 * Examples: Needed
 
 ### References
