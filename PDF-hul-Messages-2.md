@@ -855,8 +855,8 @@ An object stream dictionary has failed JHOVE's validity tests:
 
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2440](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2440)
-* Examples: [1](https://www.econstor.eu/obitstream/10419/50342/1/61501688X.pdf)
+* Source location: [PdfModule.java L4397](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4397)
+* Examples: Needed
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.4.6
