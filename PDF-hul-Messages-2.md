@@ -928,10 +928,10 @@ Needs review
 > Invalid page label info
 
 ### Details
-A general exception was caught when parsing a documenet's page labels to build JHOVE's page properties.
+A general exception was caught when parsing a document's page labels to build JHOVE's page properties.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2715](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2715)
+* Source location: [PdfModule.java L2952](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2952)
 * Examples: Needed
 
 ### References
