@@ -1056,11 +1056,11 @@ Needs review
 > Invalid page label sequence
 
 ### Details
-JHOVE has calculated a page position value of less than 1. PDF's page numbering consists of a number tree whose elements are labelling ranges stored as pdf dictionaries. JHOVE's logic around page label sequences is a little confusing, this seems to be an effort to  track a "natural" sequence number, that's checked against pages accumulated in other ranges. I don't believe that this error can be thrown as it's caught by the next general catch and changed to PDF-HUL-119.
+JHOVE has calculated a page position value of less than 1. PDF's page numbering consists of a number tree whose elements are labelling ranges stored as pdf dictionaries. JHOVE's logic around page label sequences is a little confusing, this seems to be an effort to  track a "natural" sequence number, that's checked against pages accumulated in other ranges. I don't believe that this error can be thrown as it's caught by the next general catch and changed to [PDF-HUL-119](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-119).
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L2873](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2873)
-* Examples: Needed
+* Source location: [PdfModule.java L3096](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3096)
+* Examples: See examples in [PDF-HUL-119](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-119)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.1
@@ -1084,10 +1084,10 @@ Needs review
 > Problem with page label structure
 
 ### Details
-Unexpected error while parsing the page label structure. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type.
+Unexpected error while parsing the page label structure. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type. This error is also shown when actually the problem is [PDF-HUL-118](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-118). All the Examples in this error are examples from this. The problem in these files are PDF-HUL-118, but instead PDF-HUL-119 is reported.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2921](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2921)
+* Source location: [PdfModule.java L3133](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3133)
 * Examples: [1](https://www.econstor.eu/obitstream/10419/49620/1/32932439X.pdf), [2](http://wiki.opf-labs.org/download/attachments/101613571/SIP110025_ReColl-66015_eth-24328-01.pdf), [3](http://wiki.opf-labs.org/download/attachments/101613571/SIP132254_ReColl-147838_eth-26921-01.pdf)
 
 ### References
