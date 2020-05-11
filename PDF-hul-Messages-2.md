@@ -1112,11 +1112,11 @@ Needs review
 > Annotation dictionary missing required type (S) entry
 
 ### Details
-An annotation dictionary contains an action dictionary ("A") which is missing its subtype entry ("S"). The subtype entry is necesssary for determining which kind of action to perform when the annotation is activated.
+An annotation dictionary contains an action dictionary ("A") which is missing its subtype entry ("S"). The subtype entry is necessary for determining which kind of action to perform when the annotation is activated.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L3077](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3077)
-* Examples: [1](https://drive.google.com/open?id=0BzmAJJIyoZ9xRlFfdGRlN1hiaGc), [2](http://wiki.opf-labs.org/download/attachments/101613571/pp_821.pdf)
+* Source location: [PdfModule.java L3278-L3279](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3278-L3279)
+* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/pp_821.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 8.4.1
