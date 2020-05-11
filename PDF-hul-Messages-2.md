@@ -982,11 +982,11 @@ Needs review
 > Annotations exist, but are not displayed; ...
 
 ### Details
-This just informs the user that JHOVE has skipped storing and reporting the annotation level properties and that it can be re-enabled by config, not sure it's an error.
+This just informs the user that JHOVE has skipped storing and reporting the annotation level properties and that it can be re-enabled by config. This is not an error, but a configuration option. By adding: `<param>a</param>` to the configuration of JHOVE, the annotations are not displayed.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L2748](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2748)
-* Examples: Needed
+* Source location: [PdfModule.java L2985-L2986](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2985-L2986)
+* Examples: Not applicable. This is a configuration option.
 
 ### References
  - PDF 1.6: Needs review
@@ -994,11 +994,10 @@ This just informs the user that JHOVE has skipped storing and reporting the anno
 
 
 ### Impact
-Needs review
+Not applicable, this is a configuration option
 
 ### Remediation
-Needs review
-
+Not applicable, this is a configuration option
 
 ## PDF-HUL-116
 
