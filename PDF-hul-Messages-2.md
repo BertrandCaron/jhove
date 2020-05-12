@@ -642,7 +642,7 @@ Needs review
 Unexpected error while parsing a page objects external content streams. This is a single stream or an array of streams that is the value of the optional "Contents" key.
 
 * Type: ErrorMessage
-* Source location: [PdfModule.java L1836](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1836)
+* Source location: [PdfModule.java L2107-L2112](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2107-L2112)
 * Examples: Needed
 
 ### References
