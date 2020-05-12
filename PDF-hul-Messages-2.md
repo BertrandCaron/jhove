@@ -374,8 +374,8 @@ Needs review
 The document catalogue's "Dests" entry references an object which is not a dictionary. The optional "Dests" entry is expected to contain a dictionary of the document's destination objects.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1475](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1475)
-* Examples: [1](https://drive.google.com/open?id=0BzmAJJIyoZ9xUHRudTU5WTRZZXc)
+* Source location: [PdfModule.java L1719](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1719)
+* Examples: Needed
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.1
