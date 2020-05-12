@@ -545,8 +545,8 @@ Example PDF we (@BL) have so far has turned out to be a bug in source code from 
 ### Details
 Unexpected error while parsing the document page tree.
 
-* Type: ErrorMessage
-* Source location: [PdfModule.java L1700](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1700)
+* Type: ErrorMessage, Malformed
+* Source location: [PdfModule.java L1968-L1973](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1968-L1973)
 * Examples: Needed
 
 ### References
