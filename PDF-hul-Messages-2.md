@@ -326,7 +326,7 @@ Needs review
 The document catalogue dictionary's "Names" value is a reference to a non-dictionary object.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1457](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1457)
+* Source location: [PdfModule.java L1702](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1702)
 * Examples: Needed
 
 ### References
