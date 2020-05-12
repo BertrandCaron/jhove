@@ -398,8 +398,8 @@ Needs review
 An unexpected error occurred while retrieving the document catalogue's destinations dictionary ("Dests").
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L1479](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1479)
-* Examples: [1](https://drive.google.com/open?id=0BzmAJJIyoZ9xOS1HQWpKUWNsakE)
+* Source location: [PdfModule.java L1723](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1723)
+* Examples: Needed
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.1
