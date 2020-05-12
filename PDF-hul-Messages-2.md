@@ -747,7 +747,7 @@ The configuration file can be [changed](http://jhove.openpreservation.org/module
 Some fonts in the document are missing / unreadable in the file. Needs review.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L2231](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2231)
+* Source location: [PdfModule.java L2544-L2545](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2544-L2545)
 * Examples: Needed
 
 ### References
