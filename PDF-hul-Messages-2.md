@@ -825,6 +825,7 @@ Needs review
 
 ### Details
 An error ("ZipException") occurred while decompressing an object stream. \<See explanation for Object Streams: Object streams are stream objects (a dictionary followed by a stream of bytes) which contain other indirect objects. Placing objects in a stream allows them to be compressed with one or more filters, optimizing file sizes.> As of October 2016, this module only supports decompressing object streams with "FlateDecode" filters, although this exception can be thrown even when FlateDecode filters are being used. Needs further investigation.
+Beware if encryption is used this Error is also show. All examples are examples of encrypted documents.
 
 * Type: PdfMalformedException
 * Source location: [PdfModule.java L4392](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4392)
