@@ -618,7 +618,7 @@ Needs review
 An exception was caught while parsing an XMP block embedded in the PDF.
 
 * Type: ErrorMessage, Invalid
-* Source location: [PdfModule.java L1791](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1791)
+* Source location: [PdfModule.java L2062-L2063](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2062-L2063)
 * Examples: Needed
 
 ### References
@@ -641,7 +641,7 @@ Needs review
 ### Details
 Unexpected error while parsing a page objects external content streams. This is a single stream or an array of streams that is the value of the optional "Contents" key.
 
-* Type: ErrorMessage
+* Type: ErrorMessage, Malformed
 * Source location: [PdfModule.java L2107-L2112](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2107-L2112)
 * Examples: Needed
 
@@ -665,7 +665,7 @@ Needs review
 ### Details
 Unexpected error while parsing and analysing images embedded in the PDF. This a a very general catch and might benefit from been more specific, with more errors and more descriptive messages.
 
-* Type: ErrorMessage
+* Type: ErrorMessage, Malformed
 * Source location: [PdfModule.java L2457-L2462](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2457-L2462)
 * Examples: Needed
 
