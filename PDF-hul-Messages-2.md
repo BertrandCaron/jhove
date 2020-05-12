@@ -520,7 +520,7 @@ Needs review
 The "Pages" reference from the document catalog was resolved to a non-dictionary object. This must resolve to a dictionary representing the page tree element that is the tree's root node.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L1692](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1692)
+* Source location: [PdfModule.java L1938](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1938)
 * Examples: Needed
 
 ### References
