@@ -446,7 +446,7 @@ Needs review
 Unexpected error while parsing the document information dictionary, most likely a missing (null) object or object of the wrong type encountered while resolving the dictionary object or processing its entries.
 
 * Type: ErrorMessage
-* Source location: [PdfModule.java L1676](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1676)
+* Source location: [PdfModule.java L1920-L1925](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1920-L1925)
 * Examples: Needed
 
 ### References
