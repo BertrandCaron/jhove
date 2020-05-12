@@ -422,7 +422,7 @@ Needs review
 The "V" entry of an encryption dictionary, which specifies the encryption algorithm used, has an invalid value. It must be a number value from 0-4 inclusive. Note that the PDF 1.7 specification seems to disbar the "3" option also.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1557](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1557)
+* Source location: [PdfModule.java L1797-L1798](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1797-L1798)
 * Examples: Needed
 
 ### References
