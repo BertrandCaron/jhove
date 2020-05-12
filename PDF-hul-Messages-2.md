@@ -775,7 +775,7 @@ Create the original document with embedded fonts, as in PDF/A-compliant files. I
 This occurs when an arbitary recursion limit, of thirty times, has occurred when searching for an object in a stream.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2390](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2390)
+* Source location: [PdfModule.java L2669](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2669)
 * Examples: Needed
 
 ### References
