@@ -666,7 +666,7 @@ Needs review
 Unexpected error while parsing and analysing images embedded in the PDF. This a a very general catch and might benefit from been more specific, with more errors and more descriptive messages.
 
 * Type: ErrorMessage
-* Source location: [PdfModule.java L2146](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2146)
+* Source location: [PdfModule.java L2457-L2462](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2457-L2462)
 * Examples: Needed
 
 ### References
