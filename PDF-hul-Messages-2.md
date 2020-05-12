@@ -248,10 +248,10 @@ Needs review
 > No document catalog dictionary
 
 ### Details
-The trailer contains a document catalogue entry ("Root") but it cannot be resolved. \<Insert document catalogue explanation here.>
+The trailer contains a document catalogue entry ("Root") but it cannot be resolved. The Catalog of the document contains all the references to other objects for example contents, outline, named destinations.
 
 * Type: Error Message, Malformed
-* Source location: [PdfModule.java L1355](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1355)
+* Source location: [PdfModule.java L1580](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1580)
 * Examples: Needed
 
 ### References
