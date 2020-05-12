@@ -350,7 +350,7 @@ Needs review
 An unexpected error occurred while retrieving the document catalogue's Names dictionary ("Names").
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L1461](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1461)
+* Source location: [PdfModule.java L1706](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1706)
 * Examples: Needed
 
 ### References
