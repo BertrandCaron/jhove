@@ -696,7 +696,7 @@ Needs review
 One of the font entries returned when processing the "Fonts" resource dictionary was resolved but a non-dictionary object was returned.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java 2513-L2515](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2513-L2515)
+* Source location: [PdfModule.java L2513-L2515](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2513-L2515)
 * Examples: Needs examples
 
 ### References
