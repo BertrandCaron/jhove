@@ -570,7 +570,7 @@ Needs review
 Unexpected error while parsing the document page label tree.
 
 * Type: ErrorMessage
-* Source location: [PdfModule.java L1732](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1732)
+* Source location: [PdfModule.java L1998-L2003](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1998-L2003)
 * Examples: Needed
 
 ### References
