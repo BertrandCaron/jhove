@@ -299,10 +299,10 @@ Needs review
 > Invalid Version in document catalog
 
 ### Details
-The document's PDF version, from EITHER the file header or document catalog dictionary, cannot be recognised as a number, this doesn't apply to the docuement catalog alone, misleading and needs review, or at least MUST be sure that the header version parses properly.
+The document's PDF version, from EITHER the file header or document catalog dictionary, cannot be recognised as a number, this doesn't apply to the document catalog alone, misleading and needs review, or at least MUST be sure that the header version parses properly.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1430](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1430)
+* Source location: [PdfModule.java L1677](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1677)
 * Examples: Needed
 
 ### References
