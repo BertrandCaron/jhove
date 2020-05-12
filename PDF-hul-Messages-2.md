@@ -470,7 +470,7 @@ Needs review
 The document catalogue is missing its mandatory "Pages" entry. The entry must be a reference to the page tree node dictionary that is root of the document's page tree.
 
 * Type: PdfInvalidException
-* Source location: Needs review
+* Source location: [PdfModule.java L1933](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1933)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP253613_ReColl-154468_eth-8330-02.pdf)
 
 ### References
