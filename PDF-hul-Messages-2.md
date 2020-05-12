@@ -278,7 +278,7 @@ The PDF version specified in the header is different from the version specified 
 This is OK by specification and the higher PDF version "wins" in terms of the version of the specification the document conforms to.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L1418](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1418)
+* Source location: [PdfModule.java L1665-L1669](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1665-L1669)
 * Examples: Needed
 
 ### References
