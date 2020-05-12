@@ -594,7 +594,7 @@ Needs review
 There was a character encoding issue when parsing the XMP metadata embedded in the PDF. This error is a catch around an initial SAX error that's analysed for an encoding value which is used in a second attempt to open the file. It's not clear how often this error is triggered, so I added an info log statement.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1777](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1777)
+* Source location: [PdfModule.java L1777](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2046-L2047)
 * Examples: Needed
 
 ### References
