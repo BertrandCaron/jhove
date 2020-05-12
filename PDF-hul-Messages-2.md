@@ -471,7 +471,7 @@ The document catalogue is missing its mandatory "Pages" entry. The entry must be
 
 * Type: PdfInvalidException
 * Source location: Needs review
-* Examples: Needed
+* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP253613_ReColl-154468_eth-8330-02.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.1
@@ -493,9 +493,9 @@ Needs review
 ### Details
 There was an error parsing the documents page tree.
 
-* Type: PdfInvalidException
-* Source location: [PdfModule.java L1687](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1687)
-* Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCZ0wyOWxWSHk2Zlk), [2](http://wiki.opf-labs.org/download/attachments/101613571/SIP253613_ReColl-154468_eth-8330-02.pdf)
+* Type: PdfInvalidException, Malformed
+* Source location: [PdfModule.java L1962-L1963](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1962-L1963)
+* Examples: Needed
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.2
@@ -1627,7 +1627,7 @@ The document catalog dictionary object must have key called type with the value 
 
 * Type: ErrorMessage, MalFormed
 * Source location: [PdfModule.java L1598](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1598)
-* Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_006_document-catalog-wrong-type-key.pdf)
+* Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_006_document-catalog-wrong-type-key.pdf), [2](https://drive.google.com/open?id=0Bxn2YxzZ-3xCZ0wyOWxWSHk2Zlk)
 
 ### References
  - PDF 1.6: Needs review
