@@ -1816,10 +1816,10 @@ Needs review
 > Root entry missing in trailer dictionary
 
 ### Details
-The "Root" entry in the trailer is missing. The "Root" entry should have as its value the document's catalog dictionary, which is where you will start in order to find all the objects in the PDF.
+The "Root" entry in the trailer is missing. The "Root" entry should have as its value the document's catalog dictionary, which is where you will start in order to find all the objects in the PDF. See also [PDF-HUL-85](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-85).
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1114](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1114)
+* Source location: [PdfModule.java L1341-L1342](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1341-L1342)
 * Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCdi10RGM4Y3lqdVU)
 
 ### References
