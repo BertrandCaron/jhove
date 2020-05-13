@@ -1648,10 +1648,10 @@ Needs review
 > Invalid cross-reference table
 
 ### Details
-An invalid first object id in a cross reference table. The first line of a "xref" cross reference trailer must be two numeric literals, separated by a space. The first is the id of the first object in the table. This must be a numeric type and it's not.
+An invalid first object id in a cross reference table. The first line of a "xref" cross reference trailer must be two numeric literals, separated by a space. The first is the id of the first object in the table. This must be a numeric type and it's not. This means the parsing of the trailer fails and this leads to a problem when parsing the rest of the document. With this error also [PDF-HUL-85](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-85) is associated because the document root isn't found.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1020](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1020)
+* Source location: [PdfModule.java L1240-L1241](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1240-L1241)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP179680_ReColl-146381_eth-25337-01.pdf)
 
 ### References
