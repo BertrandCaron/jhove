@@ -221,11 +221,11 @@ Needs review
 > No document catalog dictionary
 
 ### Details
-The trailer has no document catalogue entry ("Root") or a trailer was not found. \<Insert document catalogue explanation here.>
-JHOVE's approach to the document catalog is a little scattergun. Specifically here the reference to the document catalog is null. It's not clear that this can be reached as similar checks are done when parsing the trailer earlier.
+The trailer has no document catalogue entry ("Root") or a trailer was not found. The Catalog of the document contains all the references to other objects for example contents, outline, named destinations.
+JHOVE's approach to the document catalog is a little scattergun. Specifically here the reference to the document catalog is null. As one of the example shows this error can be reached, even when similar parsing in the trailer is done earlier.
 
 * Type: Error Message, Malformed
-* Source location: [PdfModule.java L1339](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1339)
+* Source location: [PdfModule.java L1568](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1568)
 * Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCdi10RGM4Y3lqdVU), [2](http://wiki.opf-labs.org/download/attachments/101613571/SIP179680_ReColl-146381_eth-25337-01.pdf)
 
 ### References
