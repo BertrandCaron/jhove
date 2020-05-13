@@ -222,7 +222,7 @@ Needs review
 
 ### Details
 The trailer has no document catalogue entry ("Root") or a trailer was not found. The Catalog of the document contains all the references to other objects for example contents, outline, named destinations.
-JHOVE's approach to the document catalog is a little scattergun. Specifically here the reference to the document catalog is null. As one of the example shows this error can be reached, even when similar parsing in the trailer is done earlier.
+JHOVE's approach to the document catalog is a little scattergun. Specifically here the reference to the document catalog is null. As the examples show this error can be reached, even when similar parsing in the trailer is done earlier. When the parsing of the cross-reference fails this error is reached (Example 2) or when the Root is missing after reaching [PDF-HUL-75](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-75) the parsing continues until this error.
 
 * Type: Error Message, Malformed
 * Source location: [PdfModule.java L1568](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1568)
