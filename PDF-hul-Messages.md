@@ -866,8 +866,8 @@ Needs review
 PDF Parser's next token (from getToken) is not a Numeric (class) Token, This is the object generation number and must be an integer. Cause in example file is missing byte in comment line after header which means that offset references in XREF are off by 1 affecting position of tokenizer. Parser.readObjectDef first reads ObjNumTok. If this object number is a double digit, the off by 1 error (in this example) only reads the tail portion of the object number (i.e. it still gets a numeric obj number, even though it's wrong). Problem occurs in this case when obj number is single digit, so no object number is read.
 
 * Type: PdfInvalidException
-* Source location: [Parser.java L226](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L226)
-* Examples: [1](https://github.com/openpreserve/format-corpus/blob/master/pdfCabinetOfHorrors/corruptionOneByteMissing.pdf)
+* Source location: [Parser.java L214](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L214)
+* Examples: [1](https://github.com/openpreserve/format-corpus/blob/master/pdfCabinetOfHorrors/corruptionOneByteMissing.pdf), [2](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/bad26.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.2.9
