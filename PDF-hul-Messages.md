@@ -842,8 +842,8 @@ Needs review
 A non numeric object ID was returned when parsing the indirect object definition. The first token must be an integer object ID.
 
 * Type: PdfInvalidException
-* Source location: [Parser.java L208](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L208)
-* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP253613_ReColl-154468_eth-8330-02.pdf)
+* Source location: [Parser.java L197](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L197)
+* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP253613_ReColl-154468_eth-8330-02.pdf), [2](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/bad25.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.2.9
