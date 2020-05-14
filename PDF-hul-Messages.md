@@ -32,8 +32,8 @@ Needs review
 An unexpected object type was returned when resolving a destination's page reference to a page. In this case the orignal destination object was an array or dictionary that resolved to an array but didn't. A destination object is expected to be an array containing a page reference, a dictionary containing such an array, or a name object leading to either of these objects.
 
 * Type: PdfInvalidException
-* Source location: Needs review
-* Examples: [1](https://github.com/behnam2014/ssoar-gold-standard/blob/master/1-German_papers_with_reference_section_at_end_of_paper_first_group/1-pdfs/11448.pdf)
+* Source location: https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Destination.java#L93
+* Examples: [1](https://github.com/behnam2014/ssoar-gold-standard/blob/master/1-German_papers_with_reference_section_at_end_of_paper_first_group/1-pdfs/11448.pdf), [2](https://github.com/behnam2014/ssoar-gold-standard/blob/master/2-English_papers_with_reference_section_at_end_of_paper/1-pdfs/11218.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 8.2.1
