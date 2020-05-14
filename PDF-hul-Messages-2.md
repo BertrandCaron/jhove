@@ -279,7 +279,7 @@ This is OK by specification and the higher PDF version "wins" in terms of the ve
 
 * Type: InfoMessage
 * Source location: [PdfModule.java L1665-L1669](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1665-L1669)
-* Examples: Needed
+* Examples: [1](https://github.com/behnam2014/ssoar-gold-standard/blob/master/1-German_papers_with_reference_section_at_end_of_paper_first_group/1-pdfs/11448.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.1
