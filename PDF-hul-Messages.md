@@ -648,8 +648,8 @@ Needs review
 The value retrieved for a page object's "Contents" key is not a content stream or an array.
 
 * Type: PdfInvalidException
-* Source location: [PageObject.java L79](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L79)
-* Examples: Needed
+* Source location: [PageObject.java L187](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L187)
+* Examples: [1](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/bad24.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.2
