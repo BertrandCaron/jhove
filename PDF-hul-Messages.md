@@ -693,11 +693,11 @@ Needs review
 > Invalid page tree node
 
 ### Details
-A general exception was caugt when processing a page tree. Page tree node must include the entries "Type", "Parent", "Kids", and "Count" to be valid.
+A general exception was caught when processing a page tree. Page tree node must include the entries "Type", "Parent", "Kids", and "Count" to be valid.
 
 * Type: PdfInvalidException
-* Source location: [PageTreeNode.java L138](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageTreeNode.java#L138)
-* Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNU1BGNFo4OGlWZ1U/view?usp=sharing)
+* Source location: [PageTreeNode.java L131](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageTreeNode.java#L131)
+* Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNU1BGNFo4OGlWZ1U/view?usp=sharing), [2](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/bad34.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.2
