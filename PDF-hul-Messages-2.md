@@ -1432,7 +1432,7 @@ A date found in a dictionary does not conform to the expected format. Dates spec
 
 * Type: PdfInvalidException, ErrorMessage
 * Source location: [PdfModule.java L4227](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4227)
-* Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNU1BGNFo4OGlWZ1U/view?usp=sharing), [2](https://github.com/angea/PDF101/blob/master/handcoded/102_A-vectorized.pdf)
+* Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNU1BGNFo4OGlWZ1U/view?usp=sharing), [2](https://github.com/angea/PDF101/blob/master/handcoded/102_A-vectorized.pdf), [3](https://github.com/mozilla/pdf.js/blob/master/test/pdfs/bug1146106.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.8.3
