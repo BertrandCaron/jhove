@@ -419,15 +419,16 @@ Needs review
 > Invalid algorithm value in encryption dictionary
 
 ### Details
-The "V" entry of an encryption dictionary, which specifies the encryption algorithm used, has an invalid value. It must be a number value from 0-4 inclusive. Note that the PDF 1.7 specification seems to disbar the "3" option also.
+The "V" entry of an encryption dictionary, which specifies the encryption algorithm used, has an invalid value. It must be a number value from 0-4 inclusive. Note that the PDF 1.7 specification seems to disbar the "3" option also. From PDF extension level 3 onward a new value number 5 is added (for the algorithm AESV3)
 
 * Type: PdfInvalidException
 * Source location: [PdfModule.java L1797-L1798](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1797-L1798)
-* Examples: Needed
+* Examples: Example with V value of 5: [1](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/copied-positive-P.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.1
  - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.7.2
+- Adobe® Supplement to the ISO 32000: https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/adobe_supplement_iso32000.pdf | 3.5.2
 
 
 ### Impact
