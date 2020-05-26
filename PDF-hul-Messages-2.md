@@ -1787,7 +1787,7 @@ This error is never reported in the output, because the Message is included with
 
 * Type: PdfInvalidException
 * Source location: [PdfModule.java L4167-L4172](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4167-L4172)
-* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP110204_ReColl-124480_1-s2.0-S0370269317301144-main.pdf)
+* Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP110204_ReColl-124480_1-s2.0-S0370269317301144-main.pdf), [2 see Isartor test suite manual.pdf](https://www.pdfa.org/isartor-test-suite-terms-of-use-download/)
 
 ### Impact
 Needs review
