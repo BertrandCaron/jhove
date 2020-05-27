@@ -1700,7 +1700,7 @@ A cross reference streams dictionary doesn't contain the root entry required by 
 
 * Type: PdfInvalidException
 * Source location: [PdfModule.java L1035](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1035)
-* Examples: Needed
+* Examples: [1](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/issue-106.pdf)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.4.7
