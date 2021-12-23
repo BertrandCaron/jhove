@@ -145,13 +145,7 @@ Needs review
 * Examples: Needed
 
 ### Impact
-When this error is raised for a well-formed but not valid file it typically hints at an uncommon but not necessarily broken file structure. From the JHOVE documentation:
-
-    A file which consists of a JPEG data stream, but does not contain the required segments for a JFIF, SPIFF, Exif, JTIP, or JPEG-LS file is considered well-formed but not valid.
-
-In particular, the most common JPEG file formats JFIF and Exif expect a file to start with the hex sequence ffd8 ffe0 (SOI + APP0) or ffd8 ffe1 (SOI + APP1), respectively. However, the original JPEG specification (ITU-T Rec. T.81, Annex B) allows other data immediately after the SOI marker (e.g., a DQT marker) as well. That may not be in line with one of the abovementioned formats though which restrict the file structure in one way or another, leading to this error.
-
-So as long as a file with this error opens correctly in a viewer (better yet, in several different viewers) and has no other errors it may just be an uncommon JPEG variant, making the final verdict a file format policy question.
+Needs review
 
 ### Remediation
 Needs review
@@ -170,10 +164,19 @@ Needs review
 * Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCVlFpNldDb2FPRFk)
 
 ### Impact
-Needs review
+When this error is raised for a well-formed but not valid file it typically hints at an uncommon but not necessarily broken file structure. From the [JHOVE documentation](https://jhove.openpreservation.org/modules/jpeg/):
+> A file which consists of a JPEG data stream, but does not contain the required segments for a JFIF, SPIFF, Exif, JTIP, or JPEG-LS file is considered well-formed but not valid.
+
+In particular, the most common JPEG file formats JFIF and Exif expect a file to start with the hex sequence `ffd8 ffe0` (SOI + APP0) or `ffd8 ffe1` (SOI + APP1), respectively. However, the original JPEG specification ([ITU-T ](https://www.w3.org/Graphics/JPEG/itu-t81.pdf) T.81, Annex B) allows other data immediately after the SOI marker (e.g., a DQT marker) as well. That may not be in line with one of the abovementioned formats though which restrict the file structure in one way or another, leading to this error.
+
+So as long as a file with this error opens correctly in a viewer (better yet, in several different viewers) and has no other errors it may just be an uncommon JPEG variant, making the final verdict a file format policy question.
 
 ### Remediation
-Needs review
+As long as this is the only error in a file one of the following measures may be appropriate:
+
+* Ignoring the error i.e., accepting the file format although it is (very) uncommon.
+* Converting it to another, more common JPEG format like JFIF. (TODO With which tool?)
+* Adding an APP0 segment like ffe0 0010 4a46494600 0102 00 0001 0001 00 00 (must be adapted to the concrete file!) after the SOI marker to turn the file into a JFIF file. However, this is adventurous at best; don't try this at home!
 
 
 ## JPEG-HUL-10
