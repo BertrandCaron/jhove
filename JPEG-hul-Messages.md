@@ -145,7 +145,13 @@ Needs review
 * Examples: Needed
 
 ### Impact
-Needs review
+When this error is raised for a well-formed but not valid file it typically hints at an uncommon but not necessarily broken file structure. From the JHOVE documentation:
+
+    A file which consists of a JPEG data stream, but does not contain the required segments for a JFIF, SPIFF, Exif, JTIP, or JPEG-LS file is considered well-formed but not valid.
+
+In particular, the most common JPEG file formats JFIF and Exif expect a file to start with the hex sequence ffd8 ffe0 (SOI + APP0) or ffd8 ffe1 (SOI + APP1), respectively. However, the original JPEG specification (ITU-T Rec. T.81, Annex B) allows other data immediately after the SOI marker (e.g., a DQT marker) as well. That may not be in line with one of the abovementioned formats though which restrict the file structure in one way or another, leading to this error.
+
+So as long as a file with this error opens correctly in a viewer (better yet, in several different viewers) and has no other errors it may just be an uncommon JPEG variant, making the final verdict a file format policy question.
 
 ### Remediation
 Needs review
