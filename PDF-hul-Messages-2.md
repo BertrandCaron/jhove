@@ -1813,3 +1813,38 @@ Needs review
 ### Remediation
 Needs review
 
+## PDF-HUL-151
+
+### Message
+> Unexpected error occurred while attempting to read the cross-reference table
+
+### Details
+A catch all error for the cross-reference table.
+
+* Type: Exception
+* Source location: Needs to be added after pull request approval
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+## PDF-HUL-152
+
+### Message
+> Encrypt dictionary has no OE key or it has a null value
+
+### Details
+OE key is a manditory key when using an encrupted dictionary.
+
+* Type: Exception
+* Source location: Needs to be added after pull request approval
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
