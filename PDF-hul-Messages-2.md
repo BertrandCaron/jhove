@@ -1837,9 +1837,45 @@ Needs review
 > Encrypt dictionary has no OE key or it has a null value
 
 ### Details
-OE key is a manditory key when using an encrupted dictionary.
+OE key is a manditory key when using an encrypted dictionary. This is part of a supplement of PDF specification for ISO 32000. According to the [documentation](https://web.archive.org/web/20220306152229/https://www.adobe.com/content/dam/acom/en/devnet/pdf/adobe_supplement_iso32000.pdf), it is based on owner and user passwords and it is used in computing encryption key.
 
-* Type: Exception
+* Type: PdfInvalidException
+* Source location: Needs to be added after pull request approval
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+## PDF-HUL-153
+
+### Message
+> Encrypt dictionary has no UE key or it has a null value
+
+### Details
+UE key is a manditory key when using an encrypted dictionary. This is part of a supplement of PDF specification for ISO 32000. According to the [documentation](https://web.archive.org/web/20220306152229/https://www.adobe.com/content/dam/acom/en/devnet/pdf/adobe_supplement_iso32000.pdf), it is based on user passwords and it is used in computing encryption key.
+
+* Type: PdfInvalidException
+* Source location: Needs to be added after pull request approval
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+## PDF-HUL-154
+
+### Message
+> Unknown Developer Prefix
+
+### Details
+The Extension information in PDF Specification (ISO 32000) has information about developer key of the extension. The Developer Key is manditory and needs to be included in the [specified list](https://github.com/adobe/pdf-names-list).
+
+* Type: Error Message
 * Source location: Needs to be added after pull request approval
 * Examples: Needed
 
