@@ -66,7 +66,7 @@ TIFF 6.0 Specification, page 15: value offsets are "expected" to point to values
 
 Storing data at word and byte boundaries allows CPUs to more efficiently read and process the data. When it is unaligned, CPUs can require additional attempts at reading the data.
 
-* Type: ErrorMessage or InfoMessage (configurable)
+* Type: ErrorMessage or InfoMessage ([configurable](https://jhove.openpreservation.org/modules/tiff/))
 * Source location: [IFD.java L309](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L309)
 * Examples: [1](https://www.rawsamples.ch/raws/samsung/RAW_SAMSUNG_%20WB2000%20.SRW)
 
