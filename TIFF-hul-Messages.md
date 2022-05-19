@@ -62,14 +62,16 @@ Needs review
 > Value offset not word aligned: \<value>
 
 ### Details
-TIFF 6.0 Specification, p. 30: Some values need to be word-aligned or even double-word-aligned.
+TIFF 6.0 Specification, page 15: value offsets are "expected" to point to values which begin on word boundaries. Page 30: "Rows must begin on byte boundaries."
 
-* Type: InfoMessage
+Storing data at word and byte boundaries allows CPUs to more efficiently read and process the data. When it is unaligned, CPUs can require additional attempts at reading the data.
+
+* Type: ErrorMessage or InfoMessage (configurable)
 * Source location: [IFD.java L309](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L309)
 * Examples: [1](https://www.rawsamples.ch/raws/samsung/RAW_SAMSUNG_%20WB2000%20.SRW)
 
 ### Impact
-Needs review
+Systems may suffer a performance penalty while reading or processing the TIFF. The penalty will depend on the architecture of the individual system, which data in the TIFF is unaligned, and how much there is.
 
 ### Remediation
 Needs review
