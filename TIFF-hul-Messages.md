@@ -71,7 +71,7 @@ Storing data at word and byte boundaries allows CPUs to more efficiently read an
 * Examples: [1](https://www.rawsamples.ch/raws/samsung/RAW_SAMSUNG_%20WB2000%20.SRW)
 
 ### Impact
-Systems may suffer a performance penalty while reading or processing the TIFF. The penalty will depend on the architecture of the individual system, which data in the TIFF is unaligned, and how much there is.
+Systems may suffer a performance penalty while reading or processing the TIFF. The penalty will depend on the architecture of the individual system, which data in the TIFF is unaligned, and how much of it there is.
 
 ### Remediation
 Needs review
@@ -1109,14 +1109,16 @@ Needs review
 > IFD offset not word-aligned: \<next>
 
 ### Details
-Needs review
+TIFF 6.0 Specification, page 13: "The [first IFD] may be at any location in the file after the header but _must begin on a word boundary_."
+
+Storing data at word boundaries allows CPUs to more efficiently read and process the data. When it is unaligned, CPUs can require additional attempts at reading the data.
 
 * Type: TiffException
 * Source location: [TiffModule.java L1081](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1081)
 * Examples: Needed
 
 ### Impact
-Needs review
+Systems may suffer a performance penalty while reading or processing the TIFF. The penalty will depend on the architecture of the individual system, which data in the TIFF is unaligned, and how much of it there is.
 
 ### Remediation
 Needs review
