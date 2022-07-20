@@ -1884,4 +1884,4 @@ The impact is not large, because this is part of the extension support in PDF. A
 The second possibility is that the Developer Prefix information is not up-to-date. The table cited above needs to be updated.
 
 ### Remediation
-Update the Developer Prefix table in jHove.
+Update the Developer Prefix table in jHove
