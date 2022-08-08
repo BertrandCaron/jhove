@@ -1442,7 +1442,7 @@ A date found in a dictionary does not conform to the expected format. Dates spec
 
 
 ### Impact
-Needs review
+Minor. This is "just" bad formatting in metadata. It violates the specification and possibly signals a useless timestamp in metadata, but usually won't keep the file from being displayed.
 
 ### Remediation
 It may happen that after a "cure" there is no information about the creation date any more, if there are no XMP metadata in the original PDF. The date may be written poorly enough that some tools cannot recognize the date and so do not translate it into the new/corrected PDF.
