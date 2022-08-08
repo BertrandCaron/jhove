@@ -164,11 +164,20 @@ Needs review
 * Examples: Needed
 
 ### Impact
-Needs review
+It depends, from minor to severe.
+
+A GIF file must end with the so-called Trailer, a single byte `0x3b` (see the [GIF specification](https://www.w3.org/Graphics/GIF/spec-gif89a.txt)). This error message indicates that the trailer byte is missing.
+
+If *only* the trailer byte is missing (e.g., because the GIF file was created by buggy software that did not add it) most viewers will still display the file without complaints. Further more, the trailer byte can then easily be added, fixing the error (see below).
+
+If more than the trailer byte is missing (e.g., because the file was damaged during a transfer) it may be hard or even impossible to repair it, depending on how much is missing.
+
+NB, since the PRONOM signatures for GIF (fmt/3 and fmt/4) rely on the trailer byte as well PRONOM based file format identification will return Unknown for files with this error.
 
 ### Remediation
-Needs review
+If *only* the trailer byte is missing it can be added like this:
 
+    $ echo -ne '\x3b' >> a.gif
 
 ## GIF-HUL-10
 
