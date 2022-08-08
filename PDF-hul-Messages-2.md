@@ -116,8 +116,9 @@ The object number of a cross-reference stream could not be found ("-1"), or is g
 Needs review
 
 ### Remediation
-Needs review
+This may fix the error, but QA may be desirable to make sure that nothing important was changed (mutool is part of [MuPDF](https://mupdf.com/)):
 
+    $ mutool clean a.pdf b.pdf
 
 ## PDF-HUL-81
 
