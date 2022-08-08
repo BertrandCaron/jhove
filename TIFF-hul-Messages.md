@@ -131,10 +131,17 @@ Needs review
 * Examples: [1](https://www.rawsamples.ch/raws/nikon/RAW_NIKON_COOLPIX_P7100.NRW), [2](https://drive.google.com/open?id=0Bxn2YxzZ-3xCMEFlUmdnWVlSNWs)
 
 ### Impact
-Needs review
+It depends, but at least medium.
+
+Each TIFF tag has a type (like BYTE, ASCII, SHORT, ...) that determines how its content should be interpreted. Generally, if the type of a tag is set to the wrong value its content cannot be interpreted correctly meaning that a viewer will read nonsense from the tag.    Depending on the significance of a tag this may or may not prevent the file from being displayed.
+
+However, since the types of the common TIFF tags are well-known from the respective specifications ([TIFF](https://www.adobe.io/content/dam/udp/en/open/standards/tiff/TIFF6.pdf) of course, but also other specifications like [XMP](https://www.adobe.com/devnet/xmp.html))  some viewers might just (silently) ignore wrong types in a TIFF file and use the correct types from the specifications instead, thus being able to display files despite this error. But obviously, this is nothing one should rely on in the long run ...
 
 ### Remediation
-Needs review
+Options:
+
+* In the affected IFD entry, set the type to the correct value, if necessary adapt the count value (because values of different types may differ in size), and watch out for pad bytes. This can be done in a hex editor (tedious and *very* error-prone) or with a script     (slightly less tedious and error-prone).
+* Copy the affected tag to itself with [ExifTool](https://exiftool.org/) (`exiftool '-XResolution<XResolution' a.tif`); in many cases this will set the correct type. (But not in all cases: some tags are not writable by ExifTool.)
 
 
 ## TIFF-HUL-8
