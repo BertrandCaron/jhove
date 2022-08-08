@@ -71,10 +71,13 @@ Storing data at word and byte boundaries allows CPUs to more efficiently read an
 * Examples: [1](https://www.rawsamples.ch/raws/samsung/RAW_SAMSUNG_%20WB2000%20.SRW)
 
 ### Impact
-Systems may suffer a performance penalty while reading or processing the TIFF. The penalty will depend on the architecture of the individual system, which data in the TIFF is unaligned, and how much of it there is.
+Minor. Most viewers don't care and will happily display files despite this error. But of course, it still violates the TIFF specification. Further more, systems may suffer a performance penalty while reading or processing the TIFF. The penalty will depend on the architecture of the individual system, which data in the TIFF is unaligned, and how much of it there is.
 
 ### Remediation
-Needs review
+Options:
+
+* Add pad bytes and adapt pointers where necessary, either manually in a hex editor (tedious and *very* error-prone) or with a script.
+* Write any metadata with [ExifTool](https://exiftool.org/) (either "really" or using some dummy operation like copying a tag to itself: `exiftool '-XResolution<XResolution' a.tif`); this will silently fix this error.
 
 
 ## TIFF-HUL-5
