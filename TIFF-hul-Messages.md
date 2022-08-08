@@ -157,10 +157,10 @@ Needs review
 * Examples: Needed
 
 ### Impact
-Needs review
+Same as [TIFF-HUL-7](https://github.com/openpreserve/jhove/wiki/TIFF-hul-Messages#tiff-hul-7).
 
 ### Remediation
-Needs review
+Same as [TIFF-HUL-7](https://github.com/openpreserve/jhove/wiki/TIFF-hul-Messages#tiff-hul-7).
 
 
 ## TIFF-HUL-9
