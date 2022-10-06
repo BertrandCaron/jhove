@@ -226,17 +226,17 @@ Needs review
 > Unknown TIFF IFD tag: \<tag>
 
 ### Details
-Needs review
+An IFD tag of the given type was found but ignored because the module is currently unaware of how to interpret the tag's data.
 
 * Type: InfoMessage
 * Source location: [TiffIFD.java L3795](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/TiffIFD.java#L3795)
 * Examples: [1](http://www.rawsamples.ch/raws/sony/a350/RAW_SONY_A350.ARW)
 
 ### Impact
-Needs review
+The module is unable to inspect the contents of the IFD tag.
 
 ### Remediation
-Needs review
+To request support for an unrecognized IFD tag, please report it to the project.
 
 
 ## TIFF-HUL-13
