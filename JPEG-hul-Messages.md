@@ -161,7 +161,7 @@ Needs review
 
 * Type: ErrorMessage
 * Source location: [JpegModule.java L503](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L503)
-* Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCVlFpNldDb2FPRFk)
+* Examples: [1](https://drive.google.com/file/d/0Bxn2YxzZ-3xCVlFpNldDb2FPRFk/view?usp=sharing&resourcekey=0-fomhzGi6oA4rNHzr2ZxISQ)
 
 ### Impact
 When this error is raised for a well-formed but not valid file it typically hints at an uncommon but not necessarily broken file structure. From the [JHOVE documentation](https://jhove.openpreservation.org/modules/jpeg/):
