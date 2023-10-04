@@ -1481,7 +1481,7 @@ Needs review
 A Java null pointer exception was caught, roughly equivalent to a missing and expected PDF object, when building the font property list. Show Fonts or Maximum Verbosity needs to be configured to show this information.
 
 * Type: ErrorMessage, NullPointerException
-* Source location: [PdfModule.java L905-L906](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L905-L906)
+* Source location: [PdfModule.java L914-L915](https://github.com/openpreserve/jhove/blob/d74599048ead2797ca9887900976b624cefbb575/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L914C5-L915C37)
 * Examples: Needed
 
 ### References
