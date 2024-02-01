@@ -1178,10 +1178,10 @@ It, for example, reports the error "Invalid indirect destination - referenced ob
 
 
 ### Impact
-Needs review
+Impact is described in [a blogpost](https://openpreservation.org/blogs/destination-null-one-of-the-many-cases-of-pdf-hul-122/)
 
 ### Remediation
-Needs review
+Remediation is described in [a blogpost](https://openpreservation.org/blogs/destination-null-one-of-the-many-cases-of-pdf-hul-122/)
 
 
 ## PDF-HUL-123
