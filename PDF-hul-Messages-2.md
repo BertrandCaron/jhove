@@ -1439,7 +1439,7 @@ A date found in a dictionary does not conform to the expected format. Dates spec
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.8.3
  - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.9.4
- - [A date with PDF-HUL-133 “Improperly formed date”](https://openpreservation.org/blogs/a-date-with-pdf-hul-133-improperly-formed-date/?q=1)
+ - [A date with PDF-HUL-133 “Improperly formed date”](https://openpreservation.org/blogs/a-date-with-pdf-hul-133-improperly-formed-date/?q=1) by Micky Lindlar
 
 ### Impact
 Minor. This is "just" bad formatting in metadata. It violates the specification and possibly signals a useless timestamp in metadata, but usually won't keep the file from being displayed.
