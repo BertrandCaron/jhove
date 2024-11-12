@@ -1083,7 +1083,7 @@ This indicates an issue with a stream dictionary's "Filter" (or deprecated "FFil
 Note that for JHOVE versions up to including 1.28, this error message was also a false positive for filter arrays such as "/Filter[/FlateDecode/DCTDecode]".
 
 * Type: PdfMalformedException
-* Source location: [PdfStream.java L204](jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PdfStream.java)
+* Source location: [PdfStream.java L204](https://github.com/openpreserve/jhove/blob/9880643d7390d2ea22935caa5d6d1ddd10e21ee8/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PdfStream.java#L204)
 
 
 ### References
