@@ -1079,15 +1079,15 @@ Needs review
 > Malformed filter
 
 ### Details
-This indicates an issue with a stream dictionary's "Filter" (or deprecated "FFilter") entry or the associated "DecodeParms" (or deprecated "FDecodeParms") entry. The "Filter" entry can be a single name or an array of names. The "DecodeParms" entry is either a single parameter dictionary accompanying a single "Filter" name, or an array of dictionaries accompanying an array of "Filter" names. Xerox Example error is based on image filters ZIP & JPEG on same image
+This indicates an issue with a stream dictionary's "Filter" (or deprecated "FFilter") entry or the associated "DecodeParms" (or deprecated "FDecodeParms") entry. The "Filter" entry can be a single name or an array of names. The "DecodeParms" entry is either a single parameter dictionary accompanying a single "Filter" name, or an array of dictionaries accompanying an array of "Filter" names. Xerox Example error is based on image filters ZIP & JPEG on same image.
+Note that for JHOVE versions up to including 1.28, this error message was also a false positive for filter arrays such as "/Filter[/FlateDecode/DCTDecode]".
 
 * Type: PdfMalformedException
-* Source location: [PdfStream.java L204](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PdfStream.java#L204)
-* Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCU3BIeE1TcWYyckU), [2](http://wiki.opf-labs.org/download/attachments/101613571/2016_23_PDF-Rules_20160905.pdf)
+* Source location: [PdfStream.java L204](jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PdfStream.java)
+
 
 ### References
- - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.2.7
- - PDF 1.7: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.3.8.2
+ - PDF 2.0: https://pdfa.org/resource/iso-32000-2/ | 7.4
 
 
 ### Impact
