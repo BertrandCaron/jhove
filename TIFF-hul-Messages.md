@@ -66,6 +66,8 @@ TIFF 6.0 Specification, page 15: value offsets are "expected" to point to values
 
 Storing data at word and byte boundaries allows CPUs to more efficiently read and process the data. When it is unaligned, CPUs can require additional attempts at reading the data.
 
+When the parameter byteoffset=true is set in [Link to the jhove configuration byteoffset](https://jhove.openpreservation.org/modules/tiff/), this error is ignored and becomes an InfoMessage. The status also becomes "Well-Formed and valid".
+
 * Type: ErrorMessage or InfoMessage ([configurable](https://jhove.openpreservation.org/modules/tiff/))
 * Source location: [IFD.java L309](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L309)
 * Examples: [1](https://www.rawsamples.ch/raws/samsung/RAW_SAMSUNG_%20WB2000%20.SRW)
@@ -1122,6 +1124,8 @@ Needs review
 TIFF 6.0 Specification, page 13: "The [first IFD] may be at any location in the file after the header but _must begin on a word boundary_."
 
 Storing data at word boundaries allows CPUs to more efficiently read and process the data. When it is unaligned, CPUs can require additional attempts at reading the data.
+
+When the parameter byteoffset=true is set in [Link to the jhove configuration byteoffset](https://jhove.openpreservation.org/modules/tiff/), this error is ignored and becomes an InfoMessage. The status also becomes Well-Formed and valid.
 
 * Type: TiffException
 * Source location: [TiffModule.java L1081](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1081)
