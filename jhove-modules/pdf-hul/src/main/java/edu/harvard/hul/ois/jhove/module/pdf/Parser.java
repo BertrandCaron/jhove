@@ -7,6 +7,7 @@ package edu.harvard.hul.ois.jhove.module.pdf;
 
 import java.io.IOException;
 import java.text.MessageFormat;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
@@ -30,7 +31,7 @@ public class Parser
     /** The number of array starts on stack. */
     private int _arrayDepth;
     /** The file's object map. */
-    private Map<Long, PdfObject> _objectMap;
+    private Map<Long, PdfObject> _objectMap = new HashMap<>();
     /** PDF/A compliance flag. */
     private boolean _pdfACompliant;
 	protected PdfModule _module;
@@ -46,12 +47,6 @@ public class Parser
         _tokenizer = tokenizer;
         _pdfACompliant = true;
         reset ();
-    }
-
-    /** Sets the object map on which the parser will work. */
-    public void setObjectMap (Map<Long, PdfObject> objectMap)
-    {
-        _objectMap = objectMap;
     }
 
     /**
