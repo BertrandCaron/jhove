@@ -182,13 +182,13 @@ As long as this is the only error in a file one of the following measures may be
 ## JPEG-HUL-10
 
 ### Message
-> Error creating temporary file. Check your configuration
+> Unrecognized tiling data
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegExif.java L69](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/jpeg/JpegExif.java#L69)
+* Source location: ~[JpegExif.java L69](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/jpeg/JpegExif.java#L69)~
 * Examples: Needed
 
 ### Impact
@@ -201,13 +201,13 @@ Needs review
 ## JPEG-HUL-11
 
 ### Message
-> Unrecognized tiling data
+> Invalid ICCProfile in APP2 segment; message
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegModule.java L1519](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L1519)
+* Source location: ~[JpegModule.java L1519](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L1519)~
 * Examples: Needed
 
 ### Impact
@@ -220,13 +220,51 @@ Needs review
 ## JPEG-HUL-12
 
 ### Message
+> Adobe marker segment, bad transformFlag value %d
+
+### Details
+Needs review
+
+* Type: InfoMessage
+* Source location: ~[JpegModule.java L1054](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L1054)~
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+
+## JPEG-HUL-13
+
+### Message
+> Unknown colorspace with number of components of %d
+
+### Details
+Needs review
+
+* Type: InfoMessage
+* Source location:
+* Examples: Needed
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+
+## JPEG-HUL-14
+
+### Message
 > TIFF-HUL module required to report Exif data
 
 ### Details
 Needs review
 
 * Type: InfoMessage
-* Source location: [JpegModule.java L1054](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L1054)
+* Source location:
 * Examples: Needed
 
 ### Impact
