@@ -104,21 +104,32 @@ Needs review
 ## TIFF-HUL-6
 
 ### Message
+
 > Count mismatch for tag \<tag>; expecting \<minCount>, saw \<count>
 
 ### Details
-Needs review
+
+Each TIFF tag has a so-called *count* that determines the size of its content. The counts of some tags are fixed by the TIFF specification or other specifications, so only certain numbers are allowed for these tags' counts. For example, the ImageWidth tag is required to have a count of 1 (see [TIFF 6 specification](http://archive.org/details/TIFF6), page 34) because obviously an image must have exactly one width. This error message points out a tag whose count contradicts the count that is specified for this tag.
+
+Note that currently (~ v1.32) JHOVE only raises this error when it encounters a tag count that is *lower* than what is expected. So it will complain about an ImageWidth tag with a count of 0, but not about one with a count of 2 or more, although that is not valid either.
 
 * Type: TiffException
 * Source location: [IFD.java L930](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L930)
 * Examples: Needed
 
 ### Impact
-Needs review
+
+It depends; from almost no practical impact to a file that cannot be rendered.
+
+For example, if the ImageWidth tag has a count other than 1, this clearly contradicts the specification. However, a viewer might gracefully ignore the wrong value and just assume a count of 1. As long as the actual tag *value* is correct (i.e., the tag contains exactly one width value), this file might thus be rendered without problems. But of course, there is no guarantee that a viewer will behave in this way, so the file might just as well *not* be rendered. Moreover, if the ImageWidth tag has a count of 0 because there is in fact no value (which is of course illegal) then even a robust viewer will have a hard time rendering the image correctly.
+
+In actual practice, this random example is already a formidable mess. A TIFF file with an ImageWidth count of 1 is valid according to JHOVE and renders fine in the Windows 10 photo viewer. Setting the count to 0 results in a TIFF-HUL-6 error but still renders fine as long as there is a sensible tag value. Setting it to 2 is valid according to JHOVE 1.32 (!) but does not render in the Windows 10 photo viewer. So you see, it's complicated ...
+
+In summary, while you might get away with this error in a robust viewer you should better try to fix it, or be confident that it really doesn't affect your file too much.
 
 ### Remediation
-Needs review
 
+In some cases it helps to write a value (preferably the correct one) to the offending tag with [ExifTool](https://www.exiftool.org/). For example, if a file has an ImageWidth value (not count) of 90, then running `exiftool -ImageWidth=90 a.tif` will write this value to the tag and also set the correct count of 1.
 
 ## TIFF-HUL-7
 
