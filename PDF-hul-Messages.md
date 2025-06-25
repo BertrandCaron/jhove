@@ -8,7 +8,7 @@
 An unexpected object type was found for a destination object. A destination object is expected to be an array containing a page reference, a dictionary containing such an array, or a name object leading to either of these objects.
 
 * Type: PdfInvalidException
-* Source location: [Destination.java L93](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Destination.java#L93)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_1&type=code)
 * Examples: [1](https://github.com/openpreserve/jhove/files/1228422/sample.pdf), [2](http://wiki.opf-labs.org/download/attachments/101613571/ETH23915.pdf), [3](http://wiki.opf-labs.org/download/attachments/101613571/2002.pdf), [4](http://wiki.opf-labs.org/download/attachments/101613571/SIP110204_ReColl-124480_1-s2.0-S0370269317301144-main.pdf)
 
 ### References
@@ -32,7 +32,7 @@ Needs review
 An unexpected object type was returned when resolving a destination's page reference to a page. In this case the orignal destination object was an array or dictionary that resolved to an array but didn't. A destination object is expected to be an array containing a page reference, a dictionary containing such an array, or a name object leading to either of these objects.
 
 * Type: PdfInvalidException
-* Source location: https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Destination.java#L93
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_2&type=code)
 * Examples: [1](https://github.com/behnam2014/ssoar-gold-standard/blob/master/1-German_papers_with_reference_section_at_end_of_paper_first_group/1-pdfs/11448.pdf), [2](https://github.com/behnam2014/ssoar-gold-standard/blob/master/2-English_papers_with_reference_section_at_end_of_paper/1-pdfs/11218.pdf)
 
 ### References
@@ -50,13 +50,13 @@ Needs review
 ## PDF-HUL-3
 
 ### Message
-> An IOException was thrown reading destination array id: \<array object id>
+> An IOException was thrown reading destination array id: `<array object id>`
 
 ### Details
 An IOException occured when trying to read and parse the destination array object, this indicates either a discrete issue with the destination array or a more serious issue with the PDF structure that makes looking up and retrieving the destination array impossible.It's possible a system issue, particularly low disk space, could cause the exception.
 
 * Type: PdfInvalidException
-* Source location: Needs review
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_3&type=code)
 * Examples: Needed
 
 ### References
@@ -80,7 +80,7 @@ Needs review
 A page or page tree node is not a dictionary. All pages and page trees should be a dictionary, which provides access to their resources and other attributes.
 
 * Type: PdfMalformedException
-* Source location: [DocNode.java L104](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/DocNode.java#L104)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_4&type=code)
 * Examples: Needed
 
 ### References
@@ -104,7 +104,7 @@ Is it possible to build a page's dictionary after the fact? Maybe iText can fix 
 One of the objects processed when resolving the Resources dictionary was of a type not allowed by the PDF Specification, or there was an IO error when resolving the Resources dictionary. Page Tree Nodes may have an empty resource dictionary (no resources) or no entry, meaning the resources are inherited from a parent node.
 
 * Type: PdfInvalidException
-* Source location: [DocNode.java L115](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/DocNode.java#L115)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_5&type=code)
 * Examples: Needed
 
 ### References
@@ -128,7 +128,7 @@ Needs review
 An IOException occurred when reading the reference for the for Fonts dictionary found in the Resource catalog for the Page Tree Node. Resource catalogs don't need to have a Font's dictionary but this error indicates the catalogue provides a reference to one that can't be read.
 
 * Type: PdfMalformedException
-* Source location: [DocNode.java L138](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/DocNode.java#L138)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_6&type=code)
 * Examples: Needed
 
 ### References
@@ -152,7 +152,7 @@ Needs review
 A page dictionary's "MediaBox" key value is not an array.
 
 * Type: PdfInvalidException
-* Source location: Needs review
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_7&type=code)
 * Examples: Needed
 
 ### References
@@ -176,7 +176,7 @@ Needs review
 A page's "MediaBox" entry is not an array of four numbers. "MediaBox" entries must contain an array of four numbers marking the X and Y coordinates for the lower-left and upper-right corners of a rectangle, e.g. [2 2 5 5].
 
 * Type: PdfInvalidException
-* Source location: [DocNode.java L159](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/DocNode.java#L159)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_8&type=code)
 * Examples: Needed
 
 ### References
@@ -200,7 +200,7 @@ Needs review
 A file specification is processed as a dictionary that can have one of the key values 'F', 'Unix', 'DOS', or 'Mac'. The value of these keys should be a simple object with the file specification as a String value. In this case the object returned wasn't a simple object with a String value.
 
 * Type: PdfInvalidException
-* Source location: [FileSpecification.java L66](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/FileSpecification.java#L66)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_9&type=code)
 * Examples: Needed
 
 ### References
@@ -224,7 +224,7 @@ Needs review
 No closing parenthesis was found when processing a String literal. All String literals must be enclosed in parenthesis.
 
 * Type: EOFException
-* Source location: [Literal.java L164](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Literal.java#L164)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_10&type=code)
 * Examples: Needed
 
 ### References
@@ -248,7 +248,7 @@ Needs review
 An invalid character was found in a hexadecimal string.A hexadecimal string is written as a sequence of hexadecimal digits (0 – 9 and either A – F or a – f) enclosed within angle brackets (\< and >). The hex string in question contains a character outside this set.
 
 * Type: PdfMalformedException
-* Source location: [Literal.java L358](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Literal.java#L358)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_11&type=code)
 * Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNbUQ2R1k5aU9yTzg/view?usp=sharing), [2](http://wiki.opf-labs.org/download/attachments/101613571/ETH23915.pdf)
 
 ### References
@@ -272,7 +272,7 @@ Needs review
 An unexpected object type was encountered when processing a name tree node. A name tree node is a dictionary that depending on its type: root, intermediate or leaf; can have up to two entries with keys "Names", "Kids", or "Limits", each of which is should have an array value. In this case either the returned value for an entry was not a PDF array, or the elements of the Limits entry array weren't Strings as per the specification.
 
 * Type: PdfInvalidException
-* Source location: [NameTreeNode.java L160](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/NameTreeNode.java#L160)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_12&type=code)
 * Examples: Needed
 
 ### References
@@ -296,7 +296,7 @@ Needs review
 The name tree node has a "Limits" dictionary entry that returned either a null entry or the entry returned was a PDF array that didn't have element at positions [0] and [1].
 
 * Type: PdfInvalidException
-* Source location: [NameTreeNode.java L166](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/NameTreeNode.java#L166)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_13&type=code)
 * Examples: Needed
 
 ### References
@@ -320,7 +320,7 @@ Needs review
 There was an I/O error resolving the object for one of the entries, "Names", "Kids", or "Limits" in the name tree node.
 
 * Type: PdfInvalidException
-* Source location: [NameTreeNode.java L91](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/NameTreeNode.java#L91)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_14&type=code)
 * Examples: Needed
 
 ### References
@@ -344,7 +344,7 @@ Needs review
 The name tree node dictionary does not have one of a "Names" or "Kids" entry as per the PDF specification.
 
 * Type: PdfInvalidException
-* Source location: [NameTreeNode.java L94](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/NameTreeNode.java#L94)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_15&type=code)
 * Examples: Needed
 
 ### References
@@ -368,7 +368,7 @@ Needs review
 An unexpected error occured while parsing a name tree node. This might have been a wrong object type, missing object, or null object encountered while processing the entries, or an I/O error resolving them.
 
 * Type: PdfInvalidException
-* Source location: [NameTreeNode.java L97](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/NameTreeNode.java#L97)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_16&type=code)
 * Examples: Needed
 
 ### References
@@ -392,7 +392,7 @@ Needs review
 An I/O error occurred when processing an object stream, this might have been when finding the object start or reading the object.
 
 * Type: PdfMalformedException
-* Source location: [ObjectStream.java L131](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/ObjectStream.java#L131)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_17&type=code)
 * Examples: Needed
 
 ### References
@@ -416,7 +416,7 @@ Needs review
 The "Nums" entry of a page label leaf node is missing. JHOVE seems to have munged the PDF concepts of a page label and a number tree, this needs review.
 
 * Type: PdfInvalidException
-* Source location: [PageLabelNode.java L178](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageLabelNode.java#L178)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_18&type=code)
 * Examples: Needed
 
 ### References
@@ -442,7 +442,7 @@ Needs review
 An unexpected error occurred while retrieving key–value pairs from a page label node's "Nums" entry. Doesn't appear to have anything to do with dates. Needs review. Can confirm that JHOVE 1.12 gave the same message and it's nothing to do with dates.
 
 * Type: PdfInvalidException
-* Source location: [PageLabelNode.java L204](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageLabelNode.java#L204)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_19&type=code)
 * Examples: Needed
 
 ### References
@@ -468,7 +468,7 @@ Needs review
 An unexpected error occured when processing the page lable number tree.
 
 * Type: PdfInvalidException
-* Source location: [PageLabelNode.java L88](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageLabelNode.java#L88)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_20&type=code)
 * Examples: Needed
 
 ### References
@@ -494,7 +494,7 @@ Needs review
 A page objects annotations entry ("Annots") is not an Array.
 
 * Type: PdfInvalidException
-* Source location: [PageObject.java L108](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L108)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_21&type=code)
 * Examples: Needed
 
 ### References
@@ -520,7 +520,7 @@ Needs review
 An IOException was encountered while trying to retrieve a page object's annotation array.
 
 * Type: PdfMalformedException
-* Source location: [PageObject.java L111](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L111)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_22&type=code)
 * Examples: Needed
 
 ### References
@@ -546,7 +546,7 @@ Needs review
 A page object's dictionary has an "ArtBox" entry but it is not an array describing a rectangle.
 
 * Type: PdfMalformedException
-* Source location: [PageObject.java L154](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L154)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_23&type=code)
 * Examples: Needed
 
 ### References
@@ -572,7 +572,7 @@ Needs review
 A page object's dictionary has a TrimBox entry but it is not an array describing a rectangle.
 
 * Type: PdfMalformedException
-* Source location: [PageObject.java L179](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L179)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_24&type=code)
 * Examples: Needed
 
 ### References
@@ -598,7 +598,7 @@ Needs review
 A page object's dictionary has a "BleedBox" entry but it is not an array describing a rectangle.
 
 * Type: PdfMalformedException
-* Source location: [PageObject.java L204](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L204)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_25&type=code)
 * Examples: Needed
 
 ### References
@@ -614,7 +614,6 @@ Needs review
 ### Remediation
 Needs review
 
-
 ## PDF-HUL-26
 
 ### Message
@@ -624,7 +623,7 @@ Needs review
 An I/O error occured when resolving a page object dictionary's contents entry, or parsing its contents.
 
 * Type: PdfInvalidException
-* Source location: [PageObject.java L74](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L74)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_26&type=code)
 * Examples: Needed
 
 ### References
@@ -648,7 +647,7 @@ Needs review
 The value retrieved for a page object's "Contents" key is not a content stream or an array.
 
 * Type: PdfInvalidException
-* Source location: [PageObject.java L187](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L187)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_27&type=code)
 * Examples: [1](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/bad24.pdf)
 
 ### References
@@ -672,7 +671,7 @@ Needs review
 A page objects's "Contents" key value is an array, but one of the elements is now a stream as per the specification.
 
 * Type: PdfInvalidException
-* Source location: [PageObject.java L82](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageObject.java#L82)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_28&type=code)
 * Examples: Needed
 
 ### References
@@ -696,7 +695,7 @@ Needs review
 A general exception was caught when processing a page tree. Page tree node must include the entries "Type", "Parent", "Kids", and "Count" to be valid.
 
 * Type: PdfInvalidException
-* Source location: [PageTreeNode.java L131](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageTreeNode.java#L131)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_29&type=code)
 * Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNU1BGNFo4OGlWZ1U/view?usp=sharing), [2](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/bad34.pdf), [3](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/big-ostream.pdf), [4](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/compress-objstm-xref-qdf.pdf)
 
 ### References
@@ -721,7 +720,7 @@ Thrown if, when trying to get the next Page Object in a tree, we revisit a node 
 It is mandatory to save PDF pages in a page tree, but the specification does not say that this page tree necesarily needs to be balanced. Suggestion during the OPF PDF Hackathon in 2014 was to ignore this error message. Having pages in a un-balanced page tree only has a negative effect on rendering performance, but does not lead to PDF invalidity.
 
 * Type: PdfMalformedException
-* Source location: [PageTreeNode.java L197](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageTreeNode.java#L197)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_30&type=code)
 * Examples: Needed
 
 ### References
@@ -746,7 +745,7 @@ Thrown if, when trying to get the next node in a page tree, we revisit a node we
 It is mandatory to save PDF pages in a page tree, but the specification does not say that this page tree necesarily needs to be balanced. Suggestion during the OPF PDF Hackathon in 2014 was to ignore this error message. Having pages in a un-balanced page tree only has a negative effect on rendering performance, but does not lead to PDF invalidity.
 
 * Type: PdfMalformedException
-* Source location: [PageTreeNode.java L197](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageTreeNode.java#L197)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_31&type=code)
 * Examples: Needed
 
 ### References
@@ -770,7 +769,7 @@ Needs review
 The page tree structure was too deep, JHOVE sets an arbitary limit of 100 here presumably to guard against infinite recursion.
 
 * Type: PdfMalformedException
-* Source location: [PageTreeNode.java L61](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageTreeNode.java#L61)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_32&type=code)
 * Examples: Needed
 
 ### References
@@ -794,7 +793,7 @@ Needs review
 More dictionary closing elements (">>") were encountered than dictionary opening elements ("\<\<").
 
 * Type: PdfMalformedException
-* Source location: [Parser.java L100](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L100)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_33&type=code)
 * Examples: Needed
 
 ### References
@@ -818,7 +817,7 @@ Needs review
 More array closing elements ("]") were encountered than array opening elements ("[").
 
 * Type: PdfMalformedException
-* Source location: [Parser.java L109](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L109)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_34&type=code)
 * Examples: [1](https://drive.google.com/open?id=0BzmAJJIyoZ9xdG5ib0N5TEJ0amM), [2](http://wiki.opf-labs.org/download/attachments/101613571/SIP161241_ReColl-150849_eth-31088-01.pdf)
 
 ### References
@@ -842,7 +841,7 @@ Needs review
 A non numeric object ID was returned when parsing the indirect object definition. The first token must be an integer object ID.
 
 * Type: PdfInvalidException
-* Source location: [Parser.java L197](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L197)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_35&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP253613_ReColl-154468_eth-8330-02.pdf), [2](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/bad25.pdf)
 
 ### References
@@ -866,7 +865,7 @@ Needs review
 PDF Parser's next token (from getToken) is not a Numeric (class) Token, This is the object generation number and must be an integer. Cause in example file is missing byte in comment line after header which means that offset references in XREF are off by 1 affecting position of tokenizer. Parser.readObjectDef first reads ObjNumTok. If this object number is a double digit, the off by 1 error (in this example) only reads the tail portion of the object number (i.e. it still gets a numeric obj number, even though it's wrong). Problem occurs in this case when obj number is single digit, so no object number is read.
 
 * Type: PdfInvalidException
-* Source location: [Parser.java L214](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L214)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_36&type=code)
 * Examples: [1](https://github.com/openpreserve/format-corpus/blob/master/pdfCabinetOfHorrors/corruptionOneByteMissing.pdf), [2](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/bad26.pdf)
 
 ### References
@@ -890,7 +889,7 @@ Correct XREF offsets.
 PDF Parser's next token (from getToken) is not a keyword, the keyword "obj" is expected after the object id.
 
 * Type: PdfInvalidException
-* Source location: [Parser.java L227](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L227)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_37&type=code)
 * Examples: Needed
 
 ### References
@@ -914,7 +913,7 @@ Needs review
 A keyword other than "obj" was found while parsing an indirect object definition. Indirect object definitions should follow the form "\<obj. number> \<obj. generation> obj".
 
 * Type: PdfMalformedException
-* Source location: [Parser.java L229](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L229)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_38&type=code)
 * Examples: [1](https://wiki.dnb.de/download/attachments/93783881/corruptionOneByteMissing.pdf?version=1&modificationDate=1400574262000)
 
 ### References
@@ -938,7 +937,7 @@ Needs review
 The token returned when parsing an object was not of the expected type: Array start or end, Dictionary start or end, or a simple token.
 
 * Type: PdfMalformedException
-* Source location: [Parser.java L297](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L297)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_39&type=code)
 * Examples: Needed
 
 ### References
@@ -962,7 +961,7 @@ Needs review
 This appears to be an unreachable error. Needs review. I concur, the type check has already taken place.
 
 * Type: PdfMalformedException
-* Source location: [Parser.java L327](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L327)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_40&type=code)
 * Examples: Needed
 
 ### References
@@ -986,7 +985,7 @@ Needs review
 The dictionary has an odd number of objects, so cannot have a complete set of name–value pairs. Often seen with asian characters in PDF, characters in bookmarks.
 
 * Type: PdfMalformedException
-* Source location: [Parser.java L366](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L366)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_41&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP196747_ReColl-18538_eth-25717-01.pdf)
 
 ### References
@@ -1010,7 +1009,7 @@ Needs review
 Unexpected error while parsing a dictionary. This is most likely caused by a null (missing) object or an object of an unexpected type when processing the dictionary.
 
 * Type: PdfMalformedException
-* Source location: [Parser.java L376](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L376)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_42&type=code)
 * Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNYWRxUHpWYTl1emc/view?usp=sharing)
 
 ### References
@@ -1034,7 +1033,7 @@ Needs review
 This appears to be an unreachable error. Needs review. Similar case to PDF-HUL-40 where the type check that might throw this has already been performed.
 
 * Type: PdfMalformedException
-* Source location: [Parser.java L385](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L385)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_43&type=code)
 * Examples: Needed
 
 ### References
@@ -1058,7 +1057,7 @@ Needs review
 A general exception was thrown while trying to "collapse an object vector" (JHOVE speak), the most likely cause is that a missing (null) object or an object of an unexpected type was encountered while processing an object "vector".
 
 * Type: PdfMalformedException
-* Source location: [Parser.java L452](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Parser.java#L452)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_44&type=code)
 * Examples: Needed
 
 ### References
@@ -1083,7 +1082,7 @@ This indicates an issue with a stream dictionary's "Filter" (or deprecated "FFil
 Note that for JHOVE versions up to including 1.28, this error message was also a false positive for filter arrays such as "/Filter[/FlateDecode/DCTDecode]".
 
 * Type: PdfMalformedException
-* Source location: [PdfStream.java L204](https://github.com/openpreserve/jhove/blob/9880643d7390d2ea22935caa5d6d1ddd10e21ee8/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PdfStream.java#L204)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_45&type=code)
 
 
 ### References
@@ -1106,7 +1105,7 @@ Change embedded image compression filter
 An integer object in a stream contained an invalid character. The integer must be a sequence of numberic characters that may be preceded by whitespace characters. In this case a non-whitespace character was encountered before any numeric character was encountered.
 
 * Type: PdfMalformedException
-* Source location: [Stream.java L202](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Stream.java#L202)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_46&type=code)
 * Examples: Needed
 
 ### References
@@ -1132,7 +1131,7 @@ Needs review
 This is triggered when the a "stream" object is found within another stream object.
 
 * Type: PdfMalformedException
-* Source location: [StreamTokenizer.java L45](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StreamTokenizer.java#L45)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_47&type=code)
 * Examples: Needed
 
 ### References
@@ -1158,7 +1157,7 @@ Needs review
 This is triggered when the a "stream" object is found within another stream object.
 
 * Type: PdfMalformedException
-* Source location: [StreamTokenizer.java L83](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StreamTokenizer.java#L83)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_48&type=code)
 * Examples: Needed
 
 ### References
@@ -1184,7 +1183,7 @@ Needs review
 The "K" (children) entry of a structure element dictionary was another dictionary. This dictionary must be one of: another nested strucuture element, marked content or an object reference, the returned dictionary was none of these.
 
 * Type: PdfInvalidException
-* Source location: [StructureElement.java L124](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureElement.java#L124)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_49&type=code)
 * Examples: Needed
 
 ### References
@@ -1208,7 +1207,7 @@ Needs review
 There was an issue resolving the "A" attributes entry of a structure element dictionary.
 
 * Type: PdfInvalidException
-* Source location: [StructureElement.java L209](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureElement.java#L209)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_50&type=code)
 * Examples: Needed
 
 ### References
@@ -1232,7 +1231,7 @@ Needs review
 There was an I/O error resolving one of the elements of an attributes array.
 
 * Type: PdfInvalidException
-* Source location: [StructureElement.java L228](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureElement.java#L228)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_51&type=code)
 * Examples: Needed
 
 ### References
@@ -1258,7 +1257,7 @@ Needs review
 An attribute element that was a PdfSimpleObject wasn't a numeric revision number.
 
 * Type: PdfInvalidException
-* Source location: [StructureElement.java L240](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureElement.java#L240)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_52&type=code)
 * Examples: Needed
 
 ### References
@@ -1284,7 +1283,7 @@ Needs review
 An element from an attributes array wasn't a dictionary or revision number object.
 
 * Type: PdfInvalidException
-* Source location: Needs review
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_53&type=code)
 * Examples: Needed
 
 ### References
@@ -1310,7 +1309,7 @@ Needs review
 The value of a structure element dictionary's "A" (attributes) entry wasn't a single attributes dictionary or an array (of attribute dictionaries).
 
 * Type: PdfInvalidException
-* Source location: [StructureElement.java L252](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureElement.java#L252)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_54&type=code)
 * Examples: Needed
 
 ### References
@@ -1334,7 +1333,7 @@ Needs review
 Attributes only applicable to a block-level structure element were found for an inline structure element.
 
 * Type: PdfInvalidException
-* Source location: [StructureElement.java L255](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureElement.java#L255)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_55&type=code)
 * Examples: Needed
 
 ### References
@@ -1360,7 +1359,7 @@ Needs review
 An attribute dictionary's "Placement" value was not a name.
 
 * Type: PdfInvalidException
-* Source location: [StructureElement.java L287](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureElement.java#L287)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_56&type=code)
 * Examples: Needed
 
 ### References
@@ -1384,7 +1383,7 @@ Needs review
 This checks that the structure element's structure type key ("S") value is one of the Adobe standard types. The check is currently disabled in code, and it should. The Adobe types are provided to aid interoperability between applications, but custom types are allowed. Review and remove permanently. A more sensible check would be that it was a name that confirmed to the naming standard in the PDF spec, Appendix E in the 1.6 version.
 
 * Type: PdfInvalidException
-* Source location: [StructureElement.java L330](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureElement.java#L330)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_57&type=code)
 * Examples: Needed
 
 ### References
@@ -1410,7 +1409,7 @@ Needs review
 An I/O exception was thrown when trying to resolve a structure elements children ("K") value.
 
 * Type: PdfInvalidException
-* Source location: [StructureElement.java L85](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureElement.java#L85)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_58&type=code)
 * Examples: Needed
 
 ### References
@@ -1434,7 +1433,7 @@ Needs review
 A structure tree root's "Type" name value that wasn't "StructTreeRoot". The structure tree root dictionary must have a Type key whose value is the name "StructTreeRoot".
 
 * Type: PdfInvalidException
-* Source location: [StructureTree.java L168](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureTree.java#L168)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_59&type=code)
 * Examples: Needed
 
 ### References
@@ -1458,7 +1457,7 @@ Needs review
 The structure tree root dictionary had no key "Type" or the value was of the wrong type.
 
 * Type: PdfInvalidException
-* Source location: [StructureTree.java L175](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureTree.java#L175)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_60&type=code)
 * Examples: Needed
 
 ### References
@@ -1482,7 +1481,7 @@ Needs review
 An I/O exception was thrown when trying to resolve a reference in a structure trees children.
 
 * Type: PdfMalformedException
-* Source location: [StructureTree.java L222](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureTree.java#L222)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_61&type=code)
 * Examples: Needed
 
 ### References
@@ -1506,7 +1505,7 @@ Needs review
 The structre tree's "K" value was not a dictionary or an array. A structure tree root's children ("K") value must be a single child dictionary, or an array of such dictionaries.
 
 * Type: PdfInvalidException
-* Source location: [StructureTree.java L233](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureTree.java#L233)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_62&type=code)
 * Examples: Needed
 
 ### References
@@ -1530,7 +1529,7 @@ Needs review
 If a structure tree root dictionary has a "RoleMap" value it must be a dictionary.
 
 * Type: PdfInvalidException
-* Source location: [StructureTree.java L249](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/StructureTree.java#L249)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_63&type=code)
 * Examples: Needed
 
 ### References
@@ -1554,7 +1553,7 @@ Needs review
 Unsure if this can be triggered, seems to be a test against reading a character integer value \< 0. I suspect that the real EOF handling will be triggered as a real Java EOFException. Needs reveiw
 
 * Type: PdfMalformedException
-* Source location: [Tokenizer.java L235](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Tokenizer.java#L235)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_64&type=code)
 * Examples: Needed
 
 ### References
@@ -1572,13 +1571,13 @@ Needs review
 ## PDF-HUL-65
 
 ### Message
-> Lexical error
+> Invalid character in hex string
 
 ### Details
 An invalid character was encountered when parsing the fractional part of a real numeric object.
 
 * Type: PdfMalformedException
-* Source location: [Tokenizer.java L362](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Tokenizer.java#L362)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_65&type=code)
 * Examples: [1](https://www.econstor.eu/obitstream/10419/45235/1/372051162.pdf)
 
 ### References
@@ -1603,7 +1602,7 @@ A dictionary is written as a sequence of key-value pairs enclosed in double angl
 brackets ( \<\< ... >>). In this case JHOVE is expecting to parse a dictionary end ">>" but only a single ">" was found.
 
 * Type: PdfMalformedException
-* Source location: [Tokenizer.java L374](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Tokenizer.java#L374)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_66&type=code)
 * Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCRG5fNmlMR1VNajQ)
 
 ### References
@@ -1627,7 +1626,7 @@ Needs review
 An invalid character was found in a hexadecimal string.A hexadecimal string is written as a sequence of hexadecimal digits (0 – 9 and either A – F or a – f) enclosed within angle brackets (\< and >). The hex string in question contains a character outside this set.
 
 * Type: PdfMalformedException
-* Source location: [Tokenizer.java L808](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/Tokenizer.java#L808)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_67&type=code)
 * Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNbUQ2R1k5aU9yTzg/view?usp=sharing)
 
 ### References
@@ -1651,7 +1650,7 @@ Needs review
 An invalid first object id in a cross reference table. The first line of a "xref" cross reference trailer must be two numeric literals, separated by a space. The first is the id of the first object in the table. This must be a numeric type and it's not. This means the parsing of the trailer fails and this leads to a problem when parsing the rest of the document. With this error also [PDF-HUL-85](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-85) is associated because the document root isn't found.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1240-L1241](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1240-L1241)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_68&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP179680_ReColl-146381_eth-25337-01.pdf)
 
 ### References
@@ -1675,7 +1674,7 @@ Needs review
 An invalid object count in a cross reference table. The first line of a "xref" cross reference trailer must be two numeric literals, separated by a space. The second is the number of objects in the table. This must be a numeric type and it's not.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1021](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1021)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_69&type=code)
 * Examples: Needed
 
 ### References
@@ -1699,7 +1698,7 @@ Needs review
 A cross reference streams dictionary doesn't contain the root entry required by a trailer dictionary.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1035](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1035)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_70&type=code)
 * Examples: [1](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/issue-106.pdf)
 
 ### References
@@ -1723,7 +1722,7 @@ Needs review
 The "trailer" keyword that marks the start of the document trailer wasn't found.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L1060](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1060)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_71&type=code)
 * Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCRnkwVXk4em1kUzg)
 
 ### References
@@ -1747,7 +1746,7 @@ Needs review
 The "Prev" entry of a trailer dictionary does not reference a numeric value. Trailer "Prev" entries should specify the byte offset of the previous cross-reference section in a PDF with multiple cross-reference sections.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1079](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1079)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_72&type=code)
 * Examples: Needed
 
 ### References
@@ -1771,7 +1770,7 @@ If there is only one cross-reference section in a PDF, the "Prev" entry should b
 The "Size" entry of a trailer dictionary does not contain a positive numeric value. Trailer "Size" entries should specify the total number of objects in a PDF's cross-reference table.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1100](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1100)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_73&type=code)
 * Examples: Needed
 
 ### References
@@ -1795,7 +1794,7 @@ Needs review
 Trailer has no "Size" value. Trailer "Size" entries are required to specify the total number of objects in a PDF's cross-reference table.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1109](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1109)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_74&type=code)
 * Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCcnhhcjZPT2JSUEU)
 
 ### References
@@ -1819,7 +1818,7 @@ Needs review
 The "Root" entry in the trailer is missing. The "Root" entry should have as its value the document's catalog dictionary, which is where you will start in order to find all the objects in the PDF. See also [PDF-HUL-85](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-85).
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1341-L1342](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1341-L1342)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_75&type=code)
 * Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCdi10RGM4Y3lqdVU)
 
 ### References
@@ -1833,6 +1832,7 @@ Needs review
 ### Remediation
 Needs review
 
+
 ## PDF-HUL-76
 
 ### Message
@@ -1842,7 +1842,7 @@ Needs review
 The "Info" entry of a trailer dictionary does not contain an indirect object reference (e.g. "1 0 R"). If an "Info" entry exists in a trailer, it should point to the document's information dictionary via an indirect object reference.
 
 * Type: PdfinvalidException
-* Source location: [PdfModule.java L1124](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1124)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_76&type=code)
 * Examples: Needed
 
 ### References
@@ -1866,7 +1866,7 @@ Needs review
 The "ID" value returned from the trailer dictionary is an array but does not have exactly two elements. The trailer ID is optional but if present it must be an array of two byte strings that constitute a file identifier.
 
 * Type: PDfInvalidException
-* Source location: [PdfModule.java L1139](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1139)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_77&type=code)
 * Examples: Needed
 
 ### References
@@ -1890,7 +1890,7 @@ Needs review
 Some exception occured processing the trailer "ID" value, most likely an invalid (non byte string) array element. The tailer "ID" is optional but if present it must be an array of two byte strings that constitute a file identifier.
 
 * Type: PDfInvalidException
-* Source location: [PdfModule.java L1151](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1151)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_78&type=code)
 * Examples: Needed
 
 ### References
@@ -1914,7 +1914,7 @@ Needs review
 The "ID" value returned from the trailer dictionary is not an array. The ID attribute is optional but if present it must be an array of two byte strings that constitute a file identifier.
 
 * Type: PDfInvalidException
-* Source location: [PdfModule.java L1155](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1155)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_79&type=code)
 * Examples: Needed
 
 ### References
@@ -1938,7 +1938,7 @@ Needs review
 The object number of a cross-reference stream could not be found ("-1"), or is greater than the total number of entries in the document's cross-reference table at the time that stream was written, meaning either the object number or table size is invalid.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L1211](https://github.com/openpreserve/jhove/blob/release-1.16/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1211)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_80&type=code)
 * Examples: Needed
 
 ### References
@@ -1963,7 +1963,7 @@ This may fix the error, but QA may be desirable to make sure that nothing import
 This error doesn't seem to be reachable, there's nothing to throw an I/O exception in the try block code. needs review
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L1238](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1238)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_81&type=code)
 * Examples: Needed
 
 ### References
@@ -1987,7 +1987,7 @@ Needs review
 The offset or object number (for a free entry) for a cross reference table entry wasn't a numeric literal.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1289](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1289)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_82&type=code)
 * Examples: [1 (Comment in Cross-reference table)](https://github.com/mozilla/pdf.js/blob/master/test/pdfs/filled-background.pdf)
 
 ### References
@@ -2011,7 +2011,7 @@ Needs review
 The final literal keyword that should be "n" for a table entry or "f" for a free entry is not a keyword at all.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1289](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1289)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_83&type=code)
 * Examples: [1](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/bad5.pdf)
 
 ### References
@@ -2035,7 +2035,7 @@ Needs review
 An unexpected keyword was found in a cross-reference entry. Expected keywords are "f" or "n".
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L1306](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1306)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_84&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP180620_ReColl-145370_eth-24266-02.pdf)
 
 ### References
@@ -2060,7 +2060,7 @@ The trailer has no document catalogue entry ("Root") or a trailer was not found.
 JHOVE's approach to the document catalog is a little scattergun. Specifically here the reference to the document catalog is null. As the examples show this error can be reached, even when similar parsing in the trailer is done earlier. When the parsing of the cross-reference fails this error is reached (Example 2) or when the Root is missing after reaching [PDF-HUL-75](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-75) the parsing continues until this error.
 
 * Type: Error Message, Malformed
-* Source location: [PdfModule.java L1568](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1568)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_85&type=code)
 * Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCdi10RGM4Y3lqdVU), [2](http://wiki.opf-labs.org/download/attachments/101613571/SIP179680_ReColl-146381_eth-25337-01.pdf)
 
 ### References
@@ -2086,7 +2086,7 @@ Needs review
 The trailer contains a document catalogue entry ("Root") but it cannot be resolved. The Catalog of the document contains all the references to other objects for example contents, outline, named destinations.
 
 * Type: Error Message, Malformed
-* Source location: [PdfModule.java L1580](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1580)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_86&type=code)
 * Examples: Needed
 
 ### References
@@ -2106,14 +2106,14 @@ Needs review
 ## PDF-HUL-87
 
 ### Message
-> File header gives version as ..., but catalog dictionary gives version as ...
+> File header gives version as `<header-version>`, but catalog dictionary gives version as `<catalog-version>`
 
 ### Details
 The PDF version specified in the header is different from the version specified in the document catalogue dictionary.
 This is OK by specification and the higher PDF version "wins" in terms of the version of the specification the document conforms to.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L1665-L1669](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1665-L1669)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_87&type=code)
 * Examples: [1](https://github.com/behnam2014/ssoar-gold-standard/blob/master/1-German_papers_with_reference_section_at_end_of_paper_first_group/1-pdfs/11448.pdf)
 
 ### References
@@ -2137,7 +2137,7 @@ Needs review
 The document's PDF version, from EITHER the file header or document catalog dictionary, cannot be recognised as a number, this doesn't apply to the document catalog alone, misleading and needs review, or at least MUST be sure that the header version parses properly.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1677](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1677)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_88&type=code)
 * Examples: Needed
 
 ### References
@@ -2161,7 +2161,7 @@ Needs review
 The document catalogue dictionary's "Names" value is a reference to a non-dictionary object.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1702](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1702)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_89&type=code)
 * Examples: Needed
 
 ### References
@@ -2185,7 +2185,7 @@ Needs review
 An unexpected error occurred while retrieving the document catalogue's Names dictionary ("Names").
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L1706](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1706)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_90&type=code)
 * Examples: Needed
 
 ### References
@@ -2209,7 +2209,7 @@ Needs review
 The document catalogue's "Dests" entry references an object which is not a dictionary. The optional "Dests" entry is expected to contain a dictionary of the document's destination objects.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1719](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1719)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_91&type=code)
 * Examples: Needed
 
 ### References
@@ -2233,7 +2233,7 @@ Needs review
 An unexpected error occurred while retrieving the document catalogue's destinations dictionary ("Dests").
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L1723](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1723)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_92&type=code)
 * Examples: Needed
 
 ### References
@@ -2257,7 +2257,7 @@ Needs review
 The "V" entry of an encryption dictionary, which specifies the encryption algorithm used, has an invalid value. It must be a number value from 0-4 inclusive. Note that the PDF 1.7 specification seems to disbar the "3" option also. From PDF extension level 3 onward a new value number 5 is added (for the algorithm AESV3)
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1797-L1798](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1797-L1798)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_93&type=code)
 * Examples: Example with V value of 5: [1](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/copied-positive-P.pdf)
 
 ### References
@@ -2276,13 +2276,13 @@ Needs review
 ## PDF-HUL-94
 
 ### Message
-> Unexpected exception ...
+> Unexpected exception `<exception-details>`
 
 ### Details
 Unexpected error while parsing the document information dictionary, most likely a missing (null) object or object of the wrong type encountered while resolving the dictionary object or processing its entries.
 
 * Type: ErrorMessage
-* Source location: [PdfModule.java L1920-L1925](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1920-L1925)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_94&type=code)
 * Examples: Needed
 
 ### References
@@ -2306,7 +2306,7 @@ Needs review
 The document catalogue is missing its mandatory "Pages" entry. The entry must be a reference to the page tree node dictionary that is root of the document's page tree.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1933](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1933)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_95&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP253613_ReColl-154468_eth-8330-02.pdf)
 
 ### References
@@ -2330,7 +2330,7 @@ Needs review
 There was an error parsing the documents page tree.
 
 * Type: PdfInvalidException, Malformed
-* Source location: [PdfModule.java L1962-L1963](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1962-L1963)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_96&type=code)
 * Examples: Needed
 
 ### References
@@ -2356,7 +2356,7 @@ Needs review
 The "Pages" reference from the document catalog was resolved to a non-dictionary object. This must resolve to a dictionary representing the page tree element that is the tree's root node.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L1938](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1938)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_97&type=code)
 * Examples: Needed
 
 ### References
@@ -2376,13 +2376,13 @@ Example PDF we (@BL) have so far has turned out to be a bug in source code from 
 ## PDF-HUL-98
 
 ### Message
-> Variable message
+> Unexpected exception `<exception-details>`
 
 ### Details
 Unexpected error while parsing the document page tree.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L1968-L1973](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1968-L1973)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_98&type=code)
 * Examples: Needed
 
 ### References
@@ -2400,13 +2400,13 @@ Needs review
 ## PDF-HUL-99
 
 ### Message
-> Unexpected exception ...
+> Unexpected exception `<exception-details>`
 
 ### Details
 Unexpected error while parsing the document page label tree.
 
 * Type: ErrorMessage
-* Source location: [PdfModule.java L1998-L2003](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1998-L2003)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_99&type=code)
 * Examples: Needed
 
 ### References
@@ -2430,7 +2430,7 @@ Needs review
 There was a character encoding issue when parsing the XMP metadata embedded in the PDF. This error is a catch around an initial SAX error that's analysed for an encoding value which is used in a second attempt to open the file. It's not clear how often this error is triggered, so I added an info log statement.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1777](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2046-L2047)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_100&type=code)
 * Examples: Needed
 
 ### References
@@ -2454,7 +2454,7 @@ Needs review
 An exception was caught while parsing an XMP block embedded in the PDF.
 
 * Type: ErrorMessage, Invalid
-* Source location: [PdfModule.java L2062-L2063](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2062-L2063)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_101&type=code)
 * Examples: Needed
 
 ### References
@@ -2472,13 +2472,13 @@ Needs review
 ## PDF-HUL-102
 
 ### Message
-> Unexpected exception ...
+> Unexpected exception `<exception-details>`
 
 ### Details
 Unexpected error while parsing a page objects external content streams. This is a single stream or an array of streams that is the value of the optional "Contents" key.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L2107-L2112](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2107-L2112)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_102&type=code)
 * Examples: Needed
 
 ### References
@@ -2496,13 +2496,13 @@ Needs review
 ## PDF-HUL-103
 
 ### Message
-> Unexpected exception ...
+> Unexpected exception `<exception-details>`
 
 ### Details
 Unexpected error while parsing and analysing images embedded in the PDF. This a a very general catch and might benefit from been more specific, with more errors and more descriptive messages.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L2457-L2462](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2457-L2462)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_103&type=code)
 * Examples: Needed
 
 ### References
@@ -2532,7 +2532,7 @@ Needs review
 One of the font entries returned when processing the "Fonts" resource dictionary was resolved but a non-dictionary object was returned.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L2513-L2515](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2513-L2515)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_104&type=code)
 * Examples: Needs examples
 
 ### References
@@ -2554,13 +2554,13 @@ Needs review
 ## PDF-HUL-105
 
 ### Message
-> Fonts exist, but are not displayed; ...
+> Fonts exist, but are not displayed; to display remove param value of f from the config file
 
 ### Details
 This is just a message to say that font information is available but not reported. The configuration needs to be changed to see the font information (See Remediation)
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L2524-L2525](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2524-L2525)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_105&type=code)
 * Examples: Not applicable, is jHove configuration
 
 ### References
@@ -2583,7 +2583,7 @@ The configuration file can be [changed](http://jhove.openpreservation.org/module
 Some fonts in the document are missing / unreadable in the file. Needs review.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L2544-L2545](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2544-L2545)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_106&type=code)
 * Examples: Needed
 
 ### References
@@ -2611,7 +2611,7 @@ Create the original document with embedded fonts, as in PDF/A-compliant files. I
 This occurs when an arbitary recursion limit, of thirty times, has occurred when searching for an object in a stream.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2669](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2669)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_107&type=code)
 * Examples: Needed
 
 ### References
@@ -2639,7 +2639,7 @@ An object stream dictionary has failed JHOVE's validity tests:
 This error is probably never shown, as the error is catched in [PDF-HUL-110](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-110).
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L4383-L4384](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4383-L4384)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_108&type=code)
 * Examples: Needed
 
 ### References
@@ -2664,7 +2664,7 @@ An error ("ZipException") occurred while decompressing an object stream. \<See e
 Beware if encryption is used this Error is also show. All examples are examples of encrypted documents.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L4392](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4392)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_109&type=code)
 * Examples: [1](https://drive.google.com/open?id=0Bxn2YxzZ-3xCaUhKODY5MVRnUzA), [2](http://wiki.opf-labs.org/download/attachments/101613571/e-book_79.pdf), [3](http://wiki.opf-labs.org/download/attachments/101613571/inkonf_1500.pdf)
 
 ### References
@@ -2692,7 +2692,7 @@ An object stream dictionary has failed JHOVE's validity tests:
 
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L4397](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4397)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_110&type=code)
 * Examples: Needed
 
 ### References
@@ -2716,7 +2716,7 @@ Needs review
 The document catalog dictionary has a "PageLabels" entry but there's no children in the number tree structure. JHOVE munges PDF's page labels and number tree concepts making this error trickier to interpret.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2880-L2881](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2880-L2881)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_111&type=code)
 * Examples: Needed
 
 ### References
@@ -2738,13 +2738,13 @@ Needs review
 ## PDF-HUL-112
 
 ### Message
-> Page information is not displayed; ...
+> Page information is not displayed; to display remove param value of p from the config file
 
 ### Details
 This just informs the user that JHOVE has skipped storing and reporting the page level properties and that it can be re-enabled by config. If the parameter p is added in the configuration the Pages are ignored `<param>p</param>`
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L2912-L2913](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2912-L2913)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_112&type=code)
 * Examples: Not applicable, this is a configuration option
 
 ### References
@@ -2767,7 +2767,7 @@ Not applicable, this is a configuration option
 A general exception was caught when parsing a document's page labels to build JHOVE's page properties.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2952](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2952)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_113&type=code)
 * Examples: Needed
 
 ### References
@@ -2795,7 +2795,7 @@ Needs review
 An item in a page's annotations array ("Annots") does not point to a dictionary. Each item in an annotation array should point to an annotation dictionary containing that annotation's details.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L2970-L2971](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2970-L2971)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_114&type=code)
 * Examples: [1](https://github.com/mozilla/pdf.js/blob/master/test/pdfs/annotation-text-without-popup.pdf)
 
 ### References
@@ -2815,13 +2815,13 @@ Needs review
 ## PDF-HUL-115
 
 ### Message
-> Annotations exist, but are not displayed; ...
+> Annotations exist, but are not displayed; to display remove param value of a from the config file
 
 ### Details
 This just informs the user that JHOVE has skipped storing and reporting the annotation level properties and that it can be re-enabled by config. This is not an error, but a configuration option. By adding: `<param>a</param>` to the configuration of JHOVE, the annotations are not displayed.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L2985-L2986](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2985-L2986)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_115&type=code)
 * Examples: Not applicable. This is a configuration option.
 
 ### References
@@ -2844,7 +2844,7 @@ Not applicable, this is a configuration option
 Unexpected error while parsing a page's annotations. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L2995](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L2995)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_116&type=code)
 * Examples: Needed
 
 ### References
@@ -2870,7 +2870,7 @@ Needs review
 Unexpected exception while parsing a page object'd dictionary. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L3054](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3054)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_117&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP247751_ReColl118253_eth-49437-01.pdf)
 
 ### References
@@ -2894,7 +2894,7 @@ Needs review
 JHOVE has calculated a page position value of less than 1. PDF's page numbering consists of a number tree whose elements are labelling ranges stored as pdf dictionaries. JHOVE's logic around page label sequences is a little confusing, this seems to be an effort to  track a "natural" sequence number, that's checked against pages accumulated in other ranges. I don't believe that this error can be thrown as it's caught by the next general catch and changed to [PDF-HUL-119](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-119).
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L3096](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3096)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_118&type=code)
 * Examples: See examples in [PDF-HUL-119](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-119)
 
 ### References
@@ -2922,7 +2922,7 @@ Needs review
 Unexpected error while parsing the page label structure. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type. This error is also shown when actually the problem is [PDF-HUL-118](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-118). All the Examples in this error are examples from this. The problem in these files are PDF-HUL-118, but instead PDF-HUL-119 is reported.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L3133](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3133)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_119&type=code)
 * Examples: [1](https://www.econstor.eu/obitstream/10419/49620/1/32932439X.pdf), [2](http://wiki.opf-labs.org/download/attachments/101613571/SIP110025_ReColl-66015_eth-24328-01.pdf), [3](http://wiki.opf-labs.org/download/attachments/101613571/SIP132254_ReColl-147838_eth-26921-01.pdf)
 
 ### References
@@ -2950,7 +2950,7 @@ Needs review
 An annotation dictionary contains an action dictionary ("A") which is missing its subtype entry ("S"). The subtype entry is necessary for determining which kind of action to perform when the annotation is activated.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L3278-L3279](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3278-L3279)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_120&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/pp_821.pdf)
 
 ### References
@@ -2976,7 +2976,7 @@ Needs review
 Unexpected error while parsing an annotation dictionary. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L3333](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3333)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_121&type=code)
 * Examples: Needed
 
 ### References
@@ -2996,14 +2996,14 @@ Needs review
 ## PDF-HUL-122
 
 ### Message
-> Variable message
+> General Exception: `<exception-details>`
 
 ### Details
 This needs review, it's a horrible cludge that eats and PDFExceptions thrown while processing destination objects and always sets the invalid flag. Seems dubious behaviour.
 It, for example, reports the error "Invalid indirect destination - referenced object ' ' cannot be found". This error comes from [PDF-HUL-149](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-149).
 
 * Type: ErrorMessage, An Exception for all the messages coming from adding Destination to Property list
-* Source location: [PdfModule.java L3378-L3383](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3378-L3383)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_122&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP110204_ReColl-124480_1-s2.0-S0370269317301144-main.pdf)
 
 ### References
@@ -3027,7 +3027,7 @@ Remediation is described in [a blogpost](https://openpreservation.org/blogs/dest
 An outline dictionary's "Next" entry points to itself. This would cause a recursive loop so JHOVE warns and breaks out. The PDF 1.6 specification doesn't explicitly disallow this.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L3967](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3967)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_123&type=code)
 * Examples: Needed
 
 ### References
@@ -3051,7 +3051,7 @@ Needs review
 Unexpected error while parsing the document outline. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type.
 
 * Type: PdfMalformedException
-* Source location: [PdfModule.java L3979](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3979)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_124&type=code)
 * Examples: Needed
 
 ### References
@@ -3075,7 +3075,7 @@ Needs review
 An outline item dictionary has no "Title" value.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L4002](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4002)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_125&type=code)
 * Examples: Needed
 
 ### References
@@ -3099,7 +3099,7 @@ Needs review
 An outline item dictionary has no "Parent" entry. This must be an indirect reference to the parent dictionary in the outline hierarchy.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L4009](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4009)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_126&type=code)
 * Examples: Needed
 
 ### References
@@ -3123,7 +3123,7 @@ Needs review
 An outline item dictionary has a "Count" value but it's not an integer or is not a Simple Object. This is required if the outline item has children, but JHOVE doesn't check it child elements are available.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L4015](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4015)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_127&type=code)
 * Examples: Needed
 
 ### References
@@ -3147,7 +3147,7 @@ Needs review
 An outline dictionary's "Next" entry points to itself. This would cause a recursive loop so JHOVE warns and breaks out. The PDF 1.6 specification doesn't explicitly disallow this.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L4068-L4069](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4068-L4069)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_128&type=code)
 * Examples: Needed
 
 ### References
@@ -3171,7 +3171,7 @@ Needs review
 An outline dictionary's "Next" entry points to itself. This would cause a recursive loop so JHOVE warns and breaks out. The PDF 1.6 specification doesn't explicitly disallow this.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L3934](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3934)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_129&type=code)
 * Examples: Needed
 
 ### References
@@ -3195,7 +3195,7 @@ Needs review
 An unexpected object type was encountered while parsing an outline item. Possible causes include unexpected "Prev", "Next", "First", or "Last" values.
 
 * Type: PdfInvalidException, ClassCastException
-* Source location: [PdfModule.java L4101](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4101)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_130&type=code)
 * Examples: Needed
 
 ### References
@@ -3219,7 +3219,7 @@ Needs review
 Unexpected error while parsing an outline item. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L4103](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4103)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_131&type=code)
 * Examples: Needed
 
 ### References
@@ -3237,13 +3237,13 @@ Needs review
 ## PDF-HUL-132
 
 ### Message
-> Outlines exist, but are not displayed; ...
+> Outlines exist, but are not displayed; to display remove param value of o from the config file
 
 ### Details
 This is just a message to say that outline information isn't been reported. It is information about the `[jHove configuration](http://jhove.openpreservation.org/modules/pdf/)`. If the parameter "o" is added the Document Outline will be suppressed: `<param>o</param>`.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L3975](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L3975)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_132&type=code)
 * Examples: This is configuration option in jHove.
 
 ### References
@@ -3267,7 +3267,7 @@ No remediation needed as this is a configuration option.
 A date found in a dictionary does not conform to the expected format. Dates specified in dictionaries should follow the format: (D:YYYYMMDDHHmmSSOHH'mm') (PDF 1.4 Spec page 100, section 3.8.2 "Dates")
 
 * Type: PdfInvalidException, ErrorMessage
-* Source location: [PdfModule.java L4227](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4227)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_133&type=code)
 * Examples: [1](https://drive.google.com/file/d/0B04zL3V7knPNU1BGNFo4OGlWZ1U/view?usp=sharing), [2](https://github.com/angea/PDF101/blob/master/handcoded/102_A-vectorized.pdf), [3](https://github.com/mozilla/pdf.js/blob/master/test/pdfs/bug1146106.pdf)
 
 ### References
@@ -3291,7 +3291,7 @@ It may happen that after a "cure" there is no information about the creation dat
 Another check to prevent an endless loop when processing the cross references. This is flagged the current cross reference is the same as the previous one. The program logic is a little dark here involving state across a few member variables.
 
 * Type: ErrorMessage, MalFormed
-* Source location: [PdfModule.java L827-L828](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L827-L828)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_134&type=code)
 * Examples: Needed
 
 ### References
@@ -3315,7 +3315,7 @@ Needs review
 A Java null pointer exception was caught, roughly equivalent to a missing and expected PDF object, when building the font property list. Show Fonts or Maximum Verbosity needs to be configured to show this information.
 
 * Type: ErrorMessage, NullPointerException
-* Source location: [PdfModule.java L914-L915](https://github.com/openpreserve/jhove/blob/d74599048ead2797ca9887900976b624cefbb575/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L914C5-L915C37)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_135&type=code)
 * Examples: Needed
 
 ### References
@@ -3339,7 +3339,7 @@ Needs review
 Really an application level warning, there's nothing wrong with the PDF, just JHOVE's ability to report all of the details.
 
 * Type: InfoMessage
-* Source location: [PdfModule.java L910-L911](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L910-L911)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_136&type=code)
 * Examples: [1](http://www.redbooks.ibm.com/redpapers/pdfs/redp4120.pdf)
 
 ### References
@@ -3357,7 +3357,7 @@ No Remediation, is an InfoMessage about jHove functionality
 ## PDF-HUL-137
 
 ### Message
-> No PDF header
+> No PDF header found
 
 ### Details
 The PDF header could not be found within the file's first 1024 bytes. This can also appear when there are certain kinds of junk data before the header, even if the header exists within the first 1024 bytes.
@@ -3365,7 +3365,7 @@ Should a file be classified as malformed if there is any non-zero data before th
 The implementation notes in the second accompanying PDF 1.6 reference has more to say about headers. The PDF 1.7 spec has no equivalent note.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L1041](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1041)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_137&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/CERN-2005-009.pdf?version=1&modificationDate=1472125536000)
 
 ### References
@@ -3390,7 +3390,7 @@ If extra information is added to the header, that extra information can be remov
 An end-of-file marker ("%%EOF") could not be found within the file's last 1024 bytes. This indicates truncates and can often be due to a PDF file being incompletely uploaded or downloaded.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L1157-L1158](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1157-L1158)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_138&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/567147525.pdf?version=1&modificationDate=1436357226000)
 
 ### References
@@ -3414,7 +3414,7 @@ Needs to be supplied again or extra information can be removed.
 The "startxref" keyword marking the reference to a cross-reference stream couldn't be found OR the following line wasn't a numeric offset to a cross reference dictionary.
 
 * Type: ErrorMessage, Malformed
-* Source location: [PdfModule.java L1213](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1213)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_139&type=code)
 * Examples: Needed
 
 ### References
@@ -3438,7 +3438,7 @@ Needs review
 The object retrieved as the document catalog dictionary from the cross-reference table does not have the same ID as the the reference used to retrieve it. An object's ID and it's position in the cross reference table should be the same, i.e. object ID 1 is found at index 1 in the cross-reference table. This may be indicative of a broken cross-reference table. This needs review as it's really a problem with the cross-reference table / JHOVE's parsing of it as readers are more forgiving.
 
 * Type: ErrorMessage, MalFormed
-* Source location: https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1591
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_140&type=code)
 * Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_002_document-catalog-wrong-object-number.pdf)
 
 ### References
@@ -3462,7 +3462,7 @@ Needs review
 The document catalog dictionary object must have key called type with the value Catalog. This error is related to [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-142) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-143).
 
 * Type: ErrorMessage, MalFormed
-* Source location: [PdfModule.java L1598](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1598)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_141&type=code)
 * Examples: [1](https://github.com/openpreserve/jhove/raw/rel/jhove-1.20/jhove-modules/src/test/resources/edu/harvard/hul/ois/jhove/module/pdf/doc-cat/T02-01_006_document-catalog-wrong-type-key.pdf), [2](https://drive.google.com/open?id=0Bxn2YxzZ-3xCZ0wyOWxWSHk2Zlk)
 
 ### References
@@ -3486,7 +3486,7 @@ Needs review
 The document catalog dictionary object must have key called type. In this error the Type does not exist and is null. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-141) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-143).
 
 * Type: ErrorMessage, MalFormed
-* Source location: [PdfModule.java L1599](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1599)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_142&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3505,7 +3505,7 @@ Needs review
 The document catalog dictionary object has a key called Type. In this error the Type is not a Simple Object. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-141) and [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-142).
 
 * Type: ErrorMessage, MalFormed
-* Source location: [PdfModule.java L1600](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1600)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_143&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3524,7 +3524,7 @@ Needs review
 This error message and the next two error messages ([PDF-HUL-145](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-145) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-146)) are related. They check the Pages in a Dictionary have the correct properties. PDF-HUL-144 is about Type key is missing or null.
 
 * Type: ErrorMessage, MalFormed
-* Source location: [PdfModule.java L1945](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1945)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_144&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3543,7 +3543,7 @@ Needs review
 This error message and the error messages ([PDF-HUL-144](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-144) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-146)) are related. The Type of the Page in the Directory is not a Simple Object.
 
 * Type: ErrorMessage, MalFormed
-* Source location: [PdfModule.java L1946](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1946)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_145&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3562,7 +3562,7 @@ Needs review
 This error message and the error messages ([PDF-HUL-144](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-144) and [PDF-HUL-145](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-145)) are related.The value of Type is not Pages.
 
 * Type: ErrorMessage, MalFormed
-* Source location: [PdfModule.java L1944](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1944)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_146&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3581,7 +3581,7 @@ Needs review
 This error occurs when the page tree is build.
 
 * Type: ArrayIndexOutOfBoundsException, PdfInvalidException
-* Source location: [PageTreeNode L128](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/pdf/PageTreeNode.java#L128)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_147&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3594,13 +3594,13 @@ Needs review
 ## PDF-HUL-148
 
 ### Message
-> PDF minor version number is greater than 7.
+> PDF minor version number is out of valid range.
 
 ### Details
-At the moment the latest version of PDF is version 1.7. The latest minor version is 7. It is defined in MAX_VALID_MAJOR_VERSION Constant.
+At the moment the latest version of PDF is version 2.0. The highest minor version is 7, for PDF 1.7. It is defined in MAX_VALID_MAJOR_VERSION Constant.
 
 * Type: ErrorMessage, Not Valid
-* Source location: [PdfModule.java L1046](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1046)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_148&type=code)
 * Examples: [1](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/extensions-adbe-force-1.8.5.pdf), [2](https://github.com/qpdf/qpdf/blob/master/qpdf/qtest/qpdf/extensions-adbe-other-force-1.8.5.pdf)
 
 ### Impact
@@ -3613,15 +3613,14 @@ Needs review
 ## PDF-HUL-149
 
 ### Message
-> Invalid indirect destination - referenced object '
-' cannot be found
+> Invalid indirect destination - referenced object `<object>` cannot be found
 
 ### Details
 The Destination was not found for an annotation that is referenced in the document
 This error is never reported in the output, because the Message is included with [PDF-HUL-122](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-122).
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L4167-L4172](https://github.com/openpreserve/jhove/blob/8677ad043a59d93b0dbe949047ef064bc592bb08/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L4167-L4172)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_149&type=code)
 * Examples: [1](http://wiki.opf-labs.org/download/attachments/101613571/SIP110204_ReColl-124480_1-s2.0-S0370269317301144-main.pdf), [2 see Isartor test suite manual.pdf](https://www.pdfa.org/isartor-test-suite-terms-of-use-download/)
 
 ### Impact
@@ -3639,7 +3638,7 @@ Needs review
 The retrieved object must be a stream. This error can occur when the Trailer is parsed or when the Cross references are parsed.
 
 * Type: PdfInvalidException
-* Source location: [PdfModule.java L1257-L1258](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1257-L1258) and [PdfModule.java L1429-L1430](https://github.com/openpreserve/jhove/blob/integration/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1429-L1430)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_150&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3657,7 +3656,7 @@ Needs review
 A catch all error for the cross-reference table.
 
 * Type: Exception
-* Source location: Needs to be added after pull request approval
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_151&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3675,7 +3674,7 @@ Needs review
 OE key is a manditory key when using an encrypted dictionary. This is part of a supplement of PDF specification for ISO 32000. According to the [documentation](https://web.archive.org/web/20220306152229/https://www.adobe.com/content/dam/acom/en/devnet/pdf/adobe_supplement_iso32000.pdf), it is based on owner and user passwords and it is used in computing encryption key.
 
 * Type: PdfInvalidException
-* Source location: Needs to be added after pull request approval
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_152&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3693,7 +3692,7 @@ Needs review
 UE key is a manditory key when using an encrypted dictionary. This is part of a supplement of PDF specification for ISO 32000. According to the [documentation](https://web.archive.org/web/20220306152229/https://www.adobe.com/content/dam/acom/en/devnet/pdf/adobe_supplement_iso32000.pdf), it is based on user passwords and it is used in computing encryption key.
 
 * Type: PdfInvalidException
-* Source location: Needs to be added after pull request approval
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_153&type=code)
 * Examples: Needed
 
 ### Impact
@@ -3711,7 +3710,7 @@ Needs review
 The Extension information in PDF Specification (ISO 32000) has information about developer key of the extension. The Developer Key is mandatory and needs to be included in the [specified list](https://github.com/adobe/pdf-names-list).
 
 * Type: Error Message
-* Source location: [PdfModule.java](https://github.com/openpreserve/jhove/blob/1bb234219c08a0bdce8f15dd003c3fb920e51814/jhove-modules/pdf-hul/src/main/java/edu/harvard/hul/ois/jhove/module/PdfModule.java#L1748-L1749)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_154&type=code)
 * Examples: [1](https://github.com/qpdf/qpdf/blob/main/qpdf/qtest/qpdf/extensions-adbe-other.pdf)
 
 ### Impact
@@ -3720,3 +3719,202 @@ The second possibility is that the Developer Prefix information is not up-to-dat
 
 ### Remediation
 Update the Developer Prefix table in jHove
+
+## PDF-HUL-155
+
+### Message
+> Error parsing mandatory version number, PDF header too short: "{0}"
+
+### Details
+NEEDS REVIEW
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_155&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-156
+
+### Message
+> Extension can't be defined as an indirect reference
+
+### Details
+NEEDS REVIEW
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_156&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-157
+
+### Message
+> Unexpected exception `<exception-details>`
+
+### Details
+NEEDS REVIEW
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_157&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-158
+
+### Message
+> Unexpected exception `<exception-details>`
+
+### Details
+NEEDS REVIEW
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_158&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-159
+
+### Message
+> Image height and width are mandatory properties
+
+### Details
+NEEDS REVIEW
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_159&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-160
+
+### Message
+> IO Exception reading PDF Header
+
+### Details
+NEEDS REVIEW
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_160&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-161
+
+### Message
+> PDF major version number should be 1.x or 2.x
+
+### Details
+The numbers 1 and 2 are the only legal values for PDF major version numbers which range as follows: 1.0 - 1.7 and 2.0.
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_161&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-162
+
+### Message
+> Malformed PDF version number
+
+### Details
+Having found the beginning of the PDF header JHOVE uses a regex pattern to try to parse the version number. The pattern expects a digit followed by a period, then another digit, e.g. `(\d)\.(\d)`. This message indicates that the pattern wasn't found.
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_162&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-163
+
+### Message
+> IO Exception reading text stream
+
+### Details
+NEEDS REVIEW
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_163&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-164
+
+### Message
+> Unbalanced parentheses in text stream
+
+### Details
+NEEDS REVIEW
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_164&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
+
+## PDF-HUL-165
+
+### Message
+> Object number exceeds the number of objects reported in the trailer Size entry
+> Object number {0} + 1 is greater than trailer.Size {1}
+
+### Details
+NEEDS REVIEW
+
+* Type: Error Message
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_165&type=code)
+* Examples: NEEDS REVIEW
+
+### Impact
+NEEDS REVIEW
+
+### Remediation
+NEEDS REVIEW
