@@ -8,7 +8,8 @@
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegModule.java L1227](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L1227)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_1&type=code)
+
 * Examples: Needed
 
 ### Impact
@@ -27,7 +28,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegModule.java L654](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L654)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_2&type=code)
 * Examples: [1](https://code.google.com/archive/p/imagetestsuite/downloads)
 
 ### Impact
@@ -46,7 +47,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegExif.java L168](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/jpeg/JpegExif.java#L168)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_3&type=code)
 * Examples: Needed
 
 ### Impact
@@ -65,7 +66,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegModule.java L887](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L887)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_4&type=code)
 * Examples: [1](https://code.google.com/archive/p/imagetestsuite/downloads)
 
 ### Impact
@@ -84,7 +85,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegModule.java L928](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L928)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_5&type=code)
 * Examples: Needed
 
 ### Impact
@@ -103,7 +104,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegModule.java L645](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L645)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_6&type=code)
 * Examples: [1](https://code.google.com/archive/p/imagetestsuite/downloads)
 
 ### Impact
@@ -116,13 +117,14 @@ Needs review
 ## JPEG-HUL-7
 
 ### Message
-> Expected marker byte 255, got ...
+> Expected marker byte 255
+> Read marker byte value `<value>`
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegModule.java L489](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L489)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_7&type=code)
 * Examples: [1](https://code.google.com/archive/p/imagetestsuite/downloads)
 
 ### Impact
@@ -141,7 +143,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegModule.java L1131](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L1131)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_8&type=code)
 * Examples: Needed
 
 ### Impact
@@ -160,7 +162,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [JpegModule.java L503](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L503)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_9&type=code)
 * Examples: [1](https://drive.google.com/file/d/0Bxn2YxzZ-3xCVlFpNldDb2FPRFk/view?usp=sharing&resourcekey=0-fomhzGi6oA4rNHzr2ZxISQ)
 
 ### Impact
@@ -188,7 +190,7 @@ As long as this is the only error in a file one of the following measures may be
 Needs review
 
 * Type: ErrorMessage
-* Source location: ~[JpegExif.java L69](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/jpeg/JpegExif.java#L69)~
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_10&type=code)
 * Examples: Needed
 
 ### Impact
@@ -207,7 +209,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: ~[JpegModule.java L1519](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L1519)~
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_11&type=code)
 * Examples: Needed
 
 ### Impact
@@ -226,7 +228,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: ~[JpegModule.java L1054](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/JpegModule.java#L1054)~
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_12&type=code)
 * Examples: Needed
 
 ### Impact
@@ -245,7 +247,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location:
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_13&type=code)
 * Examples: Needed
 
 ### Impact
@@ -264,7 +266,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location:
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG_HUL_14&type=code)
 * Examples: Needed
 
 ### Impact
