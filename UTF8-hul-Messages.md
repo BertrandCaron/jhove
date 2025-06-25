@@ -8,7 +8,7 @@
 Needs review
 
 * Type: InfoMessage
-* Source location: [Utf8Module.java L533](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/Utf8Module.java#L533)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20UTF8_HUL_1&type=code)
 * Examples: Needed
 
 ### Impact
@@ -27,7 +27,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [Utf8Module.java L255](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/Utf8Module.java#L255)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20UTF8_HUL_2&type=code)
 * Examples: Needed
 
 ### Impact
@@ -46,7 +46,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [Utf8Module.java L274](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/Utf8Module.java#L274)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20UTF8_HUL_3&type=code)
 * Examples: Needed
 
 ### Impact
