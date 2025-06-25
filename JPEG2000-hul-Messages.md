@@ -8,7 +8,7 @@
 Needs review
 
 * Type: InfoMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_1&type=code)
 * Examples: Needed
 
 ### Impact
@@ -27,7 +27,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_2&type=code)
 * Examples: Needed
 
 ### Impact
@@ -40,13 +40,13 @@ Needs review
 ## JPEG2000-HUL-3
 
 ### Message
-> Invalid context for 
+> Invalid context for `<box-number>`
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_3&type=code)
 * Examples: Needed
 
 ### Impact
@@ -65,7 +65,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_4&type=code)
 * Examples: Needed
 
 ### Impact
@@ -78,13 +78,13 @@ Needs review
 ## JPEG2000-HUL-5
 
 ### Message
-> Incorrect Box size for 
+> Incorrect Box size for `<box-holder>`
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_5&type=code)
 * Examples: Needed
 
 ### Impact
@@ -103,7 +103,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_6&type=code)
 * Examples: Needed
 
 ### Impact
@@ -122,7 +122,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_7&type=code)
 * Examples: Needed
 
 ### Impact
@@ -141,7 +141,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_8&type=code)
 * Examples: Needed
 
 ### Impact
@@ -160,7 +160,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_9&type=code)
 * Examples: Needed
 
 ### Impact
@@ -179,7 +179,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_10&type=code)
 * Examples: Needed
 
 ### Impact
@@ -198,7 +198,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_11&type=code)
 * Examples: Needed
 
 ### Impact
@@ -217,7 +217,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_12&type=code)
 * Examples: Needed
 
 ### Impact
@@ -236,7 +236,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_13&type=code)
 * Examples: Needed
 
 ### Impact
@@ -255,7 +255,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_14&type=code)
 * Examples: Needed
 
 ### Impact
@@ -274,7 +274,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_15&type=code)
 * Examples: Needed
 
 ### Impact
@@ -293,7 +293,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_16&type=code)
 * Examples: Needed
 
 ### Impact
@@ -312,7 +312,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_17&type=code)
 * Examples: Needed
 
 ### Impact
@@ -331,7 +331,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_18&type=code)
 * Examples: Needed
 
 ### Impact
@@ -350,7 +350,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_19&type=code)
 * Examples: Needed
 
 ### Impact
@@ -369,7 +369,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_20&type=code)
 * Examples: Needed
 
 ### Impact
@@ -388,7 +388,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_21&type=code)
 * Examples: Needed
 
 ### Impact
@@ -401,13 +401,13 @@ Needs review
 ## JPEG2000-HUL-22
 
 ### Message
-> Expected File Type Box, got 
+> Expected File Type Box, got `<box-header-type>`
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_22&type=code)
 * Examples: Needed
 
 ### Impact
@@ -426,7 +426,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_23&type=code)
 * Examples: Needed
 
 ### Impact
@@ -445,7 +445,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_24&type=code)
 * Examples: Needed
 
 ### Impact
@@ -464,7 +464,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_25&type=code)
 * Examples: Needed
 
 ### Impact
@@ -483,7 +483,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_26&type=code)
 * Examples: Needed
 
 ### Impact
@@ -502,7 +502,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_27&type=code)
 * Examples: Needed
 
 ### Impact
@@ -521,7 +521,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_28&type=code)
 * Examples: Needed
 
 ### Impact
@@ -540,7 +540,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_29&type=code)
 * Examples: Needed
 
 ### Impact
@@ -559,7 +559,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_30&type=code)
 * Examples: Needed
 
 ### Impact
@@ -578,7 +578,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_31&type=code)
 * Examples: Needed
 
 ### Impact
@@ -597,7 +597,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_32&type=code)
 * Examples: Needed
 
 ### Impact
@@ -616,7 +616,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_33&type=code)
 * Examples: Needed
 
 ### Impact
@@ -635,7 +635,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_34&type=code)
 * Examples: Needed
 
 ### Impact
@@ -654,7 +654,7 @@ Needs review
 The magic number is not correct.
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_35&type=code)
 * Examples: Needed
 
 ### Impact
@@ -673,7 +673,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_36&type=code)
 * Examples: Needed
 
 ### Impact
@@ -692,7 +692,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_37&type=code)
 * Examples: Needed
 
 ### Impact
@@ -711,7 +711,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_38&type=code)
 * Examples: Needed
 
 ### Impact
@@ -730,7 +730,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_39&type=code)
 * Examples: Needed
 
 ### Impact
@@ -749,7 +749,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_40&type=code)
 * Examples: Needed
 
 ### Impact
@@ -768,7 +768,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_41&type=code)
 * Examples: Needed
 
 ### Impact
@@ -787,7 +787,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_42&type=code)
 * Examples: Needed
 
 ### Impact
@@ -806,7 +806,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_43&type=code)
 * Examples: Needed
 
 ### Impact
@@ -825,7 +825,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_44&type=code)
 * Examples: Needed
 
 ### Impact
@@ -844,7 +844,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_45&type=code)
 * Examples: Needed
 
 ### Impact
@@ -863,7 +863,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_46&type=code)
 * Examples: Needed
 
 ### Impact
@@ -882,7 +882,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_47&type=code)
 * Examples: Needed
 
 ### Impact
@@ -901,7 +901,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_48&type=code)
 * Examples: Needed
 
 ### Impact
@@ -920,7 +920,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_49&type=code)
 * Examples: Needed
 
 ### Impact
@@ -939,7 +939,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_50&type=code)
 * Examples: Needed
 
 ### Impact
@@ -958,7 +958,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_51&type=code)
 * Examples: Needed
 
 ### Impact
@@ -977,7 +977,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_52&type=code)
 * Examples: Needed
 
 ### Impact
@@ -996,7 +996,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_53&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1009,13 +1009,13 @@ Needs review
 ## JPEG2000-HUL-54
 
 ### Message
-> Size of contained Boxes underruns 
+> Size of contained Boxes underruns `<box-holder>`
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_54&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1034,7 +1034,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_55&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1053,7 +1053,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: Needs review
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20JPEG2000_HUL_56&type=code)
 * Examples: Needed
 
 ### Impact
