@@ -8,7 +8,7 @@
 Needs review
 
 * Type: TiffException
-* Source location: [IFD.java L263](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L263)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_1&type=code)
 * Examples: Needed
 
 ### Impact
@@ -21,13 +21,13 @@ Needs review
 ## TIFF-HUL-2
 
 ### Message
-> Tag \<tag> out of sequence
+> Tag `<tag-number>` out of sequence
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: [IFD.java L276](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L276)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_2&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/sony/a350/RAW_SONY_A350.ARW)
 
 ### Impact
@@ -46,7 +46,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [IFD.java L286](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L286)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_3&type=code)
 * Examples: [1](https://www.rawsamples.ch/raws/nikon/d60/RAW_NIKON_D60.NEF)
 
 ### Impact
@@ -59,7 +59,7 @@ Needs review
 ## TIFF-HUL-4
 
 ### Message
-> Value offset not word aligned: \<value>
+> Value offset not word aligned: `<word-aligned-offset-value>`
 
 ### Details
 TIFF 6.0 Specification, page 15: value offsets are "expected" to point to values which begin on word boundaries. Page 30: "Rows must begin on byte boundaries."
@@ -69,7 +69,7 @@ Storing data at word and byte boundaries allows CPUs to more efficiently read an
 When the parameter byteoffset=true is set in [Link to the jhove configuration byteoffset](https://jhove.openpreservation.org/modules/tiff/), this error is ignored and becomes an InfoMessage. The status also becomes "Well-Formed and valid".
 
 * Type: ErrorMessage or InfoMessage ([configurable](https://jhove.openpreservation.org/modules/tiff/))
-* Source location: [IFD.java L309](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L309)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_4&type=code)
 * Examples: [1](https://www.rawsamples.ch/raws/samsung/RAW_SAMSUNG_%20WB2000%20.SRW)
 
 ### Impact
@@ -91,7 +91,7 @@ Options:
 Needs review
 
 * Type: IOException
-* Source location: [IFD.java L325](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L325)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_5&type=code)
 * Examples: Needed
 
 ### Impact
@@ -104,32 +104,21 @@ Needs review
 ## TIFF-HUL-6
 
 ### Message
-
 > Count mismatch for tag \<tag>; expecting \<minCount>, saw \<count>
 
 ### Details
-
-Each TIFF tag has a so-called *count* that determines the size of its content. The counts of some tags are fixed by the TIFF specification or other specifications, so only certain numbers are allowed for these tags' counts. For example, the ImageWidth tag is required to have a count of 1 (see [TIFF 6 specification](http://archive.org/details/TIFF6), page 34) because obviously an image must have exactly one width. This error message points out a tag whose count contradicts the count that is specified for this tag.
-
-Note that currently (~ v1.32) JHOVE only raises this error when it encounters a tag count that is *lower* than what is expected. So it will complain about an ImageWidth tag with a count of 0, but not about one with a count of 2 or more, although that is not valid either.
+Needs review
 
 * Type: TiffException
-* Source location: [IFD.java L930](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L930)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_6&type=code)
 * Examples: Needed
 
 ### Impact
-
-It depends; from almost no practical impact to a file that cannot be rendered.
-
-For example, if the ImageWidth tag has a count other than 1, this clearly contradicts the specification. However, a viewer might gracefully ignore the wrong value and just assume a count of 1. As long as the actual tag *value* is correct (i.e., the tag contains exactly one width value), this file might thus be rendered without problems. But of course, there is no guarantee that a viewer will behave in this way, so the file might just as well *not* be rendered. Moreover, if the ImageWidth tag has a count of 0 because there is in fact no value (which is of course illegal) then even a robust viewer will have a hard time rendering the image correctly.
-
-In actual practice, this random example is already a formidable mess. A TIFF file with an ImageWidth count of 1 is valid according to JHOVE and renders fine in the Windows 10 photo viewer. Setting the count to 0 results in a TIFF-HUL-6 error but still renders fine as long as there is a sensible tag value. Setting it to 2 is valid according to JHOVE 1.32 (!) but does not render in the Windows 10 photo viewer. So you see, it's complicated ...
-
-In summary, while you might get away with this error in a robust viewer you should better try to fix it, or be confident that it really doesn't affect your file too much.
+Needs review
 
 ### Remediation
+Needs review
 
-In some cases it helps to write a value (preferably the correct one) to the offending tag with [ExifTool](https://www.exiftool.org/). For example, if a file has an ImageWidth value (not count) of 90, then running `exiftool -ImageWidth=90 a.tif` will write this value to the tag and also set the correct count of 1.
 
 ## TIFF-HUL-7
 
@@ -140,7 +129,7 @@ In some cases it helps to write a value (preferably the correct one) to the offe
 Needs review
 
 * Type: TiffException
-* Source location: [IFD.java L953](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L953)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_7&type=code)
 * Examples: [1](https://www.rawsamples.ch/raws/nikon/RAW_NIKON_COOLPIX_P7100.NRW), [2](https://drive.google.com/open?id=0Bxn2YxzZ-3xCMEFlUmdnWVlSNWs)
 
 ### Impact
@@ -166,7 +155,7 @@ Options:
 Needs review
 
 * Type: TiffException
-* Source location: [IFD.java L971](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L971)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_8&type=code)
 * Examples: Needed
 
 ### Impact
@@ -185,7 +174,7 @@ Same as [TIFF-HUL-7](https://github.com/openpreserve/jhove/wiki/TIFF-hul-Message
 Needs review
 
 * Type: TiffException
-* Source location: [TiffIFD.java L1820](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/TiffIFD.java#L1820)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_9&type=code)
 * Examples: Needed
 
 ### Impact
@@ -204,7 +193,7 @@ Needs review
 Needs review
 
 * Type: TiffException 
-* Source location: [TiffIFD.java L2867](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/TiffIFD.java#L2867)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_10&type=code)
 * Examples: Needed
 
 ### Impact
@@ -223,7 +212,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffIFD.java L3783](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/TiffIFD.java#L3783)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_11&type=code)
 * Examples: Needed
 
 ### Impact
@@ -242,7 +231,7 @@ Needs review
 An IFD tag of the given type was found but ignored because the module is currently unaware of how to interpret the tag's data.
 
 * Type: InfoMessage
-* Source location: [TiffIFD.java L3795](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/TiffIFD.java#L3795)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_12&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/sony/a350/RAW_SONY_A350.ARW)
 
 ### Impact
@@ -261,7 +250,7 @@ To request support for an unrecognized IFD tag, please report it to the project.
 Needs review
 
 * Type: IOException
-* Source location: [TiffIFD.java L3800](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/TiffIFD.java#L3800)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_13&type=code)
 * Examples: Needed
 
 ### Impact
@@ -280,7 +269,7 @@ Needs review
 Needs review
 
 * Type: TiffException
-* Source location: [TiffIFD.java L3951](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/TiffIFD.java#L3951)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_14&type=code)
 * Examples: Needed
 
 ### Impact
@@ -299,7 +288,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [InteroperabilityIFD.java L78](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/InteroperabilityIFD.java#L78)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_15&type=code)
 * Examples: Needed
 
 ### Impact
@@ -318,7 +307,7 @@ Needs review
 Needs review
 
 * Type: IOException
-* Source location: [InteroperabilityIFD.java L84](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/InteroperabilityIFD.java#L84)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_16&type=code)
 * Examples: Needed
 
 ### Impact
@@ -337,7 +326,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage 
-* Source location: [GPSInfoIFD.java L658](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/GPSInfoIFD.java#L658)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_17&type=code)
 * Examples: Needed
 
 ### Impact
@@ -356,7 +345,7 @@ Needs review
 Needs review
 
 * Type: IOException
-* Source location: [GPSInfoIFD.java L662](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/GPSInfoIFD.java#L662)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_18&type=code)
 * Examples: Needed
 
 ### Impact
@@ -375,7 +364,7 @@ Needs review
 Needs review
 
 * Type: IOException
-* Source location: [GlobalParametersIFD.java L153](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/GlobalParametersIFD.java#L153)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_19&type=code)
 * Examples: Needed
 
 ### Impact
@@ -394,7 +383,7 @@ Needs review
 Needs review
 
 * Type: TiffException
-* Source location: [TiffModule.java L426](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L426)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_20&type=code)
 * Examples: Needed
 
 ### Impact
@@ -413,7 +402,7 @@ Needs review
 The header is 8 bytes long, the magic bytes contain of the number 42 and the description of the byte order that serves to identify the format because of internal signatures. Plus, there is an offset of the first IDF (Image File Directory).
 
 * Type: TiffException
-* Source location: [TiffModule.java L437](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L437)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_21&type=code)
 * Examples: Needed
 
 ### Impact
@@ -432,7 +421,7 @@ Needs review
 Needs review
 
 * Type: TiffException
-* Source location: [TiffModule.java L602](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L602)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_22&type=code)
 * Examples: Needed
 
 ### Impact
@@ -451,7 +440,7 @@ Needs review
 Needs review
 
 * Type: TiffException
-* Source location: [TiffModule.java L609](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L609)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_23&type=code)
 * Examples: Needed
 
 ### Impact
@@ -470,7 +459,7 @@ Needs review
 TIFF 6.0 Specification, p. 103, chapter "Strips and tiles".
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L795](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L795)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_24&type=code)
 * Examples: Needed
 
 ### Impact
@@ -489,7 +478,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L799](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L799)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_25&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/sony/a350/RAW_SONY_A350.ARW)
 
 ### Impact
@@ -508,7 +497,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L808](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L808)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_26&type=code)
 * Examples: Needed
 
 ### Impact
@@ -527,7 +516,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L812](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L812)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_27&type=code)
 * Examples: Needed
 
 ### Impact
@@ -546,7 +535,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L817](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L817)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_28&type=code)
 * Examples: Needed
 
 ### Impact
@@ -565,7 +554,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L828](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L828)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_29&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/hasselblad/RAW_HASSELBLAD_IXPRESS_CF132.3FR)
 
 ### Impact
@@ -584,7 +573,7 @@ Needs review
 TIFF 6.0 Specification, p. 109: datatype "short", has to be defined with a multiple of 8.
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L837](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L837)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_30&type=code)
 * Examples: Needed
 
 ### Impact
@@ -603,7 +592,7 @@ Needs review
 TIFF 6.0 Specification, p. 109: datatype "short", has to be defined with a multiple of 8.
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L840](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L840)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_31&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/leaf/RAW_APTUS_75.MOS)
 
 ### Impact
@@ -622,7 +611,7 @@ Needs review
 TIFF 6.0 Specification, p. 109, data type Long, length number of tiles.
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L843](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L843)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_32&type=code)
 * Examples: Needed
 
 ### Impact
@@ -641,7 +630,7 @@ Needs review
 TIFF 6.0 Specification, p. 109, data type Long, length number of tiles.
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L846](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L846)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_33&type=code)
 * Examples: Needed
 
 ### Impact
@@ -660,7 +649,7 @@ Needs review
 TileWidth must be a multiple of 16. This restriction improves performance in some graphics environments and enhances compatibility with compression schemes such as JPEG. TIFF 6.0 Specification, p. 67.
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L850](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L850)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_34&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/leaf/RAW_APTUS_75.MOS)
 
 ### Impact
@@ -679,7 +668,7 @@ Needs review
 TileLength must be a multiple of 16 for compatibility with compression schemes such as JPEG. TIFF 6.0 Specification, p. 68.
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L854](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L854)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_35&type=code)
 * Examples: Needed
 
 ### Impact
@@ -698,7 +687,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L863](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L863)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_36&type=code)
 * Examples: Needed
 
 ### Impact
@@ -717,7 +706,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L868](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L868)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_37&type=code)
 * Examples: Needed
 
 ### Impact
@@ -736,7 +725,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L873](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L873)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_38&type=code)
 * Examples: Needed
 
 ### Impact
@@ -755,7 +744,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L880](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L880)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_39&type=code)
 * Examples: Needed
 
 ### Impact
@@ -774,7 +763,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L890](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L890)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_40&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/sony/a350/RAW_SONY_A350.ARW)
 
 ### Impact
@@ -793,7 +782,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L897](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L897)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_41&type=code)
 * Examples: Needed
 
 ### Impact
@@ -812,7 +801,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L909](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L909)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_42&type=code)
 * Examples: Needed
 
 ### Impact
@@ -831,7 +820,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L916](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L916)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_43&type=code)
 * Examples: Needed
 
 ### Impact
@@ -850,7 +839,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L931](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L931)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_44&type=code)
 * Examples: Needed
 
 ### Impact
@@ -869,7 +858,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L935](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L935)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_45&type=code)
 * Examples: Needed
 
 ### Impact
@@ -888,7 +877,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L940](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L940)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_46&type=code)
 * Examples: Needed
 
 ### Impact
@@ -907,7 +896,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L949](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L949)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_47&type=code)
 * Examples: Needed
 
 ### Impact
@@ -926,7 +915,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L960](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L960)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_48&type=code)
 * Examples: Needed
 
 ### Impact
@@ -945,7 +934,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L968](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L968)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_49&type=code)
 * Examples: [1](https://www.rawsamples.ch/raws/canon/g9/RAW_CANON_G9.CR2)
 
 ### Impact
@@ -964,7 +953,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L982](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L982)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_50&type=code)
 * Examples: Needed
 
 ### Impact
@@ -983,7 +972,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L987](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L987)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_51&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1002,7 +991,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L997](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L997)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_52&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1021,7 +1010,7 @@ Needs review
 Number of values must be 20.
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L1007](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1007)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_53&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1040,7 +1029,7 @@ Needs review
 The date-time format is incompatible with the baseline TIFF specification.
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L1013](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1013)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_54&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1059,7 +1048,7 @@ TIFF date formatting could be corrected using ExifTool.
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L1026](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1026)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_55&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1078,7 +1067,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L1029](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1029)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_56&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1097,7 +1086,7 @@ Needs review
 Needs review
 
 * Type: IOException
-* Source location: [TiffModule.java L1071](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1071)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_57&type=code)
 * Examples: [1](https://www.rawsamples.ch/raws/nikon/RAW_NIKON_D5000.NEF)
 
 ### Impact
@@ -1116,7 +1105,7 @@ Needs review
 An IFD (Image File directory) is mandatory in each TIFF file.
 
 * Type: TiffException
-* Source location: [TiffModule.java L1075](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1075)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_58&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1139,7 +1128,7 @@ Storing data at word boundaries allows CPUs to more efficiently read and process
 When the parameter byteoffset=true is set in [Link to the jhove configuration byteoffset](https://jhove.openpreservation.org/modules/tiff/), this error is ignored and becomes an InfoMessage. The status also becomes Well-Formed and valid.
 
 * Type: TiffException
-* Source location: [TiffModule.java L1081](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1081)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_59&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1158,7 +1147,7 @@ Needs review
 Needs review
 
 * Type: TiffException
-* Source location: [TiffModule.java L1085](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L1085)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_60&type=code)
 * Examples: Needed
 
 ### Impact
@@ -1177,7 +1166,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L2694](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L2694)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_61&type=code)
 * Examples: [1](https://www.rawsamples.ch/raws/nikon/d60/RAW_NIKON_D60.NEF)
 
 ### Impact
@@ -1196,7 +1185,7 @@ Needs review
 TIFF 6.0 Specification, p. 17: datatype short or long, contains the number of columns in the image, i.e. the number of pixels per scanline.
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L773](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L773)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_62&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/sony/a350/RAW_SONY_A350.ARW)
 
 ### Impact
@@ -1215,7 +1204,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L769](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L769)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_63&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/sony/a350/RAW_SONY_A350.ARW)
 
 ### Impact
@@ -1234,7 +1223,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffModule.java L777](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/TiffModule.java#L777)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_64&type=code)
 * Examples: [1](http://www.rawsamples.ch/raws/sony/a350/RAW_SONY_A350.ARW)
 
 ### Impact
@@ -1253,7 +1242,7 @@ Needs review
 Needs review
 
 * Type: InfoMessage
-* Source location: [TiffIFD.java L3783](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/TiffIFD.java#L3783)
+* Source location:[Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_65&type=code)
 * Examples: [1](https://www.rawsamples.ch/raws/leica/RAW_LEICA_M240.DNG)
 
 ### Impact
@@ -1272,10 +1261,7 @@ Needs review
 The value found for the given tag is outside the range of expected values for that tag.
 
 * Type: ErrorMessage
-* Source location: [IFD.java L371](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L371) <-- Unreachable error?
-https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L401
-https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L439
-https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/tiff/IFD.java#L470
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_66&type=code)
 * Examples: [1](https://www.rawsamples.ch/raws/samsung/RAW_SAMSUNG_NX300M.SRW)
 
 ### Impact
@@ -1284,3 +1270,92 @@ Needs review
 ### Remediation
 Needs review
 
+## TIFF-HUL-67
+
+### Message
+> File is too short
+
+### Details
+Needs Review
+
+* Type: ErrorMessage
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_67&type=code)
+* Examples: Needs Review
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+## TIFF-HUL-68
+
+### Message
+> Unexpected Exception: {0}
+
+### Details
+Needs Review
+
+* Type: ErrorMessage
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_68&type=code)
+* Examples: Needs Review
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+## TIFF-HUL-69
+
+### Message
+> Unexpected Exception: {0}
+
+### Details
+Needs Review
+
+* Type: ErrorMessage
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_69&type=code)
+* Examples: Needs Review
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+## TIFF-HUL-70
+
+### Message
+> Embedded Exif block is too short
+
+### Details
+Needs Review
+
+* Type: ErrorMessage
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_70&type=code)
+* Examples: Needs Review
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
+
+## TIFF-HUL-71
+
+### Message
+> Bad ICCProfile in tag {0,number,#}; message {1}
+
+### Details
+Needs Review
+
+* Type: ErrorMessage
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20TIFF_HUL_71&type=code)
+* Examples: Needs Review
+
+### Impact
+Needs review
+
+### Remediation
+Needs review
