@@ -8,7 +8,7 @@
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L625](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L625)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_1&type=code)
 * Examples: Needed
 
 ### Impact
@@ -27,7 +27,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L502](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L502)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_2&type=code)
 * Examples: Needed
 
 ### Impact
@@ -46,7 +46,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L533](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L533)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_3&type=code)
 * Examples: Needed
 
 ### Impact
@@ -65,7 +65,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L385](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L385)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_4&type=code)
 * Examples: Needed
 
 ### Impact
@@ -78,13 +78,13 @@ Needs review
 ## GIF-HUL-5
 
 ### Message
-> Multiple graphics control blocks for one image
+> Multiple Graphics Control Extension blocks for one image
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L813](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L813)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_5&type=code)
 * Examples: Needed
 
 ### Impact
@@ -97,13 +97,13 @@ Needs review
 ## GIF-HUL-6
 
 ### Message
-> Wrong graphics control block size
+> Wrong Graphic Control Extension block size
 
 ### Details
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L820](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L820)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_6&type=code)
 * Examples: Needed
 
 ### Impact
@@ -122,7 +122,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L718](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L718)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_7&type=code)
 * Examples: Needed
 
 ### Impact
@@ -141,7 +141,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L727](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L727)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_8&type=code)
 * Examples: Needed
 
 ### Impact
@@ -160,7 +160,7 @@ Needs review
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L487](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L487)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_9&type=code)
 * Examples: Needed
 
 ### Impact
@@ -188,7 +188,7 @@ If *only* the trailer byte is missing it can be added like this:
 Needs review
 
 * Type: ErrorMessage
-* Source location: [GifModule.java L511](https://github.com/openpreserve/jhove/blob/release-1.14/jhove-modules/src/main/java/edu/harvard/hul/ois/jhove/module/GifModule.java#L511)
+* Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20GIF_HUL_10&type=code)
 * Examples: Needed
 
 ### Impact
