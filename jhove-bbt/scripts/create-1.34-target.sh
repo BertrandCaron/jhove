@@ -67,6 +67,13 @@ find "${targetRoot}" -type f -name "audit-HTML-hul.jhove.xml" -exec sed -i 's/20
 find "${targetRoot}" -type f -name "audit-HTML-hul.jhove.xml" -exec sed -i 's/01-08-2002/2002-08-01/' {} \;
 find "${targetRoot}" -type f -name "audit-HTML-hul.jhove.xml" -exec sed -i 's/31-05-2001/2001-05-31/' {} \;
 
+# Update release details for EPUB module
+find "${targetRoot}" -type f -name "*.epub.jhove.xml" -exec sed -i 's/<reportingModule release="1.3" date="2023-06-12">EPUB-ptc<\/reportingModule>/<reportingModule release="1.4" date="2025-06-25">EPUB-ptc<\/reportingModule>/' {} \;
+find "${targetRoot}" -type f -name "audit.jhove.xml" -exec sed -i 's/<module release="1.3">EPUB-ptc<\/module>/<module release="1.4">EPUB-ptc<\/module>/' {} \;
+find "${targetRoot}" -type f -name "audit-EPUB-ptc.jhove.xml" -exec sed -i 's/Copyright 2023/Copyright 2025/' {} \;
+find "${targetRoot}" -type f -name "audit-EPUB-ptc.jhove.xml" -exec sed -i 's/<release>1.3<\/release>/<release>1.4<\/release>/' {} \;
+find "${targetRoot}" -type f -name "audit-EPUB-ptc.jhove.xml" -exec sed -i 's/2023-06-12/2025-06-25/' {} \;
+
 # Update release details for JPEG 2000 module
 find "${targetRoot}" -type f -name "*.jp2.jhove.xml" -exec sed -i 's/<reportingModule release="1.4.4" date="2023-03-16">JPEG2000-hul<\/reportingModule>/<reportingModule release="1.4.5" date="2025-03-12">JPEG2000-hul<\/reportingModule>/' {} \;
 find "${targetRoot}" -type f -name "*.jpx.jhove.xml" -exec sed -i 's/<reportingModule release="1.4.4" date="2023-03-16">JPEG2000-hul<\/reportingModule>/<reportingModule release="1.4.5" date="2025-03-12">JPEG2000-hul<\/reportingModule>/' {} \;
@@ -142,4 +149,9 @@ if [[ -d "${targetRoot}/regression/modules/PDF-hul" ]]; then
 	echo " - removing existing regressions for PDF ${targetRoot}/regression/modules/PDF-hul."
 	rm -rf "${targetRoot}/regression/modules/PDF-hul"
 	cp -r "${candidateRoot}/regression/modules/PDF-hul" "${targetRoot}/regression/modules/PDF-hul"
+fi
+
+# Copy the file for the XML result where the message ordering has changed
+if [[ -f "${candidateRoot}/errors/modules/XML-hul/0003.xml.jhove.xml" ]]; then
+	cp "${candidateRoot}/errors/modules/XML-hul/0003.xml.jhove.xml" "${targetRoot}/errors/modules/XML-hul/0003.xml.jhove.xml"
 fi
