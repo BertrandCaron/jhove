@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.openpreservation.jhove</groupId>
     <artifactId>jhove</artifactId>
-    <version>1.28.0</version>
+    <version>1.34.0</version>
   </parent>
 
   <artifactId>jhove-ext-modules</artifactId>
@@ -13,7 +13,7 @@
 
   <properties>
     <jwat.version>1.0.3</jwat.version>
-    <epubcheck.version>4.2.6</epubcheck.version>
+    <epubcheck.version>5.2.1</epubcheck.version>
   </properties>
 
   <build>
@@ -58,8 +58,8 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
     </dependency>
     <!-- JWAT for WARC, ARC and GZIP -->
     <dependency>

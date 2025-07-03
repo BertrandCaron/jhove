@@ -20,6 +20,9 @@
 
 package edu.harvard.hul.ois.jhove.handler;
 
+import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.NumberFormat;
 import java.util.Date;
 import java.util.Iterator;
@@ -27,6 +30,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import edu.harvard.hul.ois.jhove.AESAudioMetadata;
@@ -83,10 +87,10 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
     private static final String NAME = "XML";
 
     /** Handler release identifier. */
-    private static final String RELEASE = "1.10";
+    private static final String RELEASE = "1.14";
 
     /** Handler release date. */
-    private static final int[] DATE = { 2023, 04, 18 };
+    private static final int[] DATE = { 2025, 03, 12 };
 
     /** Handler informative note. */
     private static final String NOTE = "This output handler is defined by the XML Schema "
@@ -102,7 +106,7 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
     private final static String EOL = System.getProperty("line.separator");
 
     /** Schema version. */
-    private static final String SCHEMA_VERSION = "1.9";
+    private static final String SCHEMA_VERSION = "1.10";
 
     /******************************************************************
      * PRIVATE INSTANCE FIELDS.
@@ -110,6 +114,8 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
 
     /* Sample rate. */
     private double _sampleRate;
+    /** Reporting module */
+    private String reportingModule = "";
 
     /******************************************************************
      * CLASS CONSTRUCTOR.
@@ -273,35 +279,31 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
             ;
             _writer.println(margn2 + elementEnd("mimeTypes"));
         }
-        List<Signature> list1 = module.getSignature();
-        int n = list1.size();
-        if (n > 0) {
+        List<Signature> sigList = module.getSignature();
+        if (!sigList.isEmpty()) {
             _writer.println(margn2 + elementStart("signatures"));
             ++_level;
-            for (int i = 0; i < n; i++) {
-                showSignature(list1.get(i));
+            for (Signature sig : sigList) {
+                showSignature(sig);
             }
             _level--;
             _writer.println(margn2 + elementEnd("signatures"));
         }
-        List<Document> list2 = module.getSpecification();
-        n = list2.size();
-        if (n > 0) {
+        List<Document> docList = module.getSpecification();
+        if (!docList.isEmpty()) {
             _writer.println(margn2 + elementStart("specifications"));
             ++_level;
-            for (int i = 0; i < n; i++) {
-                showDocument(list2.get(i));
+            for (Document doc : docList) {
+                showDocument(doc);
             }
             --_level;
             _writer.println(margn2 + elementEnd("specifications"));
         }
-        List<String> ftr = module.getFeatures();
-        if (ftr != null && !ftr.isEmpty()) {
+        List<String> featList = module.getFeatures();
+        if (featList != null && !featList.isEmpty()) {
             _writer.println(margn2 + elementStart("features"));
-            Iterator<String> iter = ftr.iterator();
-            while (iter.hasNext()) {
-                s = iter.next();
-                _writer.println(margn3 + element("feature", s));
+            for (String feat : featList) {
+                _writer.println(margn3 + element("feature", feat));
             }
             _writer.println(margn2 + elementEnd("features"));
         }
@@ -349,14 +351,10 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
         if (module != null) {
             String[][] attr2 = { { "release", module.getRelease() },
                     { "date", date.format(module.getDate()) } };
+            this.reportingModule = module.getName();
             _writer.println(margn2
-                    + element("reportingModule", attr2, module.getName()));
+                    + element("reportingModule", attr2, this.reportingModule));
         }
-        /*
-         * else { String [][] attr2 = { {"severity", "error"} }; _writer.println
-         * (margn2 + element ("message", attr2,
-         * "file not found or not readable")); }
-         */
         Date date = info.getCreated();
         if (date != null) {
             _writer.println(margn2 + element("created", toDateTime(date)));
@@ -422,26 +420,24 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
             _writer.println(margn2 + element("status", wfStr));
         }
 
-        List<String> list1 = info.getSigMatch();
-        int n = list1.size();
-        if (n > 0) {
+        List<String> sigMatches = info.getSigMatch();
+        if (!sigMatches.isEmpty()) {
             _writer.println(margn2 + elementStart("sigMatch"));
             _level++;
-            for (int i = 0; i < n; i++) {
+            for (String sigMatch : sigMatches) {
                 _writer.println(margn2
-                        + element("module", list1.get(i)));
+                        + element("module", sigMatch));
             }
             _level--;
             _writer.println(margn2 + elementEnd("sigMatch"));
         }
 
-        List<Message> list2 = info.getMessage();
-        n = list2.size();
-        if (n > 0) {
+        List<Message> messages = info.getMessage();
+        if (!messages.isEmpty()) {
             _writer.println(margn2 + elementStart("messages"));
             _level++;
-            for (int i = 0; i < n; i++) {
-                showMessage(list2.get(i));
+            for (Message message : messages) {
+                showMessage(message);
             }
             _level--;
             _writer.println(margn2 + elementEnd("messages"));
@@ -451,38 +447,31 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
             _writer.println(margn2 + element("mimeType", s));
         }
 
-        List<String> list3 = info.getProfile();
-        n = list3.size();
-        if (n > 0) {
+        List<String> profiles = info.getProfile();
+        if (!profiles.isEmpty()) {
             _writer.println(margn2 + elementStart("profiles"));
-            for (int i = 0; i < n; i++) {
+            for (String profile : profiles) {
                 _writer.println(margn3
-                        + element("profile", list3.get(i)));
+                        + element("profile", profile));
             }
             _writer.println(margn2 + elementEnd("profiles"));
         }
 
         Map<String, Property> map = info.getProperty();
-        if (map != null) {
-            if (map.size() > 0) {
-                _writer.println(margn2 + elementStart("properties"));
-                Iterator<String> iter = map.keySet().iterator();
-                while (iter.hasNext()) {
-                    String key = iter.next();
-                    Property property = info.getProperty(key);
-                    showProperty(property);
-                }
-                _writer.println(margn2 + elementEnd("properties"));
+        if (map != null && !map.isEmpty()) {
+            _writer.println(margn2 + elementStart("properties"));
+            for (Entry<String, Property> entry : map.entrySet()) {
+                showProperty(entry.getValue());
             }
+            _writer.println(margn2 + elementEnd("properties"));
         }
 
-        List<Checksum> list4 = info.getChecksum();
-        n = list4.size();
-        if (n > 0) {
+        List<Checksum> checksums = info.getChecksum();
+        if (!checksums.isEmpty()) {
             _writer.println(margn2 + elementStart("checksums"));
             _level++;
-            for (int i = 0; i < n; i++) {
-                showChecksum(list4.get(i));
+            for (Checksum checksum : checksums) {
+                showChecksum(checksum);
             }
             _level--;
             _writer.println(margn2 + elementEnd("checksums"));
@@ -662,12 +651,13 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
 
     protected void showMessage(Message message) {
         String margin = getIndent(++_level);
-        String[][] attrs = new String[4][];
+        String[][] attrs = new String[5][];
         boolean hasAttr = false;
         attrs[0] = new String[] { "subMessage", null };
         attrs[1] = new String[] { "offset", null };
         attrs[2] = new String[] { "severity", null };
         attrs[3] = new String[] { "id", null };
+        attrs[4] = new String[] { "infoLink", null };
 
         String submsg = message.getSubMessage();
         if (submsg != null) {
@@ -686,8 +676,10 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
         String id = message.getJhoveMessage().getId();
         if (!(id == null || id.isEmpty() || id.equals(JhoveMessages.NO_ID))) {
             attrs[3][1] = message.getId();
+            attrs[4][1] = Handlers.makeInfoLink(this.reportingModule, id);
             hasAttr = true;
         }
+
         if (hasAttr) {
             _writer.println(margin
                     + element("message", attrs, message.getMessage()));
@@ -744,11 +736,6 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
     }
 
     protected void showProperty(Property property) {
-        String margin = getIndent(++_level);
-        String margn2 = margin + " ";
-        String margn3 = margn2 + " ";
-        String margn4 = margn3 + " ";
-
         PropertyArity arity = property.getArity();
         PropertyType type = property.getType();
 
@@ -756,6 +743,11 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
         // as this could result in a schema violation.
         if (Utils.isPropertyEmpty(property, arity))
             return;
+
+        String margin = getIndent(++_level);
+        String margn2 = margin + " ";
+        String margn3 = margn2 + " ";
+        String margn4 = margn3 + " ";
 
         boolean valueIsProperty = PropertyType.PROPERTY.equals(type);
         boolean valueIsNiso = PropertyType.NISOIMAGEMETADATA.equals(type);
@@ -1311,6 +1303,9 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
         }
         n = niso.getOrientation();
         if (n != NisoImageMetadata.NULL) {
+            if (n > 9 || n < 1) {
+                n = 9; // force "unknown" for reserved value
+            }
             fileBuf.append(margn4
                     + element("mix:Orientation", Integer.toString(n)) + EOL);
             useFileBuf = true;
@@ -2717,6 +2712,9 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
 
         n = niso.getOrientation();
         if (n != NisoImageMetadata.NULL) {
+            if (n > 9 || n < 1) {
+                n = 9; // force "unknown" for reserved value
+            }
             captureBuffer.append(margn3
                     + element("mix:orientation", Integer.toString(n)) + EOL);
             useCaptureBuffer = true;
@@ -3780,15 +3778,16 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
 
         n = niso.getOrientation();
         if (n != NisoImageMetadata.NULL) {
-            final String[] orient = { "unknown", "normal*",
+            // Values defined in the MIX 2.0 schema
+            final String[] orient = { "", "normal*",
                     "normal, image flipped", "normal, rotated 180\u00B0",
                     "normal, image flipped, rotated 180\u00B0",
                     "normal, image flipped, rotated cw 90\u00B0",
                     "normal, rotated ccw 90\u00B0",
                     "normal, image flipped, rotated ccw 90\u00B0",
-                    "normal, rotated cw 90\u00B0" };
-            if (n > 8 || n < 0) {
-                n = 0; // force "unknown" for bad value
+                    "normal, rotated cw 90\u00B0", "unknown" };
+            if (n > 9 || n < 1) {
+                n = 9; // force "unknown" for reserved value
             }
             captureBuffer.append(margn3 + element("mix:orientation", orient[n])
                     + EOL);
@@ -4240,7 +4239,6 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
         _sampleRate = aes.getSampleRate();
 
         final String[][] attrs = { { "xmlns:aes", "http://www.aes.org/audioObject" },
-                { "xmlns:tcf", "http://www.aes.org/tcf" },
                 { "xmlns:xsi",
                         "http://www.w3.org/2001/XMLSchema-instance" },
                 { "ID", audioObjectID },
@@ -4248,7 +4246,7 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
                         aes.getAnalogDigitalFlag() },
                 { "disposition",
                         "Validated by JHOVE" },
-                { "schemaVersion", "1.02b" } };
+                { "schemaVersion", aes.getSchemaVersion() } };
         _writer.println(margin + elementStart("aes:audioObject", attrs));
         String s = aes.getFormat();
         if (s != null) {
@@ -4333,7 +4331,7 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
             AESAudioMetadata.FaceRegion facergn = f.getFaceRegion(0);
             _writer.println(margn3 + elementStart("aes:region", faceRegionAttrs));
             _writer.println(margn4 + elementStart("aes:timeRange"));
-            writeAESTimeRange(margn3,
+            writeAESTimeRange(margn4,
                     facergn.getStartTime(), facergn.getDuration());
             _writer.println(margn4 + elementEnd("aes:timeRange"));
             int nchan = aes.getNumChannels();
@@ -4341,7 +4339,6 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
                 _writer.println(margn4 + element("aes:numChannels",
                         Integer.toString(nchan)));
             }
-            String[] locs = aes.getMapLocations();
             for (int ch = 0; ch < nchan; ch++) {
                 // write a stream element for each channel
                 String[][] streamAttrs = {
@@ -4352,8 +4349,7 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
                 };
                 _writer.println(margn4 + elementStart("aes:stream", streamAttrs));
                 String[][] chanAttrs = {
-                        { "channelNum", Integer.toString(ch) },
-                        { "mapLocation", locs[ch] }
+                        { "channelNum", Integer.toString(ch) }
                 };
                 _writer.println(margn5 + element("aes:channelAssignment", chanAttrs));
                 _writer.println(margn4 + elementEnd("aes:stream"));
@@ -4379,7 +4375,10 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
                     sampleRate != AESAudioMetadata.NILL ||
                     wordSize != AESAudioMetadata.NULL) {
                 _writer.println(margn2 + elementStart("aes:formatList"));
-                String[][] frAttr = { { "ID", formatRegionID } };
+                String[][] frAttr = { { "ID", formatRegionID },
+                        { "xsi:type", "aes:formatRegionType" },
+                        { "ownerRef", faceRegionID },
+                        { "label", "JHOVE" } };
                 _writer.println(margn3 + elementStart("aes:formatRegion", frAttr));
                 if (bitDepth != AESAudioMetadata.NULL) {
                     _writer.println(margn4 + element("aes:bitDepth",
@@ -4420,83 +4419,69 @@ public class XmlHandler extends edu.harvard.hul.ois.jhove.HandlerBase
         _level -= 3;
     }
 
-    /*
-     * Break out the writing of a timeRangeType element.
-     * This always gives a start time of 0. This is all
-     * FAKE DATA for the moment.
-     */
     private void writeAESTimeRange(String baseIndent,
             AESAudioMetadata.TimeDesc start,
             AESAudioMetadata.TimeDesc duration) {
         final String margn1 = baseIndent + " ";
-        final String margn2 = margn1 + " ";
-        final String[][] attrs = {
-                { "tcf:frameCount", "30" },
-                { "tcf:timeBase", "1000" },
-                { "tcf:videoField", "FIELD_1" },
-                { "tcf:countingMode", "NTSC_NON_DROP_FRAME" }
-        };
-        _writer.println(margn1 + elementStart("tcf:startTime", attrs));
-        _writer.println(margn2 + element("tcf:hours",
-                Long.toString(start.getHours())));
-        _writer.println(margn2 + element("tcf:minutes",
-                Long.toString(start.getMinutes())));
-        _writer.println(margn2 + element("tcf:seconds",
-                Long.toString(start.getSeconds())));
-        _writer.println(margn2 + element("tcf:frames",
-                Long.toString(start.getFrames())));
-        _writer.println(margn1 + elementEnd("tcf:startTime"));
-        double sr = start.getSampleRate();
-        if (sr == 1.0) {
-            sr = _sampleRate;
+
+        writeAESTimeRangePart(margn1, "aes:startTime", start);
+
+        if (duration != null) {
+            writeAESTimeRangePart(margn1, "aes:duration", duration);
         }
     }
 
-    /*
-     * Clean up a URI string by escaping forbidden characters. We assume
-     * (perhaps dangerously) that a % is the start of an already escaped
-     * hexadecimal sequence.
+    private void writeAESTimeRangePart(String indent, String elementName, AESAudioMetadata.TimeDesc timeDesc) {
+        double sampleRate = timeDesc.getSampleRate();
+        if (sampleRate == 1.0) {
+            sampleRate = _sampleRate;
+        }
+
+        String[][] attributes = {
+                { "editRate", formatters.get().format(sampleRate) },
+                { "factorNumerator", "1" },
+                { "factorDenominator", "1" }
+        };
+
+        _writer.println(indent +
+                element(elementName, attributes, String.valueOf(timeDesc.getSamples())));
+    }
+
+    /**
+     * Returns a path normalised URI from the presented string path.@interface
+     * Solution based upon the follwing post from Eugene Yokota:
+     * https://eed3si9n.com/encoding-file-path-as-URI-reference/
      */
-    private String cleanURIString(String uri) {
-        StringBuffer sb = new StringBuffer(uri.length() * 2);
-        boolean change = false;
-        for (int i = 0; i < uri.length(); i++) {
-            char c = uri.charAt(i);
-            if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
-                    || (c >= '0' && c <= '9') || (c == '%') || // assume it's an
-                                                               // escape
-                    ("-_.!~*'();/?:@=+$,".indexOf(c) >= 0)) {
-                sb.append(c);
-            } else {
-                int cval = c;
-
-                // More significant hex digit
-                int mshd = (cval >> 4);
-                if (mshd >= 10) {
-                    mshd += 'A' - 10;
+    private static final String cleanURIString(final String path) {
+        File input = new File(path);
+        final boolean isWindows = System.getProperty("os.name").toLowerCase(Locale.ENGLISH).contains("windows");
+        final String fileScheme = "file";
+        try {
+            if (isWindows && !path.isEmpty() && path.startsWith(Character.toString(File.separatorChar))) {
+                if (path.startsWith("\\")) {
+                    return new URI(fileScheme, normaliseToSlash(path), null).toString();
                 } else {
-                    mshd += '0';
+                    return new URI(fileScheme, "", normaliseToSlash(path), null).toString();
                 }
-                sb.append('%');
-                sb.append((char) mshd);
-
-                // Less significant hex digit
-                int lshd = (cval & 0X0F);
-                if (lshd >= 10) {
-                    lshd += 'A' - 10;
-                } else {
-                    lshd += '0';
-                }
-                sb.append((char) lshd);
-                change = true;
+            } else if (input.isAbsolute()) {
+                return new URI(fileScheme, "", normaliseToSlash(ensureHeadSlash(input.getAbsolutePath())), null)
+                        .toString();
             }
+            return new URI(null, normaliseToSlash(path), null).toString();
+        } catch (URISyntaxException e) {
+            // If this fails simply return the original path
+            return path;
         }
-        // For efficiency, return the original string
-        // if nothing changed.
-        if (change) {
-            return sb.toString();
-        }
-        return uri;
+    }
+
+    private static final String ensureHeadSlash(final String name) {
+        return (!name.isEmpty() && name.startsWith(Character.toString(File.separatorChar)))
+                ? Character.toString(File.separatorChar) + name
+                : name;
+    }
+
+    private static final String normaliseToSlash(final String name) {
+        return (File.separatorChar == '/') ? name : name.replace(File.separatorChar, '/');
     }
 
     /** Appends a Rational value to a StringBuffer */
