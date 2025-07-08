@@ -1647,7 +1647,7 @@ Needs review
 > Invalid cross-reference table
 
 ### Details
-An invalid first object id in a cross reference table. The first line of a "xref" cross reference trailer must be two numeric literals, separated by a space. The first is the id of the first object in the table. This must be a numeric type and it's not. This means the parsing of the trailer fails and this leads to a problem when parsing the rest of the document. With this error also [PDF-HUL-85](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-85) is associated because the document root isn't found.
+An invalid first object id in a cross reference table. The first line of a "xref" cross reference trailer must be two numeric literals, separated by a space. The first is the id of the first object in the table. This must be a numeric type and it's not. This means the parsing of the trailer fails and this leads to a problem when parsing the rest of the document. With this error also [PDF-HUL-85](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-85) is associated because the document root isn't found.
 
 * Type: PdfInvalidException
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_68&type=code)
@@ -1815,7 +1815,7 @@ Needs review
 > Root entry missing in trailer dictionary
 
 ### Details
-The "Root" entry in the trailer is missing. The "Root" entry should have as its value the document's catalog dictionary, which is where you will start in order to find all the objects in the PDF. See also [PDF-HUL-85](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-85).
+The "Root" entry in the trailer is missing. The "Root" entry should have as its value the document's catalog dictionary, which is where you will start in order to find all the objects in the PDF. See also [PDF-HUL-85](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-85).
 
 * Type: PdfInvalidException
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_75&type=code)
@@ -2056,7 +2056,7 @@ Needs review
 > No document catalog dictionary
 
 ### Details
-The trailer has no document catalogue entry ("Root") or a trailer was not found. The Catalog of the document contains all the references to other objects for example contents, outline, named destinations.
+The trailer has no document catalogue entry ("Root"), or a trailer was not found, or the offset of the cross-reference table in the startxref section is wrong. The Catalog of the document contains all the references to other objects for example contents, outline, named destinations.
 JHOVE's approach to the document catalog is a little scattergun. Specifically here the reference to the document catalog is null. As the examples show this error can be reached, even when similar parsing in the trailer is done earlier. When the parsing of the cross-reference fails this error is reached (Example 2) or when the Root is missing after reaching [PDF-HUL-75](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-75) the parsing continues until this error.
 
 * Type: Error Message, Malformed
@@ -2071,10 +2071,10 @@ https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.
 
 
 ### Impact
-Needs review
+Probably low in the case of a wrong offset for the cross-reference table. Most PDF readers are lax regarding object offsets.
 
 ### Remediation
-Needs review
+In the case of a wrong offset for the cross-reference table, using `mutool clean` recalculates all offsets and may solve the problem.
 
 
 ## PDF-HUL-86
@@ -2083,7 +2083,7 @@ Needs review
 > No document catalog dictionary
 
 ### Details
-The trailer contains a document catalogue entry ("Root") but it cannot be resolved. The Catalog of the document contains all the references to other objects for example contents, outline, named destinations.
+The trailer contains a document catalogue entry ("Root") but it cannot be resolved, e.g., because the offset of the catalogue object is wrong in the cross-reference table. The Catalogue of the document contains all the references to other objects for example contents, outline, named destinations.
 
 * Type: Error Message, Malformed
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_86&type=code)
@@ -2100,7 +2100,7 @@ https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf | 7.
 Needs review
 
 ### Remediation
-Needs review
+In the case of a wrong offset for the Catalog object in the cross-reference table, using `mutool clean` recalculates all offsets and may solve the problem.
 
 
 ## PDF-HUL-87
@@ -2636,7 +2636,7 @@ An object stream dictionary has failed JHOVE's validity tests:
 - must have a "Type" entry which is the name: "ObjStm";
 - must have a count "N" entry that's an integer value; and
 - must have a first offset "First" entry that's an integer value.
-This error is probably never shown, as the error is catched in [PDF-HUL-110](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-110).
+This error is probably never shown, as the error is catched in [PDF-HUL-110](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-110).
 
 * Type: PdfMalformedException
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_108&type=code)
@@ -2891,11 +2891,11 @@ Needs review
 > Invalid page label sequence
 
 ### Details
-JHOVE has calculated a page position value of less than 1. PDF's page numbering consists of a number tree whose elements are labelling ranges stored as pdf dictionaries. JHOVE's logic around page label sequences is a little confusing, this seems to be an effort to  track a "natural" sequence number, that's checked against pages accumulated in other ranges. I don't believe that this error can be thrown as it's caught by the next general catch and changed to [PDF-HUL-119](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-119).
+JHOVE has calculated a page position value of less than 1. PDF's page numbering consists of a number tree whose elements are labelling ranges stored as pdf dictionaries. JHOVE's logic around page label sequences is a little confusing, this seems to be an effort to  track a "natural" sequence number, that's checked against pages accumulated in other ranges. I don't believe that this error can be thrown as it's caught by the next general catch and changed to [PDF-HUL-119](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-119).
 
 * Type: PdfInvalidException
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_118&type=code)
-* Examples: See examples in [PDF-HUL-119](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-119)
+* Examples: See examples in [PDF-HUL-119](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-119)
 
 ### References
  - PDF 1.6: https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference16.pdf | 3.6.1
@@ -2919,7 +2919,7 @@ Needs review
 > Problem with page label structure
 
 ### Details
-Unexpected error while parsing the page label structure. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type. This error is also shown when actually the problem is [PDF-HUL-118](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-118). All the Examples in this error are examples from this. The problem in these files are PDF-HUL-118, but instead PDF-HUL-119 is reported.
+Unexpected error while parsing the page label structure. This is a general catch with multiple potential causes including: an I/O exception reading an object or encountering a missing (null) object or an object of an unexpected type. This error is also shown when actually the problem is [PDF-HUL-118](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-118). All the Examples in this error are examples from this. The problem in these files are PDF-HUL-118, but instead PDF-HUL-119 is reported.
 
 * Type: PdfMalformedException
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_119&type=code)
@@ -3000,7 +3000,7 @@ Needs review
 
 ### Details
 This needs review, it's a horrible cludge that eats and PDFExceptions thrown while processing destination objects and always sets the invalid flag. Seems dubious behaviour.
-It, for example, reports the error "Invalid indirect destination - referenced object ' ' cannot be found". This error comes from [PDF-HUL-149](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-149).
+It, for example, reports the error "Invalid indirect destination - referenced object ' ' cannot be found". This error comes from [PDF-HUL-149](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-149).
 
 * Type: ErrorMessage, An Exception for all the messages coming from adding Destination to Property list
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_122&type=code)
@@ -3459,7 +3459,7 @@ Needs review
 > Document catalog Type key must have value Catalog
 
 ### Details
-The document catalog dictionary object must have key called type with the value Catalog. This error is related to [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-142) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-143).
+The document catalog dictionary object must have key called type with the value Catalog. This error is related to [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-142) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-143).
 
 * Type: ErrorMessage, MalFormed
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_141&type=code)
@@ -3483,7 +3483,7 @@ Needs review
 > Document catalog has no Type key or it has a null value.
 
 ### Details
-The document catalog dictionary object must have key called type. In this error the Type does not exist and is null. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-141) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-143).
+The document catalog dictionary object must have key called type. In this error the Type does not exist and is null. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-141) and [PDF-HUL-143](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-143).
 
 * Type: ErrorMessage, MalFormed
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_142&type=code)
@@ -3502,7 +3502,7 @@ Needs review
 > Document catalog Type key does not have a simple String value.
 
 ### Details
-The document catalog dictionary object has a key called Type. In this error the Type is not a Simple Object. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-141) and [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-142).
+The document catalog dictionary object has a key called Type. In this error the Type is not a Simple Object. This error is related to [PDF-HUL-141](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-141) and [PDF-HUL-142](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-142).
 
 * Type: ErrorMessage, MalFormed
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_143&type=code)
@@ -3521,7 +3521,7 @@ Needs review
 > Pages dictionary has no Type key or it has a null value.
 
 ### Details
-This error message and the next two error messages ([PDF-HUL-145](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-145) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-146)) are related. They check the Pages in a Dictionary have the correct properties. PDF-HUL-144 is about Type key is missing or null.
+This error message and the next two error messages ([PDF-HUL-145](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-145) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-146)) are related. They check the Pages in a Dictionary have the correct properties. PDF-HUL-144 is about Type key is missing or null.
 
 * Type: ErrorMessage, MalFormed
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_144&type=code)
@@ -3540,7 +3540,7 @@ Needs review
 > Pages dictionary Type key does not have a simple String value.
 
 ### Details
-This error message and the error messages ([PDF-HUL-144](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-144) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-146)) are related. The Type of the Page in the Directory is not a Simple Object.
+This error message and the error messages ([PDF-HUL-144](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-144) and [PDF-HUL-146](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-146)) are related. The Type of the Page in the Directory is not a Simple Object.
 
 * Type: ErrorMessage, MalFormed
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_145&type=code)
@@ -3559,7 +3559,7 @@ Needs review
 > Pages dictionary Type key must have value /Pages.
 
 ### Details
-This error message and the error messages ([PDF-HUL-144](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-144) and [PDF-HUL-145](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-145)) are related.The value of Type is not Pages.
+This error message and the error messages ([PDF-HUL-144](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-144) and [PDF-HUL-145](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-145)) are related.The value of Type is not Pages.
 
 * Type: ErrorMessage, MalFormed
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_146&type=code)
@@ -3617,7 +3617,7 @@ Needs review
 
 ### Details
 The Destination was not found for an annotation that is referenced in the document
-This error is never reported in the output, because the Message is included with [PDF-HUL-122](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages-2#pdf-hul-122).
+This error is never reported in the output, because the Message is included with [PDF-HUL-122](https://github.com/openpreserve/jhove/wiki/PDF-hul-Messages#pdf-hul-122).
 
 * Type: PdfInvalidException
 * Source location: [Search Source](https://github.com/search?q=repo%3Aopenpreserve%2Fjhove%20PDF_HUL_149&type=code)
